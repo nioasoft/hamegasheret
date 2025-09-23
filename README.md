@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# המגשרת - דבי סיידה ושו״ת
 
-## Getting Started
+אתר משרד עורכי דין מוביל בתחום גישור גירושין ודיני משפחה, בנוי עם Next.js ו-SHADCN UI.
 
-First, run the development server:
+## תכונות מרכזיות
+
+- ✅ **גישור גירושין** - התמחות מיוחדת בגישור עם 85% הצלחה
+- ✅ **דיני משפחה** - שירותים משפטיים מלאים בתחום דיני המשפחה
+- ✅ **תוכן מקצועי** - 8+ מאמרים מפורטים על גירושין ודיני משפחה
+- ✅ **SEO מותאם** - אופטימיזציה מלאה למילות מפתח בדיני משפחה
+- ✅ **מובייל פירסט** - עיצוב רספונסיבי מלא
+- ✅ **ביצועים גבוהים** - אופטימיזציה למהירות וחוויית משתמש
+
+## טכנולוגיות
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS
+- **Components**: SHADCN UI
+- **Typography**: Noto Sans Hebrew
+- **SEO**: Structured Data, Sitemap, Robots.txt
+- **Performance**: Image Optimization, Code Splitting
+
+## התחלת עבודה
+
+### התקנת dependencies
+
+```bash
+npm install
+```
+
+### הרצת שרת הפיתוח
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+פתח [http://localhost:3000](http://localhost:3000) בדפדפן לראות את התוצאה.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build לפרודקשן
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## מבנה האתר
 
-To learn more about Next.js, take a look at the following resources:
+### עמודים עיקריים
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **/** - דף הבית עם התמקדות בגישור גירושין
+- **/גישור-גירושין** - מידע מפורט על גישור גירושין
+- **/אודות** - אודות המשרד וצוות המומחים
+- **/מאמרים** - מאמרים מקצועיים על דיני משפחה
+- **/צור-קשר** - טפסי קשר ופרטי התקשרות
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### קומפוננטים עיקריים
 
-## Deploy on Vercel
+- **Navigation** - ניווט רספונסיבי
+- **Hero** - קטעי Hero עם CTA
+- **ContactForm** - טופס צור קשר
+- **ServicesSection** - הצגת שירותים
+- **SchemaScript** - Structured Data ל-SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## SEO ומיטוב
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### מילות מפתח עיקריות
+
+- גישור גירושין
+- עורך דין גירושין
+- דיני משפחה
+- משמורת ילדים
+- מזונות
+- הסכם גירושין
+
+### אופטימיזציות
+
+- ✅ Sitemap.xml דינמי
+- ✅ Robots.txt
+- ✅ Structured Data (JSON-LD)
+- ✅ Meta tags מותאמים
+- ✅ Open Graph
+- ✅ Mobile-First Design
+- ✅ Image Optimization
+
+## פריסה ב-Vercel
+
+### הגדרות מומלצות
+
+1. **Environment Variables**:
+   - לא נדרשות משתני סביבה מיוחדים
+
+2. **Build Settings**:
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+   - Install Command: `npm install`
+
+3. **Headers**:
+   - Cache-Control headers מוגדרים ב-next.config.ts
+
+### דומיינים
+
+- דומיין ראשי: `hamegasheret.co.il`
+- דומיין נוסף: `www.hamegasheret.co.il` (redirect)
+
+## תוכן האתר
+
+### זהבית דבי - מומחית בגישור
+
+- 15+ שנות ניסיון בגישור גירושין
+- 85% הצלחה בהגעה להסכמים
+- מוניטין של "קוסמת בגישור" בקרב דיינים
+- התמחות בהגעה להסכמים ללא מלחמות
+
+### שירותים עיקריים
+
+1. **גישור גירושין**
+   - תהליך מובנה להגעה להסכמים
+   - חיסכון של עד 80% בעלויות
+   - שמירה על יחסים טובים
+
+2. **משמורת ילדים**
+   - ייעוץ מקצועי בהסדרי משמורת
+   - התחשבות בצרכי הילדים
+   - פתרונות מותאמים אישית
+
+3. **מזונות**
+   - חישוב מדויק של מזונות
+   - עדכון שוטף לפי השינויים
+   - ייצוג משפטי מקצועי
+
+## צור קשר
+
+**כתובת:** יהודה הנחתום 4, בניין בית בלטק, באר שבע
+**טלפון:** +972-54-423-2167
+**אימייל:** asaf@hamegasheret.co.il
+
+## פרטיות ואבטחה
+
+- האתר עומד בתקני GDPR
+- הצפנה SSL מלאה
+- טפסי קשר מוגנים
+- ללא שיתוף נתונים עם צדדים שלישיים
+
+## תמיכה
+
+לבעיות טכניות או שאלות על התוכן, צרו קשר:
+- טלפון: +972-54-423-2167
+- אימייל: asaf@hamegasheret.co.il
+
+---
+
+**© 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.**
