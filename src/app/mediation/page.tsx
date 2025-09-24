@@ -3,12 +3,26 @@ import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Metadata } from "next";
+import { faqSchema } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "גישור גירושין מקצועי - המגשרת זהבית דבי | מומחית בגישור",
+  description: "גישור גירושין מקצועי עם המגשרת זהבית דבי - 85% הצלחה. המגשרת המובילה באר שבע ותל אביב. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות. ייעוץ ראשוני חינם.",
+  keywords: "גישור גירושין, המגשרת זהבית דבי, המגשרת באר שבע, המגשרת תל אביב, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין",
+  openGraph: {
+    title: "גישור גירושין מקצועי - המגשרת זהבית דבי | מומחית",
+    description: "גישור גירושין מקצועי עם שיעור הצלחה של 85%. זהבית דבי המגשרת מאפשרת לבני זוג להגיע להסכמים מוסכמים ללא מלחמות.",
+    type: "website",
+  },
+};
 
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
+  { label: "סיפורי הצלחה", href: "/cases" },
   { label: "צור קשר", href: "/contact" }
 ];
 
@@ -116,6 +130,12 @@ const faqs = [
 export default function MediationPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
       <Navigation menuItems={menuItems} />
 
       <main>

@@ -1,0 +1,429 @@
+import { Navigation } from "@/components/ui/navigation";
+import { Hero } from "@/components/ui/hero";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Metadata } from "next";
+import { testimonialSchema } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: "סיפורי הצלחה - המגשרת זהבית דבי",
+  description: "סיפורי הצלחה אמיתיים של המגשרת זהבית דבי. גישור מוצלח בגירושין, משמורת ילדים ורכוש. 85% הצלחה בפתרון סכסוכים. כך המגשרת פותרת בעיות קשות ומורכבות בגירושין.",
+  keywords: "סיפורי הצלחה, המגשרת זהבית דבי, גישור מוצלח, פתרון סכסוכים, גירושין בלי מלחמה, המגשרת באר שבע, גישור משמורת, חלוקת רכוש",
+  openGraph: {
+    title: "סיפורי הצלחה - המגשרת זהבית דבי",
+    description: "הכירו את הסיפורים המרגשים של זוגות שהצליחו להגיע להסכמות בזכות הגישור המקצועי של זהבית דבי המגשרת",
+    type: "website",
+  },
+};
+
+const menuItems = [
+  { label: "דף הבית", href: "/" },
+  { label: "גישור גירושין", href: "/mediation" },
+  { label: "אודות", href: "/about" },
+  { label: "מאמרים", href: "/articles" },
+  { label: "סיפורי הצלחה", href: "/cases" },
+  { label: "צור קשר", href: "/contact" }
+];
+
+const caseStudies = [
+  {
+    id: 1,
+    title: "יעל ודני מבאר שבע - מעסק משפחתי למלחמה לשותפות מחודשת",
+    location: "באר שבע",
+    marriageDuration: "12 שנים",
+    mainConflict: "עסק משפחתי",
+    tags: ["עסק משפחתי", "רכוש", "שותפות"],
+    background: {
+      description: "יעל (39) ודני (42) נשואים 12 שנים ובעלי מסעדה משפחתית מצליחה בבאר שבע. לאחר שנים של עבודה משותפת, החלו מחלוקות על ניהול העסק והתפתח קרע שהוביל לבקשת גירושין.",
+      quote: "\"אנחנו בנינו את המקום הזה יחד במשך שנים, ועכשיו כל אחד רוצה לקחת את המסעדה לבד. זה הרס את הנישואין שלנו.\""
+    },
+    conflict: {
+      description: "המחלוקת התמקדה בבעלות על המסעדה, חלוקת הרווחים, וקבלת החלטות עסקיות. יעל טענה שדני מקבל החלטות חד-צדדיות, בעוד דני טען שיעל לא מבינה בהיבטים הפיננסיים.",
+      dialogue: [
+        {
+          speaker: "יעל",
+          text: "אתה לא מתייעץ איתי על שום דבר! אתה פשוט מחליט על ספקים חדשים, על שינויי תפריט, על הכל!"
+        },
+        {
+          speaker: "דני",
+          text: "את לא מבינה איך עסק עובד! כשיש הזדמנות צריך לתפוס אותה מהר, לא להתכנס לועדות!"
+        },
+        {
+          speaker: "יעל",
+          text: "אבל זה גם שלי! אני השקעתי כאן את כל החיים שלי!"
+        }
+      ]
+    },
+    intervention: {
+      description: "זהבית דבי המגשרת הצליחה לזהות שהבעיה האמיתית לא הייתה העסק אלא חוסר תקשורת. היא ארגנה פגישות נפרדות עם כל צד ולאחר מכן פגישות משותפות עם מתודולוגיה מיוחדת.",
+      methods: [
+        "הפרדה בין הרגשות האישיים לעסקיים",
+        "יצירת מסגרת תקשורת מובנית",
+        "הגדרת תפקידים ואחריות ברורים",
+        "פיתוח מנגנון קבלת החלטות משותף"
+      ]
+    },
+    solution: {
+      description: "הפתרון שנמצא היה חדשני: הקמת מועצת מנהלים משפחתית עם חלוקת תחומי אחריות מדויקת. יעל קיבלה אחריות על השירות והאווירה, דני על הכספים וההתקשרויות.",
+      details: [
+        "פגישה שבועית קבועה לקבלת החלטות משותפות",
+        "הפרדה בין החשבון העסקי לאישי",
+        "מנגנון פתרון סכסוכים מובנה",
+        "הסכם שותפות מחודש ומפורט"
+      ]
+    },
+    outcome: {
+      success: true,
+      description: "לאחר 4 חודשי גישור, הזוג לא רק נשאר נשוי אלא גם חיזק את העסק. המסעדה גדלה ב-30% והם פתחו סניף נוסף.",
+      clientQuote: "זהבית היא קוסמת אמיתית. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד."
+    }
+  },
+  {
+    id: 2,
+    title: "רונית ומיכאל מתל אביב - ממאבק משמורת לשיתוף פעולה הורי",
+    location: "תל אביב",
+    marriageDuration: "8 שנים",
+    mainConflict: "משמורת ילדים",
+    tags: ["משמורת", "ילדים", "הסכם הורי"],
+    background: {
+      description: "רונית (35) ומיכאל (37) נשואים 8 שנים ובני זוג לשני ילדים: נועה (6) ותום (4). לאחר גירושין סוער, נכנסו למאבק קשה על המשמורת שפגע בילדים.",
+      quote: "\"הילדים שלנו הפכו לקורבנות של המלחמה בינינו. כל פעם שהם חוזרים מהשני, הם מתנהגים אחרת.\""
+    },
+    conflict: {
+      description: "הקונפליקט התמקד בהסדרי המשמורת והראייה. כל אחד מההורים האמין שהוא הטוב יותר לילדים והאשים את השני בפגיעה ברווחתם.",
+      dialogue: [
+        {
+          speaker: "רונית",
+          text: "הוא לא מסוגל לטפל בילדים! הוא עובד עד מאוחר ומשאיר אותם עם הבייביסיטר כל הזמן!"
+        },
+        {
+          speaker: "מיכאל",
+          text: "היא מרעילה את הילדים נגדי! כל פעם שהם חוזרים אליה הם לא רוצים לדבר איתי!"
+        },
+        {
+          speaker: "רונית",
+          text: "אני לא מרעילה אף אחד! אני רק אומרת להם את האמת על מי שאבא שלהם באמת!"
+        }
+      ]
+    },
+    intervention: {
+      description: "המגשרת זהבית דבי זיהתה שהילדים נמצאים במרכז הסכסוך וזה פוגע בהם קשה. היא החליטה על גישה ממוקדת ילדים עם מפגשים נפרדים וטכניקות מיוחדות.",
+      methods: [
+        "הכנת תוכנית הורית משותפת",
+        "קביעת כללי תקשורת בנוכחות הילדים",
+        "יצירת מרחבים נייטרליים למעברים",
+        "הדרכה על השפעת גירושין על ילדים"
+      ]
+    },
+    solution: {
+      description: "הפתרון כלל יצירת הסכם הורי מפורט עם דגש על טובת הילדים, לוח זמנים גמיש, ומנגנון תקשורת בריא בין ההורים.",
+      details: [
+        "משמורת משותפת עם לוח זמנים גמיש",
+        "מעברי ילדים במקומות ציבוריים נייטרליים",
+        "אפליקציית תקשורת הורית מיוחדת",
+        "פגישות הערכה רבעוניות לבחינת הצרכים"
+      ]
+    },
+    outcome: {
+      success: true,
+      description: "לאחר 6 חודשי עבודה, ההורים למדו לתקשר בצורה בונה ולשים את הילדים במרכז. הילדים החלו להראות שיפור משמעותי בהתנהגות ובלימודים.",
+      clientQuote: "הקוסמת זהבית לימדה אותנו איך להיות הורים גם אחרי הגירושין. היום הילדים שלנו מאושרים ואנחנו מצליחים לעבוד כצוות הורי למענם."
+    }
+  },
+  {
+    id: 3,
+    title: "שירה ועמיר מחיפה - מחלוקת רכוש שהפכה להסכם הוגן",
+    location: "חיפה",
+    marriageDuration: "15 שנים",
+    mainConflict: "חלוקת רכוש",
+    tags: ["רכוש", "נכסים", "חלוקה הוגנת"],
+    background: {
+      description: "שירה (44) ועמיר (46) נשואים 15 שנים וצברו רכוש נרחב: דירת מגורים, דירת השקעה, עסק קטן וחסכונות משמעותיים. הגירושין יצרו מחלוקת קשה על החלוקה.",
+      quote: "\"15 שנה בנינו הכל יחד, ועכשיו אנחנו רבים על כל שקל כאילו אנחנו אויבים.\""
+    },
+    conflict: {
+      description: "המחלוקת התמקדה בהערכת שווי הנכסים, תרומת כל צד להשגתם, וחלוקה הוגנת שתאפשר לשניהם להתחיל מחדש בכבוד.",
+      dialogue: [
+        {
+          speaker: "שירה",
+          text: "אני זו שטיפלתי בבית ובילדים בזמן שאתה בנית את הקריירה! התרומה שלי לא פחות חשובה!"
+        },
+        {
+          speaker: "עמיר",
+          text: "אבל אני זה שעבדתי 12 שעות ביום כדי להשיג את הכסף הזה! העסק זה היצירה שלי!"
+        },
+        {
+          speaker: "שירה",
+          text: "ואני לא יצרתי כלום? מי חשבת שמנהל את הבית ומגדל את הילדים בזמן הזה?"
+        }
+      ]
+    },
+    intervention: {
+      description: "המגשרת זהבית דבי הביאה מומחה הערכה נייטרלי וארגנה תהליך שקוף של הערכת כל הנכסים. היא עזרה לזוג להבין את התרומה הייחודית של כל צד.",
+      methods: [
+        "הערכה מקצועית ונייטרלית של כל הנכסים",
+        "מיפוי תרומות לא כספיות (טיפול בבית, גידול ילדים)",
+        "יצירת מודל חלוקה מותאם אישית",
+        "התחשבות בצרכים עתידיים של שני הצדדים"
+      ]
+    },
+    solution: {
+      description: "הפתרון כלל חלוקה יצירתית שלקחה בחשבון לא רק השווי הכספי אלא גם את הצרכים האישיים והמקצועיים של כל צד.",
+      details: [
+        "שירה קיבלה את דירת המגורים + חלק מהחסכונות",
+        "עמיר קיבל את העסק + דירת ההשקעה",
+        "חלוקת החסכונות באופן יחסי להכנסות עתידיות",
+        "מנגנון עדכון הסכם לפי שינויים בנסיבות"
+      ]
+    },
+    outcome: {
+      success: true,
+      description: "לאחר 3 חודשי גישור, הושג הסכם מקיף ושני הצדדים הרגישו שהחלוקה הוגנת. הם שמרו על יחסים אדיבים למען הילדים.",
+      clientQuote: "זהבית הצליחה להראות לנו שחלוקה הוגנת זה לא רק חשבון מתמטי. היא לקחה בחשבון את כל מה שבנינו יחד ואת החלומות שלנו לעתיד. זה בהגדרה קסם."
+    }
+  }
+];
+
+export default function CasesPage() {
+  return (
+    <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(testimonialSchema),
+        }}
+      />
+      <Navigation menuItems={menuItems} />
+
+      <main>
+        <Hero
+          title="סיפורי הצלחה של המגשרת"
+          subtitle="סיפורים אמיתיים של הצלחה"
+          description="הכירו את הסיפורים המרגשים של זוגות שהצליחו להגיע להסכמים מוסכמים ולפתור סכסוכים קשים בזכות הגישור המקצועי של זהבית דבי המגשרת"
+          ctaText="קבע פגישת ייעוץ"
+          ctaHref="/contact"
+          secondaryCtaText="למד על גישור"
+          secondaryCtaHref="/mediation"
+          stats={[
+            { number: "85%", label: "הצלחה בסיום הגישור" },
+            { number: "3-6", label: "חודשי גישור ממוצע" },
+            { number: "70%", label: "חיסכון בעלויות משפטיות" }
+          ]}
+        />
+
+        <section className="py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                סיפורי הצלחה מהשטח
+              </h2>
+              <p className="text-xl text-gray-600">
+                כל סיפור הוא עדות לכוחה של התקשורת הבונה והגישור המקצועי
+              </p>
+            </div>
+
+            <div className="space-y-16">
+              {caseStudies.map((caseStudy) => (
+                <Card key={caseStudy.id} className="overflow-hidden">
+                  <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 p-8">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {caseStudy.tags.map((tag, index) => (
+                        <Badge key={index} variant="secondary">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                      {caseStudy.title}
+                    </CardTitle>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-600">
+                      <div>
+                        <span className="font-semibold">מיקום:</span> {caseStudy.location}
+                      </div>
+                      <div>
+                        <span className="font-semibold">משך נישואין:</span> {caseStudy.marriageDuration}
+                      </div>
+                      <div>
+                        <span className="font-semibold">סכסוך מרכזי:</span> {caseStudy.mainConflict}
+                      </div>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="p-8 space-y-8">
+                    {/* רקע הזוג */}
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">רקע הזוג</h4>
+                      <p className="text-gray-700 mb-4">{caseStudy.background.description}</p>
+                      <blockquote className="border-r-4 border-green-500 pr-4 italic text-gray-600">
+                        {caseStudy.background.quote}
+                      </blockquote>
+                    </div>
+
+                    {/* הקונפליקט */}
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">הקונפליקט המרכזי</h4>
+                      <p className="text-gray-700 mb-6">{caseStudy.conflict.description}</p>
+
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <h5 className="font-semibold mb-4 text-gray-900">מתוך הדיאלוג בין הצדדים:</h5>
+                        <div className="space-y-4">
+                          {caseStudy.conflict.dialogue.map((exchange, index) => (
+                            <div key={index} className="border-r-2 border-red-200 pr-4">
+                              <p className="font-medium text-red-600">{exchange.speaker}:</p>
+                              <p className="text-gray-700 italic">"{exchange.text}"</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* התערבות המגשרת */}
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התערבות "הקוסמת"</h4>
+                      <p className="text-gray-700 mb-6">{caseStudy.intervention.description}</p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {caseStudy.intervention.methods.map((method, index) => (
+                          <div key={index} className="flex items-start space-x-3 rtl:space-x-reverse">
+                            <div className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                            <p className="text-gray-700">{method}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* הפתרון */}
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">הפתרון היצירתי</h4>
+                      <p className="text-gray-700 mb-6">{caseStudy.solution.description}</p>
+
+                      <div className="bg-green-50 p-6 rounded-lg">
+                        <h5 className="font-semibold mb-4 text-green-800">פרטי הפתרון:</h5>
+                        <div className="grid grid-cols-1 gap-3">
+                          {caseStudy.solution.details.map((detail, index) => (
+                            <div key={index} className="flex items-start space-x-3 rtl:space-x-reverse">
+                              <div className="flex-shrink-0 w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                              <p className="text-green-700">{detail}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* התוצאה */}
+                    <div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התוצאה המוצלחת</h4>
+                      <p className="text-gray-700 mb-6">{caseStudy.outcome.description}</p>
+
+                      <blockquote className="bg-blue-50 p-6 rounded-lg border-r-4 border-blue-500">
+                        <p className="text-blue-800 italic mb-3">
+                          "{caseStudy.outcome.clientQuote}"
+                        </p>
+                        <p className="text-blue-600 text-sm">
+                          - עדות הלקוח על החוויה עם המגשרת זהבית דבי
+                        </p>
+                      </blockquote>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* קטע המלצות */}
+        <section className="py-16 bg-green-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                למה קוראים לה "הקוסמת"?
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="text-3xl mb-4">✨</div>
+                  <h3 className="text-xl font-semibold mb-4">יכולת הפיכת יריבים לשותפים</h3>
+                  <p className="text-gray-600">
+                    היכולת המיוחדת להפוך זוגות שנמצאים במלחמה קשה לשותפים בפתרון הקושי
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="text-3xl mb-4">🎯</div>
+                  <h3 className="text-xl font-semibold mb-4">זיהוי הבעיה האמיתית</h3>
+                  <p className="text-gray-600">
+                    התמחות בזיהוי הגורם האמיתי לסכסוך מעבר לטענות השטחיות
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <div className="text-3xl mb-4">🔮</div>
+                  <h3 className="text-xl font-semibold mb-4">פתרונות מחוץ לקופסה</h3>
+                  <p className="text-gray-600">
+                    יצירתיות בפיתוח פתרונות שמתאימים לצרכים הייחודיים של כל זוג
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+                <blockquote className="text-xl italic text-gray-700 mb-4">
+                  "זהבית דבי היא מגשרת יוצאת דופן. היכולת שלה לראות מעבר לכעס ולטינה ולהגיע ללב הבעיה היא פשוט קסם.
+                  בכל מקרה שהיא טוהלת, היא מצליחה למצוא את הדרך להביא לפתרון שמתאים לכל הצדדים."
+                </blockquote>
+                <p className="font-semibold text-green-600">
+                  - ד"ר משה כהן, מומחה לדיני משפחה
+                </p>
+              </div>
+
+              <Button size="lg" asChild className="text-lg px-8 py-4">
+                <Link href="/contact">
+                  רוצים לחוות את הקסם? קבעו פגישה
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">המגשרת - זהבית דבי</h3>
+              <p className="text-gray-300">
+                מומחית בגישור גירושין ודיני משפחה
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
+              <ul className="space-y-2">
+                <li><Link href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</Link></li>
+                <li><Link href="/about" className="text-gray-300 hover:text-white">אודות המגשרת</Link></li>
+                <li><Link href="/articles" className="text-gray-300 hover:text-white">מאמרים</Link></li>
+                <li><Link href="/cases" className="text-gray-300 hover:text-white">סיפורי הצלחה</Link></li>
+                <li><Link href="/contact" className="text-gray-300 hover:text-white">צור קשר</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">פרטי קשר</h4>
+              <p className="text-gray-300">
+                יהודה הנחתום 4<br />
+                בניין בית בלטק<br />
+                באר שבע<br />
+                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
+                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 המגשרת - זהבית דבי. כל הזכויות שמורות.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

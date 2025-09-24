@@ -1,8 +1,8 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "דבי סיידה ושו״ת - משרד עורכי דין",
-  "description": "משרד עורכי דין מוביל בגישור גירושין ודיני משפחה. זהבית דבי מומחית בגישור עם 85% הצלחה.",
+  "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת",
+  "description": "המגשרת זהבית דבי הקוסמת - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה. המגשרת המובילה עם 85% הצלחה בגישור.",
   "url": "https://hamegasheret.co.il",
   "logo": "https://hamegasheret.co.il/logo.png",
   "address": {
@@ -35,11 +35,11 @@ export const organizationSchema = {
 export const mediationServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "גישור גירושין",
-  "description": "שירות גישור גירושין מקצועי עם שיעור הצלחה של 85%. הגעה להסכמים מוסכמים ללא מלחמות משפטיות.",
+  "name": "גישור גירושין - המגשרת זהבית דבי",
+  "description": "שירות גישור גירושין מקצועי של המגשרת זהבית דבי הקוסמת עם שיעור הצלחה של 85%. הגעה להסכמים מוסכמים ללא מלחמות משפטיות.",
   "provider": {
     "@type": "LegalService",
-    "name": "דבי סיידה ושו״ת"
+    "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת"
   },
   "serviceType": "גישור גירושין",
   "areaServed": "IL",
@@ -67,8 +67,8 @@ export const familyLawServiceSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "דבי סיידה ושו״ת",
-  "description": "משרד עורכי דין מוביל בגישור גירושין ודיני משפחה בבאר שבע",
+  "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת",
+  "description": "המגשרת זהבית דבי הקוסמת - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה בבאר שבע. המגשרת המובילה בישראל.",
   "url": "https://hamegasheret.co.il",
   "telephone": "+972-54-423-2167",
   "email": "asaf@hamegasheret.co.il",
@@ -88,4 +88,54 @@ export const localBusinessSchema = {
     "Fr 08:00-13:00"
   ],
   "priceRange": "$$"
+}
+
+export const testimonialSchema = {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "לקוח מרוצה"
+  },
+  "reviewBody": "זהבית דבי המגשרת היא קוסמת אמיתית. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד.",
+  "itemReviewed": {
+    "@type": "Service",
+    "name": "גישור גירושין - המגשרת זהבית דבי"
+  }
+}
+
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "מה זה גישור גירושין?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "גישור גירושין הוא תהליך שבו צד שלישי ניטרלי (המגשרת) עוזר לבני הזוג להגיע להסכמה על כל הנושאים הקשורים לגירושין, ללא צורך בהליך משפטי ארוך ויקר."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "למה לבחור בגישור במקום בהליך משפטי?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "גישור חוסך זמן, כסף ורגשות. הוא מאפשר לבני הזוג לשמור על יחסים טובים ולמצוא פתרונות מותאמים אישית שאינם אפשריים בבית המשפט."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "כמה זמן לוקח תהליך גישור?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "בדרך כלל 2-6 חודשים, לעומת שנים בהליך משפטי. אנחנו שואפים לסיים תוך 3-4 חודשים."
+      }
+    }
+  ]
 }

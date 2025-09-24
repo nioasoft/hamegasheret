@@ -10,6 +10,7 @@ const menuItems = [
   { label: "גישור גירושין", href: "/mediation" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
+  { label: "סיפורי הצלחה", href: "/cases" },
   { label: "צור קשר", href: "/contact" }
 ];
 

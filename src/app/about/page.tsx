@@ -2,12 +2,25 @@ import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "אודות המגשרת זהבית דבי | מומחית בגישור גירושין ודיני משפחה",
+  description: "הכירו את המגשרת זהבית דבי - מומחית בגישור גירושין עם 15+ שנות ניסיון ו-85% הצלחה. המגשרת המובילה באר שבע ובכל הארץ. דיני משפחה, משמורת ילדים ופתרון סכסוכים.",
+  keywords: "זהבית דבי, המגשרת, אודות המגשרת, ניסיון בגישור, מומחית דיני משפחה, המגשרת באר שבע, עורך דין משפחה, גישור מקצועי",
+  openGraph: {
+    title: "אודות המגשרת זהבית דבי | מומחית בגישור",
+    description: "הכירו את המגשרת זהבית דבי - מומחית בגישור גירושין עם ניסיון של 15+ שנים ושיעור הצלחה של 85%.",
+    type: "website",
+  },
+};
 
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
+  { label: "סיפורי הצלחה", href: "/cases" },
   { label: "צור קשר", href: "/contact" }
 ];
 
