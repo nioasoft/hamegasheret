@@ -206,7 +206,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-lg shadow-lg p-4">
                 <div className="aspect-video rounded overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0!2d34.7915844!3d31.2521199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z15HXkNeoINep15HXog!5e0!3m2!1siw!2sil!5m2!1siw!2sil"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.765888186687!2d34.79168761547!3d31.74936908129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502666aa0ef1c3b%3A0x8e0b1e0b1e0b1e0b!2z15nXlNeV15PXlCDXlNeg15fXqteV150gNCwg15HXkNeoINep15HXog!5e0!3m2!1siw!2sil!4v1700000000000!5m2!1siw!2sil"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -221,7 +221,7 @@ export default function ContactPage() {
                 <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
                   <Button variant="outline" asChild>
                     <a
-                      href="https://maps.google.com?q=יהודה+הנחתום+4+באר+שבע"
+                      href="https://maps.google.com/maps?q=יהודה+הנחתום+4,+באר+שבע,+ישראל"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -232,7 +232,7 @@ export default function ContactPage() {
                   </Button>
                   <Button variant="outline" asChild>
                     <a
-                      href="https://waze.com/ul?q=יהודה+הנחתום+4+באר+שבע&navigate=yes"
+                      href="https://waze.com/ul?q=יהודה+הנחתום+4,+באר+שבע&navigate=yes"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
