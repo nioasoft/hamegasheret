@@ -505,8 +505,8 @@ export default function ChildSupportPage() {
                 <div className="flex justify-center">
                   <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
                     <img
-                      src="/images/placeholder.svg"
-                      alt="המגשרת זהבית דבי - ייעוץ מזונות"
+                      src="/images/child-support-hero.webp"
+                      alt="חישוב מזונות ילדים - ייעוץ משפטי מקצועי עם המגשרת זהבית דבי"
                       className="w-full h-full object-cover"
                     />
                   </div>

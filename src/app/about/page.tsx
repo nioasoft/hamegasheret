@@ -177,7 +177,7 @@ export default function AboutPage() {
                           <CardHeader className="text-center pb-6">
                             <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
                               <Image
-                                src={index === 0 ? "/images/zehavit.jpg" : "/images/asaf.jpg"}
+                                src={index === 0 ? "/images/zehavit.webp" : "/images/asaf.webp"}
                                 alt={member.name}
                                 width={128}
                                 height={128}

@@ -1,11 +1,14 @@
 import { MetadataRoute } from 'next'
+import { getPageDates } from '@/lib/git-dates'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://hamegasheret.co.il'
 
-  // Use static dates for better SEO accuracy
-  // Update these dates when content is actually modified
-  const lastModifiedDates = {
+  // Get dynamic dates from git history or use fallback dates
+  const dynamicDates = getPageDates();
+
+  // Fallback dates if git is not available
+  const fallbackDates = {
     home: new Date('2024-09-24'),
     mediation: new Date('2024-09-24'),
     childCustody: new Date('2024-09-24'),
@@ -14,7 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     about: new Date('2024-09-24'),
     articles: new Date('2024-09-24'),
     contact: new Date('2024-09-24'),
-  }
+  };
+
+  // Use dynamic dates if available, otherwise use fallback
+  const lastModifiedDates = Object.keys(fallbackDates).reduce((acc, key) => {
+    const k = key as keyof typeof fallbackDates;
+    acc[k] = dynamicDates[k] || fallbackDates[k];
+    return acc;
+  }, {} as typeof fallbackDates)
 
   return [
     {

@@ -139,3 +139,45 @@ export const faqSchema = {
     }
   ]
 }
+
+export const articleSchema = (article: {
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.title,
+  "description": article.excerpt,
+  "datePublished": article.date,
+  "dateModified": article.date,
+  "author": {
+    "@type": "Person",
+    "name": "זהבית דבי",
+    "jobTitle": "המגשרת - מומחית בגישור גירושין"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "המגשרת - זהבית דבי",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hamegasheret.co.il/logo.png"
+    }
+  },
+  "articleSection": article.category,
+  "timeRequired": article.readTime,
+  "inLanguage": "he-IL"
+})
+
+export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": item.url
+  }))
+})

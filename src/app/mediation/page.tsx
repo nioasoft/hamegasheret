@@ -180,7 +180,7 @@ export default function MediationPage() {
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
                             <Image
-                              src="/images/zehavit.jpg"
+                              src="/images/zehavit.webp"
                               alt="זהבית דבי"
                               width={128}
                               height={128}

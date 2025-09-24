@@ -169,11 +169,12 @@ export default function Home() {
                 <div className="flex justify-center">
                   <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
                     <Image
-                      src="/images/placeholder.svg"
-                      alt="ייעוץ משפטי"
+                      src="/images/consultation-hero.webp"
+                      alt="ייעוץ משפטי מקצועי עם המגשרת זהבית דבי"
                       width={192}
                       height={192}
                       className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                 </div>
