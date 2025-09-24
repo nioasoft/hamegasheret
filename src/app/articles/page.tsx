@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
+  { label: "משמורת ילדים", href: "/child-custody" },
+  { label: "מזונות", href: "/child-support" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
   { label: "סיפורי הצלחה", href: "/cases" },
@@ -871,9 +874,11 @@ export default function ArticlesPage() {
               </div>
               <div className="flex justify-center">
                 <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg">
-                  <img
+                  <Image
                     src="/images/placeholder.svg"
                     alt="מאמרים מובחרים"
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover"
                   />
                 </div>

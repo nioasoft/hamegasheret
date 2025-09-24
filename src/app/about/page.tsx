@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
+  { label: "משמורת ילדים", href: "/child-custody" },
+  { label: "מזונות", href: "/child-support" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
   { label: "סיפורי הצלחה", href: "/cases" },
@@ -173,9 +176,11 @@ export default function AboutPage() {
                         <Card key={index} className="h-full">
                           <CardHeader className="text-center pb-6">
                             <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
-                              <img
+                              <Image
                                 src={index === 0 ? "/images/zehavit.jpg" : "/images/asaf.jpg"}
                                 alt={member.name}
+                                width={128}
+                                height={128}
                                 className="w-full h-full object-cover"
                               />
                             </div>

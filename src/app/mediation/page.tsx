@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
+  { label: "משמורת ילדים", href: "/child-custody" },
+  { label: "מזונות", href: "/child-support" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
   { label: "סיפורי הצלחה", href: "/cases" },
@@ -176,9 +179,11 @@ export default function MediationPage() {
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
-                            <img
+                            <Image
                               src="/images/zehavit.jpg"
                               alt="זהבית דבי"
+                              width={128}
+                              height={128}
                               className="w-full h-full object-cover"
                             />
                           </div>

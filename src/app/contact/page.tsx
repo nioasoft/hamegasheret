@@ -8,6 +8,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
+  { label: "משמורת ילדים", href: "/child-custody" },
+  { label: "מזונות", href: "/child-support" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
   { label: "סיפורי הצלחה", href: "/cases" },

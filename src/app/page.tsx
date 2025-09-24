@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { ServicesSection } from "@/components/ui/services-section";
@@ -7,6 +8,8 @@ import { organizationSchema, mediationServiceSchema, localBusinessSchema } from 
 const menuItems = [
   { label: "דף הבית", href: "/" },
   { label: "גישור גירושין", href: "/mediation" },
+  { label: "משמורת ילדים", href: "/child-custody" },
+  { label: "מזונות", href: "/child-support" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
   { label: "סיפורי הצלחה", href: "/cases" },
@@ -59,7 +62,7 @@ const services = [
     title: "משמורת ילדים",
     description: "ייעוץ וליווי משפטי מקצועי בענייני משמורת ילדים והסדרי ראייה.",
     icon: "👨‍👩‍👧‍👦",
-    href: "/משמורת-ילדים",
+    href: "/child-custody",
     features: [
       "הסכמי משמורת מותאמים",
       "התחשבות בצרכי הילדים",
@@ -71,7 +74,7 @@ const services = [
     title: "מזונות",
     description: "ייעוץ וייצוג משפטי בענייני מזונות ילדים ומזונות אישה בהתאם לחוק.",
     icon: "💰",
-    href: "/מזונות",
+    href: "/child-support",
     features: [
       "חישוב מזונות מדויק",
       "התאמה לצרכים המשפחתיים",
@@ -98,7 +101,7 @@ export default function Home() {
           subtitle="המגשרת המובילה - הסכמים ללא מלחמות"
           description="המגשרת זהבית דבי עם הצלחה של 85% בהגעה להסכמים מוסכמים. המגשרת המובילה באר שבע ותל אביב מביאה לתוצאות מעולות ללא קרבות מיותרים."
           ctaText="קבע פגישת ייעוץ"
-          ctaHref="/צור-קשר"
+          ctaHref="/contact"
           secondaryCtaText="למד על גישור"
           secondaryCtaHref="/mediation"
           stats={stats}
@@ -165,9 +168,11 @@ export default function Home() {
                 </div>
                 <div className="flex justify-center">
                   <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
-                    <img
+                    <Image
                       src="/images/placeholder.svg"
                       alt="ייעוץ משפטי"
+                      width={192}
+                      height={192}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -192,6 +197,8 @@ export default function Home() {
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
                 <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-gray-300 hover:text-white">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-gray-300 hover:text-white">מזונות</a></li>
                 <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
                 <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
                 <li><a href="/cases" className="text-gray-300 hover:text-white">סיפורי הצלחה</a></li>
