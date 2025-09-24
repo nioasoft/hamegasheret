@@ -25,7 +25,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center h-16 relative">
           {/* Logo */}
-          <div className="absolute left-0">
+          <div className="absolute right-0">
             <Link href="/" className="text-xl font-bold text-gray-900">
               {logo}
             </Link>
@@ -46,7 +46,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
 
           {/* CTA Button */}
           {ctaButton && (
-            <div className="absolute right-0 hidden md:block">
+            <div className="absolute left-0 hidden md:block">
               <Button asChild>
                 <Link href={ctaButton.href}>
                   {ctaButton.text}
@@ -56,13 +56,14 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
           )}
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden absolute left-4">
             <Button
-              variant="ghost"
-              size="sm"
+              variant="outline"
+              size="lg"
+              className="border-2 border-slate-600 hover:bg-slate-100 hover:border-slate-800 shadow-md"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-7 w-7 text-slate-700" /> : <Menu className="h-7 w-7 text-slate-700" />}
             </Button>
           </div>
         </div>

@@ -97,9 +97,9 @@ export default function Home() {
 
       <main>
         <Hero
-          title="המגשרת - זהבית דבי | מומחית בגישור גירושין"
-          subtitle="המגשרת המובילה - הסכמים ללא מלחמות"
-          description="המגשרת זהבית דבי עם הצלחה של 85% בהגעה להסכמים מוסכמים. המגשרת המובילה באר שבע ותל אביב מביאה לתוצאות מעולות ללא קרבות מיותרים."
+          title="המגשרת זהבית דבי"
+          subtitle="מומחית בגישור גירושין - הסכמים ללא מלחמות"
+          description="המגשרת הבכירה באר שבע ותל אביב עם הצלחה של 85% בהגעה להסכמים מוסכמים. מביאה לתוצאות מעולות ללא קרבות מיותרים בתהליך גישור מקצועי ורגיש."
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="למד על גישור"
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 bg-green-50">
+        <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">

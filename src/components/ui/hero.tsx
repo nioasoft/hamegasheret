@@ -33,14 +33,14 @@ export function Hero({
   testimonials
 }: HeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-16 sm:py-24">
+    <section className="relative bg-gradient-to-br from-gray-50 to-slate-100 py-16 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 text-sm sm:text-base">
             {subtitle}
           </Badge>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight max-w-4xl mx-auto">
             {title}
           </h1>
 
@@ -77,7 +77,7 @@ export function Hero({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-green-600 mb-2">
+                  <div className="text-3xl sm:text-4xl font-bold text-slate-700 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 text-sm sm:text-base">
