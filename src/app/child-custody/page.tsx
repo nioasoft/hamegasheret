@@ -236,7 +236,7 @@ export default function ChildCustodyPage() {
                   המגשרת זהבית דבי - מומחית במשמורת ילדים
                 </h2>
                 <p className="text-xl text-gray-600">
-                  "כל ילד זוכה לשני הורים" - זהו העיקרון המנחה את המגשרת זהבית דבי
+                  {"כל ילד זוכה לשני הורים"} - זהו העיקרון המנחה את המגשרת זהבית דבי
                 </p>
               </div>
 
@@ -260,23 +260,23 @@ export default function ChildCustodyPage() {
                   <h3 className="text-xl font-bold mb-6 text-center">התמחויות המגשרת</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>משמורת משותפת יצירתית</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>הסדרי ראייה גמישים</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>פתרונות למרחק גיאוגרפי</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>משמורת בגילאים שונים</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>הכנת ילדים לשינוי</span>
                     </li>
                   </ul>

@@ -1206,6 +1206,18 @@ const categories = [
   { name: "גישור vs ליטיגציה", count: 1 }
 ];
 
+// פונקציה להמרת כותרת לכתובת URL
+function titleToSlug(title: string): string {
+  return title
+    .replace(/המגשרת|הקוסמת/g, '') // הסרת מילים חוזרות
+    .replace(/[:\-–]/g, '') // הסרת סימני פיסוק
+    .trim()
+    .split(' ')
+    .filter(word => word.length > 0)
+    .slice(0, 4) // נשתמש ב-4 מילים ראשונות
+    .join('-');
+}
+
 export default function ArticlesPage() {
   const featuredArticles = articles.filter(article => article.featured);
   const regularArticles = articles.filter(article => !article.featured);
@@ -1284,7 +1296,7 @@ export default function ArticlesPage() {
                       <span className="text-sm text-gray-500">{article.readTime}</span>
                     </div>
                     <CardTitle className="text-xl leading-tight">
-                      <a href="#" className="hover:text-slate-600 transition-colors">
+                      <a href={`/articles/${titleToSlug(article.title)}`} className="hover:text-slate-600 transition-colors">
                         {article.title}
                       </a>
                     </CardTitle>
@@ -1298,7 +1310,7 @@ export default function ArticlesPage() {
                         {article.date}
                       </div>
                       <Button variant="outline" className="w-full hover:bg-gray-50 hover:border-gray-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
-                        <a href="#">
+                        <a href={`/articles/${titleToSlug(article.title)}`}>
                           קרא עוד
                         </a>
                       </Button>
@@ -1336,7 +1348,7 @@ export default function ArticlesPage() {
                           <span className="text-sm text-gray-500">{article.date}</span>
                         </div>
                         <h3 className="text-xl font-semibold mb-2">
-                          <a href="#" className="hover:text-slate-600 transition-colors">
+                          <a href={`/articles/${titleToSlug(article.title)}`} className="hover:text-slate-600 transition-colors">
                             {article.title}
                           </a>
                         </h3>
@@ -1346,7 +1358,7 @@ export default function ArticlesPage() {
                       </div>
                       <div className="md:w-32 flex-shrink-0">
                         <Button variant="outline" className="hover:bg-gray-50 hover:border-gray-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
-                          <a href="#">
+                          <a href={`/articles/${titleToSlug(article.title)}`}>
                             קרא עוד
                           </a>
                         </Button>
@@ -1360,7 +1372,7 @@ export default function ArticlesPage() {
         </section>
 
         {/* קריאה לפעולה */}
-        <section className="py-12 bg-green-600 text-white">
+        <section className="py-12 bg-slate-700 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               יש לך שאלות נוספות?
@@ -1370,11 +1382,11 @@ export default function ArticlesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg" asChild>
-                <a href="/צור-קשר">
+                <a href="/contact">
                   קבע ייעוץ חינם
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="hover:bg-green-50 hover:border-green-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
+              <Button size="lg" variant="outline" className="hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
                 <a href="tel:+972-54-423-2167">
                   התקשר עכשיו
                 </a>

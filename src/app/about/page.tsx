@@ -124,7 +124,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-5 text-gray-700 text-base leading-7">
                   <p>
-                    משרד "דבי סיידה ושו״ת" הינו משרד מקצועי למתן ייעוץ, סיוע משפטי וייצוג למוסדות ציבוריים,
+                    משרד {`"דבי סיידה ושו״ת"`} הינו משרד מקצועי למתן ייעוץ, סיוע משפטי וייצוג למוסדות ציבוריים,
                     תאגידים מסחריים וללקוחות פרטיים. המשרד מציע שירותים משפטיים במגוון התחומים המסחריים-אזרחיים
                     ובתחום המנהלי-מוניציפאלי וזאת באמצעות עורכי דין איכותיים ומקצועיים.
                   </p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
                               />
                             </div>
                             <CardTitle className="text-2xl mb-2">{member.name}</CardTitle>
-                            <p className="text-green-600 font-medium">{member.title}</p>
+                            <p className="text-slate-600 font-medium">{member.title}</p>
                           </CardHeader>
 
                   <CardContent className="space-y-5">
@@ -198,7 +198,7 @@ export default function AboutPage() {
                       <ul className="space-y-1.5">
                         {member.achievements.map((achievement, achIndex) => (
                           <li key={achIndex} className="flex items-start text-sm text-gray-600">
-                            <span className="text-green-500 mr-2 mt-1">•</span>
+                            <span className="text-slate-500 mr-2 mt-1">•</span>
                             <span className="leading-6">{achievement}</span>
                           </li>
                         ))}
@@ -243,7 +243,7 @@ export default function AboutPage() {
                   <CardContent className="p-5 flex-1 flex flex-col">
                     <div className="text-center h-full flex flex-col">
                       <p className="text-gray-700 mb-4 italic text-base leading-7 flex-1">
-                        "{testimonial.quote}"
+                        {`"${testimonial.quote}"`}
                       </p>
                       <div className="border-t pt-3 mt-auto">
                         <div className="font-semibold text-gray-900 text-base">
@@ -262,7 +262,7 @@ export default function AboutPage() {
         </section>
 
         {/* סטטיסטיקות */}
-        <section className="py-12 bg-green-600 text-white">
+        <section className="py-12 bg-slate-700 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">

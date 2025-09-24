@@ -165,7 +165,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
 
               <Button
                 variant="outline"
-                className="w-full hover:bg-green-50 hover:border-green-300 transition-colors"
+                className="w-full hover:bg-slate-50 hover:border-slate-300 transition-colors"
                 asChild
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">

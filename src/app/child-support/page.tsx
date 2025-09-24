@@ -1,7 +1,6 @@
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactForm } from "@/components/ui/contact-form";
 import { Check, Phone, Mail, MapPin } from "lucide-react";
@@ -199,19 +198,19 @@ export default function ChildSupportPage() {
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>שני ההורים אחראים למזונות (לא רק האבא)</span>
                       </li>
                       <li className="flex items-start">
-                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>נוסחת חישוב אחידה ושקופה</span>
                       </li>
                       <li className="flex items-start">
-                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>דגש על צרכי הילד בפועל</span>
                       </li>
                       <li className="flex items-start">
-                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>התחשבות בהסדרי לינה</span>
                       </li>
                     </ul>
@@ -397,7 +396,7 @@ export default function ChildSupportPage() {
                       {method.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
                           <span className={`${index === 0 ? 'text-slate-600' : 'text-slate-600'} ml-2 mt-1`}>
-                            {index === 0 ? <Check className="h-4 w-4 text-green-500" /> : '•'}
+                            {index === 0 ? <Check className="h-4 w-4 text-slate-600" /> : '•'}
                           </span>
                           <span className="text-gray-700">{benefit}</span>
                         </li>

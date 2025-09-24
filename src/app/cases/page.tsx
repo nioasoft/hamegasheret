@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -388,7 +388,7 @@ export default function CasesPage() {
             <div className="space-y-16">
               {caseStudies.map((caseStudy) => (
                 <Card key={caseStudy.id} className="overflow-hidden">
-                  <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 p-8">
+                  <CardHeader className="bg-gradient-to-r from-slate-50 to-blue-50 p-8">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {caseStudy.tags.map((tag, index) => (
                         <Badge key={index} variant="secondary">
@@ -419,7 +419,7 @@ export default function CasesPage() {
                     <div>
                       <h4 className="text-xl font-semibold text-gray-900 mb-4">רקע הזוג</h4>
                       <p className="text-gray-700 mb-4">{caseStudy.background.description}</p>
-                      <blockquote className="border-r-4 border-green-500 pr-4 italic text-gray-600">
+                      <blockquote className="border-r-4 border-slate-400 pr-4 italic text-gray-600">
                         {caseStudy.background.quote}
                       </blockquote>
                     </div>
@@ -435,7 +435,7 @@ export default function CasesPage() {
                           {caseStudy.conflict.dialogue.map((exchange, index) => (
                             <div key={index} className="border-r-2 border-red-200 pr-4">
                               <p className="font-medium text-red-600">{exchange.speaker}:</p>
-                              <p className="text-gray-700 italic">"{exchange.text}"</p>
+                              <p className="text-gray-700 italic">{`"${exchange.text}"`}</p>
                             </div>
                           ))}
                         </div>
@@ -444,13 +444,13 @@ export default function CasesPage() {
 
                     {/* התערבות המגשרת */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התערבות "הקוסמת"</h4>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התערבות {"הקוסמת"}</h4>
                       <p className="text-gray-700 mb-6">{caseStudy.intervention.description}</p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {caseStudy.intervention.methods.map((method, index) => (
                           <div key={index} className="flex items-start space-x-3 rtl:space-x-reverse">
-                            <div className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                            <div className="flex-shrink-0 w-2 h-2 bg-slate-500 rounded-full mt-2"></div>
                             <p className="text-gray-700">{method}</p>
                           </div>
                         ))}
@@ -462,13 +462,13 @@ export default function CasesPage() {
                       <h4 className="text-xl font-semibold text-gray-900 mb-4">הפתרון היצירתי</h4>
                       <p className="text-gray-700 mb-6">{caseStudy.solution.description}</p>
 
-                      <div className="bg-green-50 p-6 rounded-lg">
-                        <h5 className="font-semibold mb-4 text-green-800">פרטי הפתרון:</h5>
+                      <div className="bg-slate-50 p-6 rounded-lg">
+                        <h5 className="font-semibold mb-4 text-slate-700">פרטי הפתרון:</h5>
                         <div className="grid grid-cols-1 gap-3">
                           {caseStudy.solution.details.map((detail, index) => (
                             <div key={index} className="flex items-start space-x-3 rtl:space-x-reverse">
-                              <div className="flex-shrink-0 w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                              <p className="text-green-700">{detail}</p>
+                              <div className="flex-shrink-0 w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                              <p className="text-slate-700">{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -482,7 +482,7 @@ export default function CasesPage() {
 
                       <blockquote className="bg-blue-50 p-6 rounded-lg border-r-4 border-blue-500">
                         <p className="text-blue-800 italic mb-3">
-                          "{caseStudy.outcome.clientQuote}"
+                          {`"${caseStudy.outcome.clientQuote}"`}
                         </p>
                         <p className="text-blue-600 text-sm">
                           - עדות הלקוח על החוויה עם המגשרת זהבית דבי
@@ -497,11 +497,11 @@ export default function CasesPage() {
         </section>
 
         {/* קטע המלצות */}
-        <section className="py-16 bg-green-50">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                למה קוראים לה "הקוסמת"?
+                למה קוראים לה {"הקוסמת"}?
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -532,11 +532,10 @@ export default function CasesPage() {
 
               <div className="bg-white p-8 rounded-lg shadow-md mb-8">
                 <blockquote className="text-xl italic text-gray-700 mb-4">
-                  "זהבית דבי היא מגשרת יוצאת דופן. היכולת שלה לראות מעבר לכעס ולטינה ולהגיע ללב הבעיה היא פשוט קסם.
-                  בכל מקרה שהיא טוהלת, היא מצליחה למצוא את הדרך להביא לפתרון שמתאים לכל הצדדים."
+                  {"זהבית דבי היא מגשרת יוצאת דופן. היכולת שלה לראות מעבר לכעס ולטינה ולהגיע ללב הבעיה היא פשוט קסם. בכל מקרה שהיא טוהלת, היא מצליחה למצוא את הדרך להביא לפתרון שמתאים לכל הצדדים."}
                 </blockquote>
-                <p className="font-semibold text-green-600">
-                  - ד"ר משה כהן, מומחה לדיני משפחה
+                <p className="font-semibold text-slate-600">
+                  - ד{"ר"} משה כהן, מומחה לדיני משפחה
                 </p>
               </div>
 

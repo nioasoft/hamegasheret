@@ -170,7 +170,7 @@ export default function MediationPage() {
                               הניסיון הרב שלה והגישה הייחודית מאפשרים לה להגיע להישגים יוצאי דופן.
                             </p>
                             <p>
-                              '"ככה הדיינים בבית הדין הרבני מכנים אותה - קוסמת אמיתית בגישור."'
+                              {`"ככה הדיינים בבית הדין הרבני מכנים אותה - קוסמת אמיתית בגישור."`}
                             </p>
                             <p>
                               הגישה של זהבית מתמקדת בזיהוי הצרכים האמיתיים של כל צד, יצירת אווירה של אמון וכבוד הדדי,
@@ -191,19 +191,19 @@ export default function MediationPage() {
                           <h3 className="text-xl font-bold mb-4 text-center">הישגים מוכחים</h3>
                           <ul className="space-y-3">
                             <li className="flex items-center">
-                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>85% הצלחה בהגעה להסכמים</span>
                             </li>
                             <li className="flex items-center">
-                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>15+ שנות ניסיון בגישור</span>
                             </li>
                             <li className="flex items-center">
-                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>מאות זוגות שקיבלו ייעוץ</span>
                             </li>
                             <li className="flex items-center">
-                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>הכרה מקצועית מדיינים בבתי דין</span>
                             </li>
                           </ul>
@@ -316,7 +316,7 @@ export default function MediationPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <a href="/צור-קשר">
+                <a href="/contact">
                   קבע פגישת ייעוץ
                 </a>
               </Button>

@@ -197,17 +197,53 @@ export default function ContactPage() {
         </section>
 
         {/* מפה */}
-        <section className="py-12 bg-green-50">
+        <section className="py-12 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 מיקום המשרד
               </h2>
               <div className="bg-white rounded-lg shadow-lg p-4">
-                <div className="aspect-video bg-gray-200 rounded flex items-center justify-center">
-                  <p className="text-gray-600">מפה תוצג כאן</p>
+                <div className="aspect-video rounded overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0!2d34.7915844!3d31.2521199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z15HXkNeoINep15HXog!5e0!3m2!1siw!2sil!5m2!1siw!2sil"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="מיקום המשרד - יהודה הנחתום 4, באר שבע"
+                  ></iframe>
                 </div>
-                <div className="mt-4 p-4 bg-blue-50 rounded">
+
+                {/* כפתורי ניווט */}
+                <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button variant="outline" asChild>
+                    <a
+                      href="https://maps.google.com?q=יהודה+הנחתום+4+באר+שבע"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <span>🗺️</span>
+                      פתח ב-Google Maps
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <a
+                      href="https://waze.com/ul?q=יהודה+הנחתום+4+באר+שבע&navigate=yes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <span>🚗</span>
+                      נווט עם Waze
+                    </a>
+                  </Button>
+                </div>
+
+                <div className="mt-6 p-4 bg-blue-50 rounded">
                   <h3 className="font-semibold text-gray-900 mb-2">הוראות הגעה</h3>
                   <p className="text-gray-600 text-sm">
                     המשרד ממוקם במרכז באר שבע, עם גישה נוחה לתחבורה ציבורית ולחניה.
@@ -249,7 +285,7 @@ export default function ContactPage() {
         </section>
 
         {/* קריאה לפעולה אחרונה */}
-        <section className="py-12 bg-green-600 text-white">
+        <section className="py-12 bg-slate-700 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               אל תחכה, צור קשר עכשיו!

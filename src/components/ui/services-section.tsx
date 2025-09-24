@@ -48,7 +48,7 @@ export function ServicesSection({ title, subtitle, services }: ServicesSectionPr
                 <ul className="space-y-1.5 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <Check className="text-green-500 mr-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-slate-600 mr-2 h-4 w-4 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -56,7 +56,7 @@ export function ServicesSection({ title, subtitle, services }: ServicesSectionPr
 
                 <Button
                   variant="outline"
-                  className="w-full mt-auto hover:bg-green-50 hover:border-green-300 transition-all active:scale-95 transform hover:shadow-md"
+                  className="w-full mt-auto hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95 transform hover:shadow-md"
                   asChild
                 >
                   <Link href={service.href}>

@@ -74,13 +74,13 @@ export function Hero({
           </div>
 
           {stats && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mb-10">
+            <div className="grid grid-cols-3 gap-2 sm:gap-8 mb-10">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-slate-700 mb-1">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-sm sm:text-base">
+                  <div className="text-gray-600 text-xs sm:text-sm lg:text-base leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export function Hero({
                 <Card key={index} className="text-center p-4 h-full flex flex-col bg-white/50 backdrop-blur-sm border border-gray-200/50 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-0 flex-1 flex flex-col">
                     <p className="text-gray-700 mb-4 italic text-sm leading-relaxed flex-1">
-                      "{testimonial.quote}"
+                      {`"${testimonial.quote}"`}
                     </p>
                     <div className="text-xs border-t pt-3 mt-auto">
                       <div className="font-semibold text-gray-900">
