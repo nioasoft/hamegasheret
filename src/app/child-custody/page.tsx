@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Check } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -227,7 +228,7 @@ export default function ChildCustodyPage() {
         />
 
         {/* המגשרת זהבית דבי - המומחיות */}
-        <section className="py-12 bg-gradient-to-r from-blue-50 to-green-50">
+        <section className="py-12 bg-gradient-to-r from-gray-50 to-slate-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -259,23 +260,23 @@ export default function ChildCustodyPage() {
                   <h3 className="text-xl font-bold mb-6 text-center">התמחויות המגשרת</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <span className="text-blue-500 ml-2">✓</span>
+                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>משמורת משותפת יצירתית</span>
                     </li>
                     <li className="flex items-center">
-                      <span className="text-blue-500 ml-2">✓</span>
+                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>הסדרי ראייה גמישים</span>
                     </li>
                     <li className="flex items-center">
-                      <span className="text-blue-500 ml-2">✓</span>
+                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>פתרונות למרחק גיאוגרפי</span>
                     </li>
                     <li className="flex items-center">
-                      <span className="text-blue-500 ml-2">✓</span>
+                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>משמורת בגילאים שונים</span>
                     </li>
                     <li className="flex items-center">
-                      <span className="text-blue-500 ml-2">✓</span>
+                      <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>הכנת ילדים לשינוי</span>
                     </li>
                   </ul>
@@ -312,7 +313,7 @@ export default function ChildCustodyPage() {
                         <ul className="space-y-1">
                           {type.benefits.map((benefit, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-green-500 ml-2 mt-0.5">•</span>
+                              <span className="text-slate-600 ml-2 mt-0.5">•</span>
                               <span className="text-sm">{benefit}</span>
                             </li>
                           ))}
@@ -347,7 +348,7 @@ export default function ChildCustodyPage() {
                 {lawChanges.map((change, index) => (
                   <Card key={index}>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold mb-3 text-blue-700">
+                      <h3 className="text-lg font-semibold mb-3 text-slate-700">
                         {change.title}
                       </h3>
                       <p className="text-gray-700">{change.description}</p>
@@ -356,7 +357,7 @@ export default function ChildCustodyPage() {
                 ))}
               </div>
 
-              <div className="mt-8 p-6 bg-blue-100 rounded-lg">
+              <div className="mt-8 p-6 bg-gray-100 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3">השפעה על הגישור</h3>
                 <p className="text-gray-700">
                   השינויים החדשים בחוק מחזקים את האפשרויות לגישור יעיל במשמורת.
@@ -390,7 +391,7 @@ export default function ChildCustodyPage() {
                     <ul className="space-y-2">
                       {category.tips.map((tip, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="text-green-500 ml-2 mt-1">→</span>
+                          <span className="text-slate-600 ml-2 mt-1">→</span>
                           <span className="text-sm">{tip}</span>
                         </li>
                       ))}
@@ -401,7 +402,7 @@ export default function ChildCustodyPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="bg-green-100 p-6 rounded-lg">
+              <div className="bg-gray-100 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3">עזרה מקצועית</h3>
                 <p className="text-gray-700">
                   המגשרת זהבית דבי מספקת ליווי מתמשך גם אחרי חתימת ההסכם,
@@ -413,7 +414,7 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* סיפורי הצלחה */}
-        <section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
+        <section className="py-12 bg-gradient-to-r from-gray-50 to-slate-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -428,13 +429,13 @@ export default function ChildCustodyPage() {
               {successStories.map((story, index) => (
                 <Card key={index} className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-lg text-blue-700">{story.title}</CardTitle>
+                    <CardTitle className="text-lg text-slate-700">{story.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-700 mb-4">{story.description}</p>
-                    <div className="p-3 bg-green-100 rounded">
-                      <p className="text-sm font-medium text-green-800">תוצאות:</p>
-                      <p className="text-sm text-green-700">{story.outcome}</p>
+                    <div className="p-3 bg-gray-100 rounded">
+                      <p className="text-sm font-medium text-slate-800">תוצאות:</p>
+                      <p className="text-sm text-slate-700">{story.outcome}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -479,7 +480,7 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* סטטיסטיקות */}
-        <section className="py-12 bg-blue-600 text-white">
+        <section className="py-12 bg-slate-700 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">
@@ -512,7 +513,7 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* קריאה לפעולה */}
-        <section className="py-12 bg-green-600 text-white">
+        <section className="py-12 bg-slate-800 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               מוכנים למצוא את הפתרון הטוב ביותר לילדים שלכם?

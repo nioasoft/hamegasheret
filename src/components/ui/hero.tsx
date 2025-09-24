@@ -51,7 +51,7 @@ export function Hero({
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              className="text-lg px-8 py-4 h-auto"
+              className="text-lg px-8 py-4 h-auto hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg"
               asChild
             >
               <a href={ctaHref}>
@@ -63,7 +63,7 @@ export function Hero({
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-4 h-auto"
+                className="text-lg px-8 py-4 h-auto hover:bg-gray-50 hover:border-gray-300 transition-all active:scale-95 transform hover:shadow-md"
                 asChild
               >
                 <a href={secondaryCtaHref}>
@@ -74,10 +74,10 @@ export function Hero({
           </div>
 
           {stats && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mb-10">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-slate-700 mb-2">
+                  <div className="text-3xl sm:text-4xl font-bold text-slate-700 mb-1">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 text-sm sm:text-base">
@@ -89,14 +89,14 @@ export function Hero({
           )}
 
           {testimonials && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="text-center p-6">
-                  <CardContent className="p-0">
-                    <p className="text-gray-700 mb-4 italic">
+                <Card key={index} className="text-center p-4 h-full flex flex-col bg-white/50 backdrop-blur-sm border border-gray-200/50 shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-0 flex-1 flex flex-col">
+                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed flex-1">
                       "{testimonial.quote}"
                     </p>
-                    <div className="text-sm">
+                    <div className="text-xs border-t pt-3 mt-auto">
                       <div className="font-semibold text-gray-900">
                         {testimonial.author}
                       </div>

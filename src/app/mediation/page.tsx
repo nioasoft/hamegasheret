@@ -4,6 +4,7 @@ import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Check } from "lucide-react";
 import { Metadata } from "next";
 import { faqSchema } from "@/lib/schema";
 
@@ -155,7 +156,7 @@ export default function MediationPage() {
         />
 
                 {/* זהבית דבי - המומחית */}
-                <section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
+                <section className="py-12 bg-gradient-to-r from-gray-50 to-slate-100">
                   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -190,19 +191,19 @@ export default function MediationPage() {
                           <h3 className="text-xl font-bold mb-4 text-center">הישגים מוכחים</h3>
                           <ul className="space-y-3">
                             <li className="flex items-center">
-                              <span className="text-green-500 ml-2">✓</span>
+                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>85% הצלחה בהגעה להסכמים</span>
                             </li>
                             <li className="flex items-center">
-                              <span className="text-green-500 ml-2">✓</span>
+                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>15+ שנות ניסיון בגישור</span>
                             </li>
                             <li className="flex items-center">
-                              <span className="text-green-500 ml-2">✓</span>
+                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>מאות זוגות שקיבלו ייעוץ</span>
                             </li>
                             <li className="flex items-center">
-                              <span className="text-green-500 ml-2">✓</span>
+                              <Check className="text-green-500 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>הכרה מקצועית מדיינים בבתי דין</span>
                             </li>
                           </ul>
@@ -256,7 +257,7 @@ export default function MediationPage() {
                 {processSteps.map((step, index) => (
                   <div key={index} className="flex items-start space-x-4 rtl:space-x-reverse">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                      <div className="w-12 h-12 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold text-lg">
                         {step.step}
                       </div>
                     </div>
@@ -305,7 +306,7 @@ export default function MediationPage() {
         </section>
 
         {/* קריאה לפעולה */}
-        <section className="py-12 bg-green-600 text-white">
+        <section className="py-12 bg-slate-800 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               מוכנים להתחיל את התהליך?
@@ -341,10 +342,13 @@ export default function MediationPage() {
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white">צור קשר</a></li>
+                <li><a href="/mediation" className="text-gray-300 hover:text-white transition-colors">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-gray-300 hover:text-white transition-colors">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-gray-300 hover:text-white transition-colors">מזונות</a></li>
+                <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-gray-300 hover:text-white transition-colors">מאמרים</a></li>
+                <li><a href="/cases" className="text-gray-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
+                <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">צור קשר</a></li>
               </ul>
             </div>
             <div>
@@ -353,8 +357,8 @@ export default function MediationPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">+972-54-423-2167</a><br />
+                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white transition-colors">asaf@hamegasheret.co.il</a>
               </p>
             </div>
           </div>

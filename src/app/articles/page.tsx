@@ -87,7 +87,7 @@ const articles = [
     זהבית דבי, שזכתה לכינוי 'הקוסמת' מלקוחותיה, מסכמת: "הטעויות הללו נפוצות מאוד, אבל הן ניתנות למניעה. המגשרת כאן כדי להדריך אתכם דרך התהליך ולוודא שתגיעו לפתרון הכי טוב עבורכם ועבור המשפחה שלכם. זכרו - גירושין חכמים הם כאלו שכל הצדדים יוצאים מהם עם כבוד ועם פתרון שהם יכולים לחיות איתו לאורך זמן."`,
     category: "טיפים מהמגשרת",
     readTime: "8 דקות קריאה",
-    date: "2024-02-15",
+    date: "15 בפברואר 2024",
     featured: true,
     image: "/images/divorce-mistakes.webp"
   },
@@ -220,7 +220,7 @@ const articles = [
     המגשרת מזמינה זוגות שמתלבטים לקבוע ייעוץ אישי כדי לבדוק יחד אם משמורת משותפת מתאימה למקרה שלהם. "הקסם של המגשרת," כפי שמכנים אותה לקוחותיה, "הוא ביכולת לראות את הפוטנציאל בכל משפחה ולעזור לה להגיע אליו."`,
     category: "משמורת ילדים",
     readTime: "10 דקות קריאה",
-    date: "2024-02-10",
+    date: "10 בפברואר 2024",
     featured: true,
     image: "/images/shared-custody.webp"
   },
@@ -359,7 +359,7 @@ const articles = [
     המגשרת מזמינה זוגות העומדים לפני חלוקת רכוש לקבוע פגישת ייעוץ ללא התחייבות: "הקסם שלי כמגשרת הוא לראות את הפוטנציאל לפתרון גם במקרים הכי מורכבים. לעיתים קרובות הפתרון הכי פשוט הוא גם הכי חכם."`,
     category: "חלוקת רכוש",
     readTime: "9 דקות קריאה",
-    date: "2024-02-05",
+    date: "5 בפברואר 2024",
     featured: true
   },
   {
@@ -386,7 +386,7 @@ const articles = [
     אצל המגשרת זהבית דבי, אנו מתמחים בגישור גירושין עם שיעור הצלחה של 85%.`,
     category: "גישור גירושין",
     readTime: "5 דקות קריאה",
-    date: "2024-01-15",
+    date: "15 בינואר 2024",
     featured: true
   },
   {
@@ -420,7 +420,7 @@ const articles = [
     בגישור עם המגשרת, בני הזוג יכולים למצוא פתרונות יצירתיים המותאמים לצרכים הספציפיים שלהם. בבית המשפט, הפתרונות מוגבלים על ידי החוק והפסיקה.`,
     category: "גישור גירושין",
     readTime: "7 דקות קריאה",
-    date: "2024-01-10",
+    date: "10 בינואר 2024",
     featured: true
   },
   {
@@ -452,7 +452,7 @@ const articles = [
     "המגשרת זהבית דבי היא קוסמת אמיתית בגישור. היכולת שלה להביא זוגות להסכמה הדדית פשוט מדהימה." - ד.מ., דיין בבית הדין הרבני באר שבע`,
     category: "המומחים שלנו",
     readTime: "4 דקות קריאה",
-    date: "2024-01-08",
+    date: "8 בינואר 2024",
     featured: true
   },
   {
@@ -504,7 +504,7 @@ const articles = [
     5. פנו לעזרה מקצועית במידת הצורך`,
     category: "משמורת ילדים",
     readTime: "8 דקות קריאה",
-    date: "2024-01-05",
+    date: "5 בינואר 2024",
     featured: false
   },
   {
@@ -559,7 +559,7 @@ const articles = [
     4. שקלו גישור במקרה של מחלוקות`,
     category: "מזונות",
     readTime: "6 דקות קריאה",
-    date: "2024-01-03",
+    date: "3 בינואר 2024",
     featured: false
   },
   {
@@ -626,7 +626,7 @@ const articles = [
     - מניעת סכסוכים עתידיים`,
     category: "הסכמי גירושין",
     readTime: "9 דקות קריאה",
-    date: "2024-01-01",
+    date: "1 בינואר 2024",
     featured: false
   },
   {
@@ -911,7 +911,7 @@ const articles = [
     המגשרת זהבית דבי מסכמת: "הסכם ממון הוא כלי חשוב להגנה על שני בני הזוג. כשהוא נערך נכון ובהגינות, הוא מספק שקט נפשי ומונע סכסוכים עתידיים."`,
     category: "הסכמי ממון",
     readTime: "11 דקות קריאה",
-    date: "2024-03-15",
+    date: "15 במרץ 2024",
     featured: false
   },
   {
@@ -1037,7 +1037,7 @@ const articles = [
     המגשרת זהבית דבי מסכמת: "הקשר בין סבים לנכדים הוא קדוש. בתקופה קשה של גירושין, הסבים יכולים להיות עוגן של יציבות ואהבה. חשוב לשמור על הקשר הזה למען כולם, ובמיוחד למען הילדים."`,
     category: "זכויות משפחתיות",
     readTime: "10 דקות קריאה",
-    date: "2024-03-10",
+    date: "10 במרץ 2024",
     featured: false
   },
   {
@@ -1186,7 +1186,7 @@ const articles = [
     המגשרת זהבית דבי מסכמת: "אין פתרון אחד שמתאים לכולם. גישור מתאים לרוב המקרים ומביא לתוצאות טובות יותר, אבל יש מקרים שבהם ליטיגציה הכרחית. החוכמה היא לבחור את הדרך הנכונה למקרה שלכם."`,
     category: "גישור vs ליטיגציה",
     readTime: "12 דקות קריאה",
-    date: "2024-03-05",
+    date: "5 במרץ 2024",
     featured: true
   }
 ];
@@ -1233,11 +1233,16 @@ export default function ArticlesPage() {
                 קטגוריות מאמרים
               </h2>
             </div>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
               {categories.map((category, index) => (
-                <Badge key={index} variant="secondary" className="text-sm px-4 py-2">
+                <Button
+                  key={index}
+                  variant="outline"
+                  size="sm"
+                  className="text-sm px-3 py-2 sm:px-4 sm:py-2 h-auto min-h-[2.5rem] hover:bg-slate-100 hover:border-slate-300 transition-colors active:scale-95 transform"
+                >
                   {category.name} ({category.count})
-                </Badge>
+                </Button>
               ))}
             </div>
           </div>
@@ -1270,8 +1275,8 @@ export default function ArticlesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredArticles.map((article, index) => (
-                <Card key={index} className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
+                <Card key={index} className="h-full hover:shadow-lg transition-shadow flex flex-col">
+                  <CardHeader className="flex-shrink-0">
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="default" className="text-xs">
                         {article.category}
@@ -1279,20 +1284,20 @@ export default function ArticlesPage() {
                       <span className="text-sm text-gray-500">{article.readTime}</span>
                     </div>
                     <CardTitle className="text-xl leading-tight">
-                      <a href="#" className="hover:text-blue-600 transition-colors">
+                      <a href="#" className="hover:text-slate-600 transition-colors">
                         {article.title}
                       </a>
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-1 flex flex-col">
-                    <p className="text-gray-600 mb-4 flex-1">
+                  <CardContent className="flex-grow flex flex-col">
+                    <p className="text-gray-600 mb-4 flex-grow">
                       {article.excerpt}
                     </p>
                     <div className="mt-auto">
                       <div className="text-sm text-gray-500 mb-3">
                         {article.date}
                       </div>
-                      <Button variant="outline" className="w-full" asChild>
+                      <Button variant="outline" className="w-full hover:bg-gray-50 hover:border-gray-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
                         <a href="#">
                           קרא עוד
                         </a>
@@ -1331,7 +1336,7 @@ export default function ArticlesPage() {
                           <span className="text-sm text-gray-500">{article.date}</span>
                         </div>
                         <h3 className="text-xl font-semibold mb-2">
-                          <a href="#" className="hover:text-blue-600 transition-colors">
+                          <a href="#" className="hover:text-slate-600 transition-colors">
                             {article.title}
                           </a>
                         </h3>
@@ -1340,7 +1345,7 @@ export default function ArticlesPage() {
                         </p>
                       </div>
                       <div className="md:w-32 flex-shrink-0">
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" className="hover:bg-gray-50 hover:border-gray-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
                           <a href="#">
                             קרא עוד
                           </a>
@@ -1364,12 +1369,12 @@ export default function ArticlesPage() {
               אנחנו כאן לעזור לך. צור קשר וקבל ייעוץ ראשוני חינם
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
+              <Button size="lg" variant="secondary" className="hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg" asChild>
                 <a href="/צור-קשר">
                   קבע ייעוץ חינם
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" className="hover:bg-green-50 hover:border-green-300 transition-all active:scale-95 transform hover:shadow-md" asChild>
                 <a href="tel:+972-54-423-2167">
                   התקשר עכשיו
                 </a>
@@ -1391,10 +1396,13 @@ export default function ArticlesPage() {
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white">צור קשר</a></li>
+                <li><a href="/mediation" className="text-gray-300 hover:text-white transition-colors">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-gray-300 hover:text-white transition-colors">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-gray-300 hover:text-white transition-colors">מזונות</a></li>
+                <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-gray-300 hover:text-white transition-colors">מאמרים</a></li>
+                <li><a href="/cases" className="text-gray-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
+                <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">צור קשר</a></li>
               </ul>
             </div>
             <div>
@@ -1403,8 +1411,8 @@ export default function ArticlesPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">+972-54-423-2167</a><br />
+                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white transition-colors">asaf@hamegasheret.co.il</a>
               </p>
             </div>
           </div>

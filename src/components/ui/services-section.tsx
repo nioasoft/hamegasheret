@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
 interface Service {
@@ -29,25 +30,25 @@ export function ServicesSection({ title, subtitle, services }: ServicesSectionPr
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="h-full hover:shadow-lg transition-shadow">
+            <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-gray-50/30 border border-gray-200/60 shadow-md">
               <CardHeader className="text-center pb-4">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="text-4xl mb-3">{service.icon}</div>
                 <CardTitle className="text-xl mb-2">
                   {service.title}
                 </CardTitle>
               </CardHeader>
 
               <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1">
+                <p className="text-gray-600 mb-4 flex-1 leading-relaxed">
                   {service.description}
                 </p>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-1.5 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <span className="text-green-500 mr-2">✓</span>
+                      <Check className="text-green-500 mr-2 h-4 w-4 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -55,7 +56,7 @@ export function ServicesSection({ title, subtitle, services }: ServicesSectionPr
 
                 <Button
                   variant="outline"
-                  className="w-full mt-auto"
+                  className="w-full mt-auto hover:bg-green-50 hover:border-green-300 transition-all active:scale-95 transform hover:shadow-md"
                   asChild
                 >
                   <Link href={service.href}>

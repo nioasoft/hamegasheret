@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Phone, MessageCircle, Mail } from "lucide-react";
 
 interface ContactFormProps {
   email?: string;
@@ -105,7 +106,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
 
             <Button
               type="submit"
-              className="w-full"
+              className="w-full hover:bg-slate-700 transition-colors active:scale-95 transform"
               disabled={isSubmitting}
             >
               {isSubmitting ? "שולח..." : "שלח הודעה"}
@@ -133,7 +134,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
             <div>
               <h3 className="font-semibold text-lg mb-2">טלפון</h3>
               <p className="text-gray-600">
-                <a href={`tel:${phone}`} className="hover:text-blue-600">
+                <a href={`tel:${phone}`} className="hover:text-slate-600">
                   {phone}
                 </a>
               </p>
@@ -142,7 +143,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
             <div>
               <h3 className="font-semibold text-lg mb-2">אימייל</h3>
               <p className="text-gray-600">
-                <a href={`mailto:${email}`} className="hover:text-blue-600">
+                <a href={`mailto:${email}`} className="hover:text-slate-600">
                   {email}
                 </a>
               </p>
@@ -153,31 +154,34 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
             <h3 className="font-semibold text-lg mb-4">צור קשר מהיר</h3>
             <div className="space-y-3">
               <Button
-                className="w-full"
+                className="w-full hover:bg-slate-700 transition-colors"
                 asChild
               >
-                <a href={`tel:${phone}`}>
-                  📞 התקשר עכשיו
+                <a href={`tel:${phone}`} className="flex items-center justify-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  התקשר עכשיו
                 </a>
               </Button>
 
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full hover:bg-green-50 hover:border-green-300 transition-colors"
                 asChild
               >
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  💬 וואטסאפ
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  וואטסאפ
                 </a>
               </Button>
 
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full hover:bg-blue-50 hover:border-blue-300 transition-colors"
                 asChild
               >
-                <a href={`mailto:${email}`}>
-                  ✉️ שלח אימייל
+                <a href={`mailto:${email}`} className="flex items-center justify-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  שלח אימייל
                 </a>
               </Button>
             </div>

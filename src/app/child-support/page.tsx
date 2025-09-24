@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Check, Phone, Mail, MapPin } from "lucide-react";
 import { Metadata } from "next";
 import { faqSchema } from "@/lib/schema";
 
@@ -184,7 +185,7 @@ export default function ChildSupportPage() {
         />
 
         {/* מהו תיקון 2017 */}
-        <section className="py-12 bg-blue-50">
+        <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -193,24 +194,24 @@ export default function ChildSupportPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-green-600">החידושים החשובים</CardTitle>
+                    <CardTitle className="text-slate-700">החידושים החשובים</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-green-500 ml-2 mt-1">✓</span>
+                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>שני ההורים אחראים למזונות (לא רק האבא)</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-500 ml-2 mt-1">✓</span>
+                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>נוסחת חישוב אחידה ושקופה</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-500 ml-2 mt-1">✓</span>
+                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>דגש על צרכי הילד בפועל</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-500 ml-2 mt-1">✓</span>
+                        <Check className="text-green-500 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>התחשבות בהסדרי לינה</span>
                       </li>
                     </ul>
@@ -218,24 +219,24 @@ export default function ChildSupportPage() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-blue-600">ההשפעה על ההורים</CardTitle>
+                    <CardTitle className="text-slate-700">ההשפעה על ההורים</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-blue-500 ml-2 mt-1">•</span>
+                        <span className="text-slate-600 ml-2 mt-1">•</span>
                         <span>עלייה ממוצעת של 20-30% בסכומי המזונות</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-500 ml-2 mt-1">•</span>
+                        <span className="text-slate-600 ml-2 mt-1">•</span>
                         <span>הוגנות רבה יותר בחלוקת העבור</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-500 ml-2 mt-1">•</span>
+                        <span className="text-slate-600 ml-2 mt-1">•</span>
                         <span>התאמה לעידן המודרני</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-500 ml-2 mt-1">•</span>
+                        <span className="text-slate-600 ml-2 mt-1">•</span>
                         <span>פחות סכסוכים בזכות נוסחה ברורה</span>
                       </li>
                     </ul>
@@ -268,10 +269,10 @@ export default function ChildSupportPage() {
               {supportAmountsByAge.map((ageGroup, index) => (
                 <Card key={index} className="text-center">
                   <CardHeader>
-                    <CardTitle className="text-blue-600">{ageGroup.ageRange}</CardTitle>
+                    <CardTitle className="text-slate-700">{ageGroup.ageRange}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-green-600 mb-3">
+                    <div className="text-2xl font-bold text-slate-700 mb-3">
                       {ageGroup.averageAmount}
                     </div>
                     <p className="text-sm text-gray-600">
@@ -335,7 +336,7 @@ export default function ChildSupportPage() {
               {mediationBenefits.map((benefit, index) => (
                 <Card key={index} className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-lg text-green-600">{benefit.title}</CardTitle>
+                    <CardTitle className="text-lg text-slate-700">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600">{benefit.description}</p>
@@ -345,15 +346,15 @@ export default function ChildSupportPage() {
             </div>
 
             {/* הצלחות מוכחות */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-gray-50 to-slate-100 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-center mb-6">הצלחות מוכחות עם המגשרת זהבית דבי</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
+                  <div className="text-3xl font-bold text-slate-700 mb-2">85%</div>
                   <p className="text-gray-700">הצלחה בגישור מזונות</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">3 שבועות</div>
+                  <div className="text-3xl font-bold text-slate-700 mb-2">3 שבועות</div>
                   <p className="text-gray-700">זמן ממוצע להסכם</p>
                 </div>
                 <div>
@@ -379,11 +380,11 @@ export default function ChildSupportPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {costComparison.map((method, index) => (
-                <Card key={index} className={`h-full ${index === 0 ? 'border-green-500 border-2' : ''}`}>
+                <Card key={index} className={`h-full ${index === 0 ? 'border-slate-500 border-2' : ''}`}>
                   <CardHeader>
-                    <CardTitle className={`text-xl ${index === 0 ? 'text-green-600' : 'text-gray-700'}`}>
+                    <CardTitle className={`text-xl ${index === 0 ? 'text-slate-700' : 'text-gray-700'}`}>
                       {method.method}
-                      {index === 0 && <span className="text-sm bg-green-100 text-green-800 px-2 py-1 rounded-full mr-2">מומלץ</span>}
+                      {index === 0 && <span className="text-sm bg-gray-200 text-slate-800 px-2 py-1 rounded-full mr-2">מומלץ</span>}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -395,8 +396,8 @@ export default function ChildSupportPage() {
                     <ul className="space-y-2">
                       {method.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
-                          <span className={`${index === 0 ? 'text-green-500' : 'text-blue-500'} ml-2 mt-1`}>
-                            {index === 0 ? '✓' : '•'}
+                          <span className={`${index === 0 ? 'text-slate-600' : 'text-slate-600'} ml-2 mt-1`}>
+                            {index === 0 ? <Check className="h-4 w-4 text-green-500" /> : '•'}
                           </span>
                           <span className="text-gray-700">{benefit}</span>
                         </li>
@@ -449,7 +450,7 @@ export default function ChildSupportPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-blue-600">מזונות לחיילים ובני 18+</CardTitle>
+                    <CardTitle className="text-slate-700">מזונות לחיילים ובני 18+</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
@@ -485,7 +486,7 @@ export default function ChildSupportPage() {
         </section>
 
         {/* קריאה לפעולה ויצירת קשר */}
-        <section className="py-12 bg-green-50">
+        <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -497,9 +498,18 @@ export default function ChildSupportPage() {
                     פנו אלינו לייעוץ ראשוני חינם ונעזור לכם להגיע להסכם מזונות הוגן ומאוזן עם חיסכון של 80% בעלויות
                   </p>
                   <div className="space-y-2 text-lg">
-                    <p>📞 <a href="tel:+972-54-423-2167" className="hover:text-blue-600">054-423-2167</a></p>
-                    <p>📧 <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-blue-600">asaf@hamegasheret.co.il</a></p>
-                    <p>📍 יהודה הנחתום 4, באר שבע</p>
+                    <p className="flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      <a href="tel:+972-54-423-2167" className="hover:text-slate-600">054-423-2167</a>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Mail className="h-4 w-4" />
+                      <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-slate-600">asaf@hamegasheret.co.il</a>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      יהודה הנחתום 4, באר שבע
+                    </p>
                   </div>
                 </div>
                 <div className="flex justify-center">

@@ -114,37 +114,37 @@ export default function Home() {
           services={services}
         />
 
-        <section className="py-12">
+        <section className="py-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 למה לבחור במשרד שלנו?
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-right mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-right mb-8">
                 <div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
-                    <h3 className="text-xl font-semibold mb-4">ניסיון מוכח</h3>
-                    <p className="text-gray-600">
+                  <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-gray-100">
+                    <h3 className="text-xl font-semibold mb-3">ניסיון מוכח</h3>
+                    <p className="text-gray-600 leading-relaxed">
                       למעלה מ-15 שנות ניסיון בדיני משפחה וגירושין, עם התמחות מיוחדת בגישור.
                     </p>
                   </div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
-                    <h3 className="text-xl font-semibold mb-4">גישה אנושית</h3>
-                    <p className="text-gray-600">
+                  <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                    <h3 className="text-xl font-semibold mb-3">גישה אנושית</h3>
+                    <p className="text-gray-600 leading-relaxed">
                       אנו מבינים את הרגישות של הנושאים ומתייחסים לכל לקוח באמפתיה ובמקצועיות.
                     </p>
                   </div>
                 </div>
                 <div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
-                    <h3 className="text-xl font-semibold mb-4">פתרונות יצירתיים</h3>
-                    <p className="text-gray-600">
+                  <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-gray-100">
+                    <h3 className="text-xl font-semibold mb-3">פתרונות יצירתיים</h3>
+                    <p className="text-gray-600 leading-relaxed">
                       אנו מוצאים פתרונות מותאמים אישית לכל מקרה, תוך התחשבות בצרכים הייחודיים.
                     </p>
                   </div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-4">שירות אישי</h3>
-                    <p className="text-gray-600">
+                  <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                    <h3 className="text-xl font-semibold mb-3">שירות אישי</h3>
+                    <p className="text-gray-600 leading-relaxed">
                       ליווי צמוד וזמינות מלאה לאורך כל התהליך עד להשגת התוצאה הרצויה.
                     </p>
                   </div>
@@ -197,13 +197,13 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-gray-300 hover:text-white">משמורת ילדים</a></li>
-                <li><a href="/child-support" className="text-gray-300 hover:text-white">מזונות</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/cases" className="text-gray-300 hover:text-white">סיפורי הצלחה</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white">צור קשר</a></li>
+                <li><a href="/mediation" className="text-gray-300 hover:text-white transition-colors">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-gray-300 hover:text-white transition-colors">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-gray-300 hover:text-white transition-colors">מזונות</a></li>
+                <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-gray-300 hover:text-white transition-colors">מאמרים</a></li>
+                <li><a href="/cases" className="text-gray-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
+                <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">צור קשר</a></li>
               </ul>
             </div>
             <div>
@@ -212,8 +212,8 @@ export default function Home() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">+972-54-423-2167</a><br />
+                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white transition-colors">asaf@hamegasheret.co.il</a>
               </p>
             </div>
           </div>

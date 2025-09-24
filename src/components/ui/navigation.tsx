@@ -47,7 +47,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
           {/* CTA Button */}
           {ctaButton && (
             <div className="absolute left-0 hidden md:block">
-              <Button asChild>
+              <Button className="hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg" asChild>
                 <Link href={ctaButton.href}>
                   {ctaButton.text}
                 </Link>
@@ -60,7 +60,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-slate-600 hover:bg-slate-100 hover:border-slate-800 shadow-md"
+              className="border-2 border-slate-600 hover:bg-slate-100 hover:border-slate-800 shadow-md transition-all active:scale-95 transform"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-7 w-7 text-slate-700" /> : <Menu className="h-7 w-7 text-slate-700" />}
@@ -85,7 +85,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
 
               {ctaButton && (
                 <div className="px-3 py-2">
-                  <Button asChild className="w-full">
+                  <Button asChild className="w-full hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg">
                     <Link href={ctaButton.href} onClick={() => setIsMenuOpen(false)}>
                       {ctaButton.text}
                     </Link>

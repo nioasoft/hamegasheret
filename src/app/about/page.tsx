@@ -122,7 +122,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   דבי סיידה ושו״ת - משרד עורכי דין
                 </h2>
-                <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+                <div className="space-y-5 text-gray-700 text-base leading-7">
                   <p>
                     משרד "דבי סיידה ושו״ת" הינו משרד מקצועי למתן ייעוץ, סיוע משפטי וייצוג למוסדות ציבוריים,
                     תאגידים מסחריים וללקוחות פרטיים. המשרד מציע שירותים משפטיים במגוון התחומים המסחריים-אזרחיים
@@ -171,10 +171,10 @@ export default function AboutPage() {
               </p>
             </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                       {teamMembers.map((member, index) => (
-                        <Card key={index} className="h-full">
-                          <CardHeader className="text-center pb-6">
+                        <Card key={index} className="h-full bg-white border border-gray-200 shadow-md">
+                          <CardHeader className="text-center pb-4">
                             <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
                               <Image
                                 src={index === 0 ? "/images/zehavit.webp" : "/images/asaf.webp"}
@@ -188,30 +188,30 @@ export default function AboutPage() {
                             <p className="text-green-600 font-medium">{member.title}</p>
                           </CardHeader>
 
-                  <CardContent className="space-y-6">
-                    <p className="text-gray-700 leading-relaxed">
+                  <CardContent className="space-y-5">
+                    <p className="text-gray-700 leading-7 text-base">
                       {member.description}
                     </p>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">הישגים:</h4>
-                      <ul className="space-y-2">
+                      <h4 className="font-semibold text-gray-900 mb-2">הישגים:</h4>
+                      <ul className="space-y-1.5">
                         {member.achievements.map((achievement, achIndex) => (
                           <li key={achIndex} className="flex items-start text-sm text-gray-600">
                             <span className="text-green-500 mr-2 mt-1">•</span>
-                            <span>{achievement}</span>
+                            <span className="leading-6">{achievement}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">תחומי התמחות:</h4>
-                      <div className="flex flex-wrap gap-2">
+                      <h4 className="font-semibold text-gray-900 mb-2">תחומי התמחות:</h4>
+                      <div className="flex flex-wrap gap-1.5">
                         {member.specialties.map((specialty, specIndex) => (
                           <span
                             key={specIndex}
-                            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                            className="bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full text-xs"
                           >
                             {specialty}
                           </span>
@@ -237,19 +237,19 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="h-full">
-                  <CardContent className="p-6">
-                    <div className="text-center">
-                      <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">
+                <Card key={index} className="h-full flex flex-col bg-white border border-gray-200 shadow-md">
+                  <CardContent className="p-5 flex-1 flex flex-col">
+                    <div className="text-center h-full flex flex-col">
+                      <p className="text-gray-700 mb-4 italic text-base leading-7 flex-1">
                         "{testimonial.quote}"
                       </p>
-                      <div className="border-t pt-4">
-                        <div className="font-semibold text-gray-900 text-lg">
+                      <div className="border-t pt-3 mt-auto">
+                        <div className="font-semibold text-gray-900 text-base">
                           {testimonial.author}
                         </div>
-                        <div className="text-gray-600">
+                        <div className="text-gray-600 text-sm">
                           {testimonial.role}
                         </div>
                       </div>
