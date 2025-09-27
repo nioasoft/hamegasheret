@@ -104,6 +104,10 @@ export default function Home() {
           ctaHref="/contact"
           secondaryCtaText="למד על גישור"
           secondaryCtaHref="/mediation"
+          profileImage={{
+            src: "/images/zehavit.webp",
+            alt: "המגשרת זהבית דבי - מומחית בגישור גירושין"
+          }}
           stats={stats}
           testimonials={testimonials}
         />

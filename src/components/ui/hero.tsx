@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 interface HeroProps {
   title: string;
@@ -10,6 +11,10 @@ interface HeroProps {
   ctaHref: string;
   secondaryCtaText?: string;
   secondaryCtaHref?: string;
+  profileImage?: {
+    src: string;
+    alt: string;
+  };
   stats?: Array<{
     number: string;
     label: string;
@@ -29,6 +34,7 @@ export function Hero({
   ctaHref,
   secondaryCtaText,
   secondaryCtaHref,
+  profileImage,
   stats,
   testimonials
 }: HeroProps) {
@@ -40,9 +46,23 @@ export function Hero({
             {subtitle}
           </Badge>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight max-w-4xl mx-auto">
-            {title}
-          </h1>
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 mb-6">
+            {profileImage && (
+              <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                <Image
+                  src={profileImage.src}
+                  alt={profileImage.alt}
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            )}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              {title}
+            </h1>
+          </div>
 
           <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             {description}
