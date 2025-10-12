@@ -29,7 +29,7 @@ const contactMethods = [
     title: "וואטסאפ",
     description: "שלחו הודעה וואטסאפ ונחזור אליכם בהקדם",
     value: "שלח הודעה",
-    action: "https://wa.me/972544232167?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%92%D7%99%D7%A9%D7%95%D7%A8%20%D7%92%D7%99%D7%A8%D7%95%D7%A9%D7%99%D7%9F",
+    action: "https://wa.me/972536062456?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%92%D7%99%D7%A9%D7%95%D7%A8%20%D7%92%D7%99%D7%A8%D7%95%D7%A9%D7%99%D7%9F",
     icon: "💬",
     cta: "פתח וואטסאפ"
   },
@@ -300,7 +300,7 @@ export default function ContactPage() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/972544232167?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%92%D7%99%D7%A9%D7%95%D7%A8%20%D7%92%D7%99%D7%A8%D7%95%D7%A9%D7%99%D7%9F" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/972536062456?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%92%D7%99%D7%A9%D7%95%D7%A8%20%D7%92%D7%99%D7%A8%D7%95%D7%A9%D7%99%D7%9F" target="_blank" rel="noopener noreferrer">
                   💬 וואטסאפ
                 </a>
               </Button>
