@@ -17,7 +17,7 @@ interface NavigationProps {
   } | null;
 }
 
-export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, ctaButton }: NavigationProps) {
+export function Navigation({ logo = "דבי סיידה ושות'", menuItems, ctaButton }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

@@ -18,7 +18,7 @@ const menuItems = [
 
 const testimonials = [
   {
-    quote: "המגשרת זהבית דבי עזרה לנו להגיע להסכם הוגן תוך שמירה על כבוד הדדי. התהליך היה מקצועי ורגיש.",
+    quote: "המגשרת עו״ד זהבית דבי עזרה לנו להגיע להסכם הוגן תוך שמירה על כבוד הדדי. התהליך היה מקצועי ורגיש.",
     author: "א.ב.",
     role: "לקוחה מבאר שבע"
   },
@@ -33,7 +33,7 @@ const testimonials = [
     role: "לקוחה מלהבים"
   },
   {
-    quote: "גישה אמפתית ומקצועית שהובילה להסכם מוצלח. המגשרת זהבית דבי היא מקצועית מהשורה הראשונה.",
+    quote: "גישה אמפתית ומקצועית שהובילה להסכם מוצלח. המגשרת עו״ד זהבית דבי היא מקצועית מהשורה הראשונה.",
     author: "ד.ש.",
     role: "לקוח ממיתר"
   }
@@ -97,7 +97,7 @@ export default function Home() {
 
       <main>
         <Hero
-          title="המגשרת זהבית דבי"
+          title="המגשרת עו״ד זהבית דבי"
           subtitle="מומחית בגישור גירושין - הסכמים ללא מלחמות"
           description="המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים מוסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים."
           ctaText="קבע פגישת ייעוץ"
@@ -106,7 +106,7 @@ export default function Home() {
           secondaryCtaHref="/mediation"
           profileImage={{
             src: "/images/zehavitmain.webp",
-            alt: "המגשרת זהבית דבי - מומחית בגישור גירושין"
+            alt: "המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין"
           }}
           stats={stats}
           testimonials={testimonials}
@@ -114,7 +114,7 @@ export default function Home() {
 
         <ServicesSection
           title="השירותים של המגשרת"
-          subtitle="זהבית דבי - המגשרת המובילה בגישור גירושין ודיני משפחה"
+          subtitle="עו״ד זהבית דבי - המגשרת המובילה בגישור גירושין ודיני משפחה"
           services={services}
         />
 
@@ -174,7 +174,7 @@ export default function Home() {
                   <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
                     <Image
                       src="/images/consultation-hero.webp"
-                      alt="ייעוץ משפטי מקצועי עם המגשרת זהבית דבי"
+                      alt="ייעוץ משפטי מקצועי עם המגשרת עו״ד זהבית דבי"
                       width={192}
                       height={192}
                       className="w-full h-full object-cover"
@@ -193,7 +193,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
+              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
               <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין
               </p>
@@ -222,7 +222,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
           </div>
         </div>
       </footer>

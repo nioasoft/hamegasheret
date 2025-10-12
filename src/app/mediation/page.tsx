@@ -9,12 +9,12 @@ import { Metadata } from "next";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "גישור גירושין מקצועי - המגשרת זהבית דבי | מומחית בגישור",
-  description: "גישור גירושין מקצועי עם המגשרת זהבית דבי - 85% הצלחה. המגשרת המובילה בבאר שבע והדרום. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות.",
-  keywords: "גישור גירושין, המגשרת זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין",
+  title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי | מומחית בגישור",
+  description: "גישור גירושין מקצועי עם המגשרת עו״ד זהבית דבי - 85% הצלחה. המגשרת המובילה בבאר שבע והדרום. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות.",
+  keywords: "גישור גירושין, המגשרת עו״ד זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין",
   openGraph: {
-    title: "גישור גירושין מקצועי - המגשרת זהבית דבי | מומחית",
-    description: "גישור גירושין מקצועי עם שיעור הצלחה של 85%. זהבית דבי המגשרת מאפשרת לבני זוג להגיע להסכמים מוסכמים ללא מלחמות.",
+    title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי | מומחית",
+    description: "גישור גירושין מקצועי עם שיעור הצלחה של 85%. עו״ד זהבית דבי המגשרת מאפשרת לבני זוג להגיע להסכמים מוסכמים ללא מלחמות.",
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ const testimonials = [
     role: "לקוחה מבאר שבע"
   },
   {
-    quote: "זהבית דבי הצליחה להפוך מצב מורכב לתהליך מכבד. המומחיות שלה בגישור עזרה לנו מאוד.",
+    quote: "עו״ד זהבית דבי הצליחה להפוך מצב מורכב לתהליך מכבד. המומחיות שלה בגישור עזרה לנו מאוד.",
     author: "ש.ל.",
     role: "לקוח מקיבוץ להב"
   }
@@ -146,7 +146,7 @@ export default function MediationPage() {
         <Hero
           title="גישור גירושין מקצועי"
           subtitle="הגעה להסכם ללא מלחמות"
-          description="זהבית דבי, מומחית בגישור גירושין עם שיעור הצלחה של 85%. הגישה הייחודית שלנו מאפשרת לבני זוג להגיע להסכמים מוסכמים תוך שמירה על כבוד הדדי ויחסים טובים."
+          description="עו״ד זהבית דבי, מומחית בגישור גירושין עם שיעור הצלחה של 85%. הגישה הייחודית שלנו מאפשרת לבני זוג להגיע להסכמים מוסכמים תוך שמירה על כבוד הדדי ויחסים טובים."
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="צור קשר עכשיו"
@@ -155,18 +155,18 @@ export default function MediationPage() {
           testimonials={testimonials}
         />
 
-                {/* זהבית דבי - המומחית */}
+                {/* עו״ד זהבית דבי - המומחית */}
                 <section className="py-12 bg-gradient-to-r from-beige-50 to-beige-200">
                   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                           <h2 className="text-3xl font-bold text-beige-900 mb-6">
-                            זהבית דבי - מומחית בגישור גירושין
+                            עו״ד זהבית דבי - מומחית בגישור גירושין
                           </h2>
                           <div className="space-y-4 text-beige-700">
                             <p>
-                              זהבית דבי היא עורכת דין מובילה בתחום דיני המשפחה, עם התמחות מיוחדת בגישור גירושין.
+                              עו״ד זהבית דבי היא עורכת דין מובילה בתחום דיני המשפחה, עם התמחות מיוחדת בגישור גירושין.
                               הניסיון הרב שלה והגישה הייחודית מאפשרים לה להגיע להישגים יוצאי דופן.
                             </p>
                             <p>
@@ -182,7 +182,7 @@ export default function MediationPage() {
                           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
                             <Image
                               src="/images/zehavitmain.webp"
-                              alt="זהבית דבי"
+                              alt="עו״ד זהבית דבי"
                               width={128}
                               height={128}
                               className="w-full h-full object-cover"
@@ -334,7 +334,7 @@ export default function MediationPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
+              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
               <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין
               </p>
@@ -363,7 +363,7 @@ export default function MediationPage() {
             </div>
           </div>
           <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
           </div>
         </div>
       </footer>

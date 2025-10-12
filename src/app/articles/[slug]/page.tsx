@@ -49,8 +49,8 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       description: article.excerpt,
       type: "article",
       publishedTime: article.date,
-      authors: ["זהבית דבי - המגשרת"],
-      siteName: "המגשרת - זהבית דבי",
+      authors: ["עו״ד זהבית דבי - המגשרת"],
+      siteName: "המגשרת - עו״ד זהבית דבי",
       locale: "he_IL",
       url: `https://hamegasheret.co.il/articles/${slug}`,
       images: article.image ? [
@@ -249,7 +249,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   זקוקים לעזרה בגישור גירושין?
                 </h3>
                 <p className="text-lg text-beige-800 mb-6">
-                  המגשרת זהבית דבי כאן כדי לעזור לכם לעבור את התהליך בצורה מכבדת והוגנת
+                  המגשרת עו״ד זהבית דבי כאן כדי לעזור לכם לעבור את התהליך בצורה מכבדת והוגנת
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact">
@@ -324,7 +324,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div>
               <h3 className="text-xl font-bold mb-4">המגשרת</h3>
               <p className="text-beige-300 mb-4">
-                זהבית דבי - המגשרת המובילה בישראל לגישור גירושין מכבד והוגן
+                עו״ד זהבית דבי - המגשרת המובילה בישראל לגישור גירושין מכבד והוגן
               </p>
             </div>
 
@@ -363,7 +363,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           <div className="mt-8 pt-8 border-t border-beige-700 text-center text-beige-300">
-            <p>&copy; 2024 המגשרת - זהבית דבי. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 המגשרת - עו״ד זהבית דבי. כל הזכויות שמורות.</p>
           </div>
         </div>
       </footer>

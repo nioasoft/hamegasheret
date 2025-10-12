@@ -1,8 +1,8 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת",
-  "description": "המגשרת זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה. המגשרת המובילה עם 85% הצלחה בגישור.",
+  "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'",
+  "description": "המגשרת עו״ד זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה. המגשרת המובילה עם 85% הצלחה בגישור.",
   "url": "https://hamegasheret.co.il",
   "logo": "https://hamegasheret.co.il/logo.png",
   "address": {
@@ -35,11 +35,11 @@ export const organizationSchema = {
 export const mediationServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "גישור גירושין - המגשרת זהבית דבי",
-  "description": "שירות גישור גירושין מקצועי של המגשרת זהבית דבי עם שיעור הצלחה של 85%. הגעה להסכמים מוסכמים ללא מלחמות משפטיות.",
+  "name": "גישור גירושין - המגשרת עו״ד זהבית דבי",
+  "description": "שירות גישור גירושין מקצועי של המגשרת עו״ד זהבית דבי עם שיעור הצלחה של 85%. הגעה להסכמים מוסכמים ללא מלחמות משפטיות.",
   "provider": {
     "@type": "LegalService",
-    "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת"
+    "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'"
   },
   "serviceType": "גישור גירושין",
   "areaServed": "IL",
@@ -58,7 +58,7 @@ export const familyLawServiceSchema = {
   "description": "שירותים משפטיים בתחום דיני המשפחה: משמורת ילדים, מזונות, הסכמי גירושין ועוד.",
   "provider": {
     "@type": "LegalService",
-    "name": "דבי סיידה ושו״ת"
+    "name": "דבי סיידה ושות'"
   },
   "serviceType": "דיני משפחה",
   "areaServed": "IL"
@@ -67,8 +67,8 @@ export const familyLawServiceSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת",
-  "description": "המגשרת זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה בבאר שבע. המגשרת המובילה בישראל.",
+  "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'",
+  "description": "המגשרת עו״ד זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה בבאר שבע. המגשרת המובילה בישראל.",
   "url": "https://hamegasheret.co.il",
   "telephone": "+972-53-606-2456",
   "email": "zehavit@silaw.co.il",
@@ -102,10 +102,10 @@ export const testimonialSchema = {
     "@type": "Person",
     "name": "לקוח מרוצה"
   },
-  "reviewBody": "זהבית דבי המגשרת היא מקצועית מהשורה הראשונה. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד.",
+  "reviewBody": "עו״ד זהבית דבי המגשרת היא מקצועית מהשורה הראשונה. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד.",
   "itemReviewed": {
     "@type": "Service",
-    "name": "גישור גירושין - המגשרת זהבית דבי"
+    "name": "גישור גירושין - המגשרת עו״ד זהבית דבי"
   }
 }
 
@@ -155,12 +155,12 @@ export const articleSchema = (article: {
   "dateModified": article.date,
   "author": {
     "@type": "Person",
-    "name": "זהבית דבי",
+    "name": "עו״ד זהבית דבי",
     "jobTitle": "המגשרת - מומחית בגישור גירושין"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "המגשרת - זהבית דבי",
+    "name": "המגשרת - עו״ד זהבית דבי",
     "logo": {
       "@type": "ImageObject",
       "url": "https://hamegasheret.co.il/logo.png"
