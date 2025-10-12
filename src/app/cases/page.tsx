@@ -79,13 +79,13 @@ const caseStudies = [
     outcome: {
       success: true,
       description: "לאחר 4 חודשי גישור, הזוג לא רק נשאר נשוי אלא גם חיזק את העסק. המסעדה גדלה ב-30% והם פתחו סניף נוסף.",
-      clientQuote: "זהבית היא קוסמת אמיתית. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד."
+      clientQuote: "זהבית היא מגשרת מצוינת. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד."
     }
   },
   {
     id: 2,
-    title: "רונית ומיכאל מתל אביב - ממאבק משמורת לשיתוף פעולה הורי",
-    location: "תל אביב",
+    title: "רונית ומיכאל מקיבוץ להב - ממאבק משמורת לשיתוף פעולה הורי",
+    location: "קיבוץ להב",
     marriageDuration: "8 שנים",
     mainConflict: "משמורת ילדים",
     tags: ["משמורת", "ילדים", "הסכם הורי"],
@@ -131,13 +131,13 @@ const caseStudies = [
     outcome: {
       success: true,
       description: "לאחר 6 חודשי עבודה, ההורים למדו לתקשר בצורה בונה ולשים את הילדים במרכז. הילדים החלו להראות שיפור משמעותי בהתנהגות ובלימודים.",
-      clientQuote: "הקוסמת זהבית לימדה אותנו איך להיות הורים גם אחרי הגירושין. היום הילדים שלנו מאושרים ואנחנו מצליחים לעבוד כצוות הורי למענם."
+      clientQuote: "זהבית לימדה אותנו איך להיות הורים גם אחרי הגירושין. היום הילדים שלנו מאושרים ואנחנו מצליחים לעבוד כצוות הורי למענם."
     }
   },
   {
     id: 3,
-    title: "שירה ועמיר מחיפה - מחלוקת רכוש שהפכה להסכם הוגן",
-    location: "חיפה",
+    title: "שירה ועמיר מלהבים - מחלוקת רכוש שהפכה להסכם הוגן",
+    location: "להבים",
     marriageDuration: "15 שנים",
     mainConflict: "חלוקת רכוש",
     tags: ["רכוש", "נכסים", "חלוקה הוגנת"],
@@ -183,13 +183,13 @@ const caseStudies = [
     outcome: {
       success: true,
       description: "לאחר 3 חודשי גישור, הושג הסכם מקיף ושני הצדדים הרגישו שהחלוקה הוגנת. הם שמרו על יחסים אדיבים למען הילדים.",
-      clientQuote: "זהבית הצליחה להראות לנו שחלוקה הוגנת זה לא רק חשבון מתמטי. היא לקחה בחשבון את כל מה שבנינו יחד ואת החלומות שלנו לעתיד. זה בהגדרה קסם."
+      clientQuote: "זהבית הצליחה להראות לנו שחלוקה הוגנת זה לא רק חשבון מתמטי. היא לקחה בחשבון את כל מה שבנינו יחד ואת החלומות שלנו לעתיד. זה פתרון מעולה."
     }
   },
   {
     id: 4,
-    title: "חיה ודוד מחיפה - גישור עם ילד בעל צרכים מיוחדים",
-    location: "חיפה",
+    title: "חיה ודוד ממיתר - גישור עם ילד בעל צרכים מיוחדים",
+    location: "מיתר",
     marriageDuration: "10 שנים",
     mainConflict: "הסדרי טיפול בילד עם אוטיזם",
     tags: ["צרכים מיוחדים", "משמורת", "מזונות מיוחדים"],
@@ -241,8 +241,8 @@ const caseStudies = [
   },
   {
     id: 5,
-    title: "נעמי ואורי מירושלים - גישור במשפחה דתית",
-    location: "ירושלים",
+    title: "נעמי ואורי מבאר שבע - גישור במשפחה דתית",
+    location: "באר שבע",
     marriageDuration: "15 שנים",
     mainConflict: "גירושין בקהילה דתית שמרנית",
     tags: ["גירושין דתיים", "בית דין רבני", "כתובה"],
@@ -294,8 +294,8 @@ const caseStudies = [
   },
   {
     id: 6,
-    title: "שרון ועידו מנתניה - חלוקת עסק טכנולוגי",
-    location: "נתניה",
+    title: "שרון ועידו מקיבוץ להב - חלוקת עסק טכנולוגי",
+    location: "קיבוץ להב",
     marriageDuration: "7 שנים",
     mainConflict: "חלוקת סטארטאפ בשווי מיליונים",
     tags: ["עסק טכנולוגי", "סטארטאפ", "אופציות"],
@@ -444,7 +444,7 @@ export default function CasesPage() {
 
                     {/* התערבות המגשרת */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התערבות {"הקוסמת"}</h4>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התערבות המגשרת</h4>
                       <p className="text-gray-700 mb-6">{caseStudy.intervention.description}</p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -501,7 +501,7 @@ export default function CasesPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                למה קוראים לה {"הקוסמת"}?
+                מה מייחד את זהבית?
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -532,7 +532,7 @@ export default function CasesPage() {
 
               <div className="bg-white p-8 rounded-lg shadow-md mb-8">
                 <blockquote className="text-xl italic text-gray-700 mb-4">
-                  {"זהבית דבי היא מגשרת יוצאת דופן. היכולת שלה לראות מעבר לכעס ולטינה ולהגיע ללב הבעיה היא פשוט קסם. בכל מקרה שהיא טוהלת, היא מצליחה למצוא את הדרך להביא לפתרון שמתאים לכל הצדדים."}
+                  {"זהבית דבי היא מגשרת יוצאת דופן. היכולת שלה לראות מעבר לכעס ולטינה ולהגיע ללב הבעיה היא יוצאת דופן. בכל מקרה שהיא טופלת, היא מצליחה למצוא את הדרך להביא לפתרון שמתאים לכל הצדדים."}
                 </blockquote>
                 <p className="font-semibold text-slate-600">
                   - ד{"ר"} משה כהן, מומחה לדיני משפחה
@@ -541,7 +541,7 @@ export default function CasesPage() {
 
               <Button size="lg" asChild className="text-lg px-8 py-4">
                 <Link href="/contact">
-                  רוצים לחוות את הקסם? קבעו פגישה
+                  רוצים לחוות את ההצלחה? קבעו פגישה
                 </Link>
               </Button>
             </div>
@@ -574,8 +574,8 @@ export default function CasesPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>
