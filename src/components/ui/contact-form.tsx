@@ -135,7 +135,7 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
               <h3 className="font-semibold text-lg mb-2">טלפון</h3>
               <p className="text-beige-600">
                 <a href={`tel:${phone}`} className="hover:text-beige-700">
-                  {phone}
+                  {phone.replace('+972-', '0').replace('+972', '0')}
                 </a>
               </p>
             </div>
