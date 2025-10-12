@@ -36,17 +36,17 @@ const testimonials = [
   {
     quote: "זהבית הצליחה להפוך מצב קשה לתהליך מכבד. המומחיות שלה בגישור גירושין עזרה לנו מאוד.",
     author: "ש.ל.",
-    role: "לקוח מתל אביב"
+    role: "לקוח מקיבוץ להב"
   },
   {
     quote: "בזכות הגישור של עו״ד דבי, הצלחנו להגיע להסכם הוגן שמתחשב בכולם, במיוחד בילדים.",
     author: "י.א.",
-    role: "לקוחה מחיפה"
+    role: "לקוחה מלהבים"
   },
   {
     quote: "המקצועיות והרגישות של זהבית דבי בגישור הן יוצאות דופן. התהליך שינה את חיינו לטובה.",
     author: "מ.כ.",
-    role: "לקוח מירושלים"
+    role: "לקוח ממיתר"
   }
 ];
 
@@ -177,7 +177,7 @@ export default function AboutPage() {
                           <CardHeader className="text-center pb-4">
                             <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
                               <Image
-                                src={index === 0 ? "/images/zehavit.webp" : "/images/asaf.webp"}
+                                src={index === 0 ? "/images/zehavit2.webp" : "/images/asaf.webp"}
                                 alt={member.name}
                                 width={128}
                                 height={128}
@@ -301,7 +301,7 @@ export default function AboutPage() {
               מוכנים להתחיל?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              פנו אלינו לייעוץ ראשוני חינם ונראה איך נוכל לעזור לכם למצוא את הפתרון הטוב ביותר למצבכם
+              פנו אלינו ונראה איך נוכל לעזור לכם למצוא את הפתרון הטוב ביותר למצבכם
             </p>
             <ContactForm />
           </div>
@@ -332,8 +332,8 @@ export default function AboutPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>

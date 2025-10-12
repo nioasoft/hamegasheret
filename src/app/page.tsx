@@ -25,17 +25,17 @@ const testimonials = [
   {
     quote: "התהליך היה מקצועי, רגיש ויעיל. חסכנו זמן וכסף רב. המגשרת הובילה אותנו בחכמה להסכם מוצלח.",
     author: "ר.כ.",
-    role: "לקוח מתל אביב"
+    role: "לקוח מקיבוץ להב"
   },
   {
     quote: "ההדרכה המקצועית של זהבית עזרה לנו לחשוב על טובת הילדים. הגענו להסכם שכולם מרוצים ממנו.",
     author: "מ.ל.",
-    role: "לקוחה מחיפה"
+    role: "לקוחה מלהבים"
   },
   {
     quote: "גישה אמפתית ומקצועית שהובילה להסכם מוצלח. המגשרת זהבית דבי היא מקצועית מהשורה הראשונה.",
     author: "ד.ש.",
-    role: "לקוח מירושלים"
+    role: "לקוח ממיתר"
   }
 ];
 
@@ -60,7 +60,7 @@ const services = [
   },
   {
     title: "משמורת ילדים",
-    description: "ייעוץ וליווי משפטי מקצועי בענייני משמורת ילדים והסדרי ראייה.",
+    description: "ייעוץ וליווי משפטי מקצועי בענייני משמורת ילדים והסדרי שהות.",
     icon: "👨‍👩‍👧‍👦",
     href: "/child-custody",
     features: [
@@ -76,7 +76,7 @@ const services = [
     icon: "💰",
     href: "/child-support",
     features: [
-      "חישוב מזונות מדויק",
+      "הערכת חישוב מזונות המותאם לתא המשפחתי ובהתאם לפסיקה הרווחת",
       "התאמה לצרכים המשפחתיים",
       "ייצוג בבית המשפט",
       "עדכון שוטף של פסקי דין"
@@ -105,7 +105,7 @@ export default function Home() {
           secondaryCtaText="למד על גישור"
           secondaryCtaHref="/mediation"
           profileImage={{
-            src: "/images/zehavit.webp",
+            src: "/images/zehavitmain.webp",
             alt: "המגשרת זהבית דבי - מומחית בגישור גירושין"
           }}
           stats={stats}
@@ -167,7 +167,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
                 <div className="text-right">
                   <p className="text-xl text-gray-600 mb-6">
-                    פנו אלינו לייעוץ ראשוני חינם ונעזור לכם למצוא את הפתרון הטוב ביותר למצבכם
+                    פנו אלינו ונעזור לכם למצוא את הפתרון הטוב ביותר למצבכם
                   </p>
                 </div>
                 <div className="flex justify-center">
@@ -183,7 +183,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <ContactForm email="asaf@hamegasheret.co.il" phone="+972-54-423-2167" />
+              <ContactForm email="zehavit@silaw.co.il" phone="+972-54-423-2167" />
             </div>
           </div>
         </section>
@@ -216,8 +216,8 @@ export default function Home() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white transition-colors">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>

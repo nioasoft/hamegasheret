@@ -10,7 +10,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "משמורת ילדים - המגשרת זהבית דבי | מומחית בגישור משמורת",
   description: "משמורת ילדים עם המגשרת זהבית דבי - פתרונות יצירתיים למשמורת משותפת, יחידה ואחריות הורית. 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים והמשפחה.",
-  keywords: "משמורת ילדים, המגשרת זהבית דבי, משמורת משותפת, משמורת יחידה, אחריות הורית, הסדרי ראייה, גישור משמורת, דיני משפחה, זכויות ילדים, הורות משותפת",
+  keywords: "משמורת ילדים, המגשרת זהבית דבי, משמורת משותפת, משמורת יחידה, אחריות הורית, הסדרי שהות, גישור משמורת, דיני משפחה, זכויות ילדים, הורות משותפת",
   openGraph: {
     title: "משמורת ילדים - המגשרת זהבית דבי | פתרונות לטובת הילדים",
     description: "המגשרת זהבית דבי מתמחה בגישור משמורת ילדים. פתרונות יצירתיים ומאוזנים לטובת הילדים עם שיעור הצלחה של 85% בהגעה להסכמי משמורת מוסכמים.",
@@ -44,7 +44,6 @@ const testimonials = [
 
 const stats = [
   { number: "85%", label: "הצלחה בהסכמי משמורת" },
-  { number: "90%", label: "שביעות רצון הילדים" },
   { number: "75%", label: "משמורת משותפת מוסכמת" }
 ];
 
@@ -63,7 +62,7 @@ const custodyTypes = [
   },
   {
     title: "משמורת יחידה",
-    description: "הורה אחד מקבל את המשמורת העיקרית והשני זוכה להסדרי ראייה",
+    description: "הורה אחד מקבל את המשמורת העיקרית והשני זוכה להסדרי שהות",
     icon: "👤",
     benefits: [
       "יציבות מרבית לילדים",
@@ -265,7 +264,7 @@ export default function ChildCustodyPage() {
                     </li>
                     <li className="flex items-center">
                       <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
-                      <span>הסדרי ראייה גמישים</span>
+                      <span>הסדרי שהות גמישים</span>
                     </li>
                     <li className="flex items-center">
                       <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
@@ -519,12 +518,12 @@ export default function ChildCustodyPage() {
               מוכנים למצוא את הפתרון הטוב ביותר לילדים שלכם?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              המגשרת זהבית דבי כאן לעזור לכם - ייעוץ ראשוני חינם
+              המגשרת זהבית דבי כאן לעזור לכם
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <a href="/contact">
-                  קבע פגישת ייעוץ חינם
+                  קבע פגישת ייעוץ
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
@@ -544,10 +543,10 @@ export default function ChildCustodyPage() {
                 צוות המומחים שלנו כאן לעזור
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                פנו אלינו לייעוץ ראשוני חינם במשמורת ילדים ונמצא יחד את הפתרון הטוב ביותר למשפחה שלכם
+                פנו אלינו במשמורת ילדים ונמצא יחד את הפתרון הטוב ביותר למשפחה שלכם
               </p>
               <ContactForm
-                email="asaf@hamegasheret.co.il"
+                email="zehavit@silaw.co.il"
                 phone="+972-54-423-2167"
                 whatsappText="שלום, אני מעוניין בייעוץ במשמורת ילדים"
               />
@@ -581,8 +580,8 @@ export default function ChildCustodyPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>

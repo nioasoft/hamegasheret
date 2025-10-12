@@ -10,7 +10,7 @@ import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "גישור גירושין מקצועי - המגשרת זהבית דבי | מומחית בגישור",
-  description: "גישור גירושין מקצועי עם המגשרת זהבית דבי - 85% הצלחה. המגשרת המובילה באר שבע ותל אביב. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות. ייעוץ ראשוני חינם.",
+  description: "גישור גירושין מקצועי עם המגשרת זהבית דבי - 85% הצלחה. המגשרת המובילה באר שבע ותל אביב. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות.",
   keywords: "גישור גירושין, המגשרת זהבית דבי, המגשרת באר שבע, המגשרת תל אביב, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין",
   openGraph: {
     title: "גישור גירושין מקצועי - המגשרת זהבית דבי | מומחית",
@@ -39,7 +39,7 @@ const testimonials = [
   {
     quote: "זהבית דבי הצליחה להפוך מצב מורכב לתהליך מכבד. המומחיות שלה בגישור עזרה לנו מאוד.",
     author: "ש.ל.",
-    role: "לקוח מתל אביב"
+    role: "לקוח מקיבוץ להב"
   }
 ];
 
@@ -181,7 +181,7 @@ export default function MediationPage() {
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
                             <Image
-                              src="/images/zehavit.webp"
+                              src="/images/zehavitmain.webp"
                               alt="זהבית דבי"
                               width={128}
                               height={128}
@@ -312,7 +312,7 @@ export default function MediationPage() {
               מוכנים להתחיל את התהליך?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              פנו אלינו לייעוץ ראשוני חינם ונבדוק איך נוכל לעזור לכם
+              פנו אלינו ונבדוק איך נוכל לעזור לכם
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
@@ -357,8 +357,8 @@ export default function MediationPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white transition-colors">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>

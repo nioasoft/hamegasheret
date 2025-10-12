@@ -19,8 +19,8 @@ const menuItems = [
 const contactMethods = [
   {
     title: "טלפון",
-    description: "התקשרו אלינו לקבלת ייעוץ ראשוני מיידי",
-    value: "+972-54-423-2167",
+    description: "התקשרו אלינו לקבלת ייעוץ מיידי",
+    value: "054-423-2167 / 053-606-2456",
     action: "tel:+972-54-423-2167",
     icon: "📞",
     cta: "התקשר עכשיו"
@@ -36,8 +36,8 @@ const contactMethods = [
   {
     title: "אימייל",
     description: "שלחו מייל מפורט ונענה בהקדם האפשרי",
-    value: "asaf@hamegasheret.co.il",
-    action: "mailto:asaf@hamegasheret.co.il",
+    value: "zehavit@silaw.co.il",
+    action: "mailto:zehavit@silaw.co.il",
     icon: "✉️",
     cta: "שלח אימייל"
   }
@@ -63,7 +63,7 @@ const officeInfo = [
   {
     title: "חניה",
     details: [
-      "חניה חינם ללקוחות המשרד",
+      "חניה ללקוחות המשרד",
       "גישה נוחה ונגישה",
       "כניסה למשרד ללא מדרגות"
     ]
@@ -102,7 +102,7 @@ export default function ContactPage() {
         <Hero
           title="צור קשר"
           subtitle="אנחנו כאן לעזור לך"
-          description="מוכנים לעזור לך למצוא את הפתרון הטוב ביותר למצבך. צור קשר עכשיו וקבל ייעוץ ראשוני חינם."
+          description="מוכנים לעזור לך למצוא את הפתרון הטוב ביותר למצבך. צור קשר עכשיו."
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="התקשר עכשיו"
@@ -333,8 +333,8 @@ export default function ContactPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>
