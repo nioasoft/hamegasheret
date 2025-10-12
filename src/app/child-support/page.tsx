@@ -9,11 +9,11 @@ import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "מזונות ילדים - המגשרת זהבית דבי | חישוב מזונות מקצועי 2024",
-  description: "מזונות ילדים עם המגשרת זהבית דבי - חישוב מזונות מדויק לפי חוק 2024, הסכמי מזונות הוגנים, גישור מזונות וחיסכון של 80% בעלויות משפט. ייעוץ ראשוני חינם.",
+  description: "מזונות ילדים עם המגשרת זהבית דבי - הערכת חישוב מזונות המותאם לתא המשפחתי ובהתאם לפסיקה הרווחת, הסכמי מזונות הוגנים, גישור מזונות וחיסכון של 80% בעלויות משפט. ייעוץ ראשוני.",
   keywords: "מזונות ילדים, חישוב מזונות, המגשרת זהבית דבי, הסכמי מזונות, גישור מזונות, מזונות 2024, תקנות מזונות, מזונות נטל, מזונות לפי גיל, עדכון מזונות",
   openGraph: {
     title: "מזונות ילדים - המגשרת זהבית דבי | חישוב מזונות מקצועי",
-    description: "גישור מזונות ילדים מקצועי עם המגשרת זהבית דבי. הסכמי מזונות הוגנים לשני הצדדים עם חיסכון של 80% בעלויות. חישוב מזונות מדויק לפי חוק 2024.",
+    description: "גישור מזונות ילדים מקצועי עם המגשרת זהבית דבי. הסכמי מזונות הוגנים לשני הצדדים עם חיסכון של 80% בעלויות. הערכת חישוב מזונות המותאם לתא המשפחתי ובהתאם לפסיקה הרווחת.",
     type: "website",
   },
 };
@@ -50,24 +50,24 @@ const stats = [
 
 const supportAmountsByAge = [
   {
-    ageRange: "0-6 שנים",
-    averageAmount: "1,500-2,500 ₪",
+    ageRange: "עד גיל 6",
+    averageAmount: "2,500 ₪",
     description: "כולל עלויות גן, חיתולים, מזון מיוחד ובגדים"
   },
   {
-    ageRange: "7-14 שנים",
-    averageAmount: "2,000-3,500 ₪",
+    ageRange: "גיל 6-12",
+    averageAmount: "1,500-2,000 ₪",
     description: "כולל חינוך, פעילויות חוץ-בית-ספריות ובגדים"
   },
   {
-    ageRange: "15-18 שנים",
-    averageAmount: "2,500-4,000 ₪",
-    description: "כולל הכנה לבגרות, קורסים והוצאות נוספות"
+    ageRange: "גיל 12-15",
+    averageAmount: "1,200-1,500 ₪",
+    description: "כולל חינוך תיכון, פעילויות נוער והוצאות חברתיות"
   },
   {
-    ageRange: "18+ (סטודנטים)",
-    averageAmount: "2,000-3,000 ₪",
-    description: "תלוי בלימודים ומצב כלכלי של ההורים"
+    ageRange: "מגיל 15",
+    averageAmount: "1,000 ₪",
+    description: "כולל הכנה לבגרות והוצאות נוספות"
   }
 ];
 
@@ -174,7 +174,7 @@ export default function ChildSupportPage() {
         <Hero
           title="מזונות ילדים - הסכמים הוגנים לשני הצדדים"
           subtitle="המגשרת זהבית דבי - מומחית בגישור מזונות"
-          description="המגשרת זהבית דבי מתמחה בגישור הסכמי מזונות הוגנים ומאוזנים. חישוב מזונות מדויק לפי חוק 2024, פתרונות יצירתיים למצבים מורכבים, וחיסכון של 80% בעלויות משפטיות."
+          description="המגשרת זהבית דבי מתמחה בגישור הסכמי מזונות הוגנים ומאוזנים. הערכת חישוב מזונות המותאם לתא המשפחתי ובהתאם לפסיקה הרווחת, פתרונות יצירתיים למצבים מורכבים, וחיסכון של 80% בעלויות משפטיות."
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="חישוב מזונות"
@@ -257,7 +257,7 @@ export default function ChildSupportPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                מזונות ממוצעים לפי גיל הילד - 2024
+                מזונות ממוצעים לפי גיל הילד - 2025
               </h2>
               <p className="text-xl text-gray-600">
                 הסכומים משתנים בהתאם להכנסות ההורים ולצרכים המיוחדים
@@ -284,10 +284,17 @@ export default function ChildSupportPage() {
 
             <div className="bg-yellow-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3 text-center">חשוב לדעת</h3>
-              <p className="text-gray-700 text-center">
-                הסכומים לעיל הם הערכה כללית בלבד. החישוב המדויק נעשה על בסיס הכנסות ההורים, צרכי הילד הספציפיים,
-                והסדרי הלינה. <strong>המגשרת זהבית דבי</strong> מתמחה בחישוב מזונות מדויק ובהתאמת הסכמים לנסיבות הייחודיות של כל משפחה.
-              </p>
+              <div className="text-gray-700 space-y-3">
+                <p className="text-center">
+                  הסכומים לעיל הם הערכה כללית בלבד <strong>ואינם כוללים מחציות</strong> (חלוקת הוצאות משתנות).
+                </p>
+                <p className="text-center">
+                  <strong>מה זה מחציות?</strong> הוצאות נוספות כמו חוגים, קייטנות, טיפולים רפואיים לא מסובסדים, וחינוך מיוחד - המתחלקות בין ההורים <strong>בהתאם ליחס ההכנסות ביניהם</strong> (לא בהכרח 50-50).
+                </p>
+                <p className="text-center">
+                  החישוב המדויק נעשה על בסיס הכנסות ההורים, צרכי הילד הספציפיים, והסדרי הלינה. <strong>המגשרת זהבית דבי</strong> מתמחה בהערכת חישוב מזונות המותאם לתא המשפחתי ובהתאמת הסכמים לנסיבות הייחודיות של כל משפחה.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -494,7 +501,7 @@ export default function ChildSupportPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
                 <div className="text-right">
                   <p className="text-xl text-gray-600 mb-6">
-                    פנו אלינו לייעוץ ראשוני חינם ונעזור לכם להגיע להסכם מזונות הוגן ומאוזן עם חיסכון של 80% בעלויות
+                    פנו אלינו לייעוץ ראשוני ונעזור לכם להגיע להסכם מזונות הוגן ומאוזן עם חיסכון של 80% בעלויות
                   </p>
                   <div className="space-y-2 text-lg">
                     <p className="flex items-center gap-2">
@@ -503,7 +510,7 @@ export default function ChildSupportPage() {
                     </p>
                     <p className="flex items-center gap-2">
                       <Mail className="h-4 w-4" />
-                      <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-slate-600">asaf@hamegasheret.co.il</a>
+                      <a href="mailto:zehavit@silaw.co.il" className="hover:text-slate-600">zehavit@silaw.co.il</a>
                     </p>
                     <p className="flex items-center gap-2">
                       <MapPin className="h-4 w-4" />
@@ -521,7 +528,7 @@ export default function ChildSupportPage() {
                   </div>
                 </div>
               </div>
-              <ContactForm email="asaf@hamegasheret.co.il" phone="+972-54-423-2167" />
+              <ContactForm email="zehavit@silaw.co.il" phone="+972-54-423-2167" />
             </div>
           </div>
         </section>
@@ -554,8 +561,8 @@ export default function ChildSupportPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">+972-54-423-2167</a><br />
-                <a href="mailto:asaf@hamegasheret.co.il" className="hover:text-white">asaf@hamegasheret.co.il</a>
+                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>
           </div>
