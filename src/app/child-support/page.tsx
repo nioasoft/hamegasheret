@@ -184,33 +184,33 @@ export default function ChildSupportPage() {
         />
 
         {/* מהו תיקון 2017 */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-beige-900 mb-8 text-center">
                 תיקון חוק המזונות 2017 - מה השתנה?
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-slate-700">החידושים החשובים</CardTitle>
+                    <CardTitle className="text-beige-800">החידושים החשובים</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-beige-700 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>שני ההורים אחראים למזונות (לא רק האבא)</span>
                       </li>
                       <li className="flex items-start">
-                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-beige-700 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>נוסחת חישוב אחידה ושקופה</span>
                       </li>
                       <li className="flex items-start">
-                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-beige-700 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>דגש על צרכי הילד בפועל</span>
                       </li>
                       <li className="flex items-start">
-                        <Check className="text-slate-600 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
+                        <Check className="text-beige-700 ml-2 mt-1 h-4 w-4 flex-shrink-0" />
                         <span>התחשבות בהסדרי לינה</span>
                       </li>
                     </ul>
@@ -218,24 +218,24 @@ export default function ChildSupportPage() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-slate-700">ההשפעה על ההורים</CardTitle>
+                    <CardTitle className="text-beige-800">ההשפעה על ההורים</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-slate-600 ml-2 mt-1">•</span>
+                        <span className="text-beige-700 ml-2 mt-1">•</span>
                         <span>עלייה ממוצעת של 20-30% בסכומי המזונות</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-slate-600 ml-2 mt-1">•</span>
+                        <span className="text-beige-700 ml-2 mt-1">•</span>
                         <span>הוגנות רבה יותר בחלוקת העבור</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-slate-600 ml-2 mt-1">•</span>
+                        <span className="text-beige-700 ml-2 mt-1">•</span>
                         <span>התאמה לעידן המודרני</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-slate-600 ml-2 mt-1">•</span>
+                        <span className="text-beige-700 ml-2 mt-1">•</span>
                         <span>פחות סכסוכים בזכות נוסחה ברורה</span>
                       </li>
                     </ul>
@@ -243,7 +243,7 @@ export default function ChildSupportPage() {
                 </Card>
               </div>
               <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
-                <p className="text-lg text-gray-700 text-center">
+                <p className="text-lg text-beige-700 text-center">
                   <strong>המגשרת זהבית דבי</strong> מתמחה ביישום התיקון החדש ויודעת בדיוק איך לחשב מזונות הוגנים לפי החוק המעודכן.
                   הניסיון שלה מאפשר למצוא פתרונות יצירתיים שעונים על הצרכים של כל המשפחה.
                 </p>
@@ -256,10 +256,10 @@ export default function ChildSupportPage() {
         <section className="py-16" id="calculator">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 מזונות ממוצעים לפי גיל הילד - 2025
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 הסכומים משתנים בהתאם להכנסות ההורים ולצרכים המיוחדים
               </p>
             </div>
@@ -268,13 +268,13 @@ export default function ChildSupportPage() {
               {supportAmountsByAge.map((ageGroup, index) => (
                 <Card key={index} className="text-center">
                   <CardHeader>
-                    <CardTitle className="text-slate-700">{ageGroup.ageRange}</CardTitle>
+                    <CardTitle className="text-beige-800">{ageGroup.ageRange}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-slate-700 mb-3">
+                    <div className="text-2xl font-bold text-beige-800 mb-3">
                       {ageGroup.averageAmount}
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-beige-600">
                       {ageGroup.description}
                     </p>
                   </CardContent>
@@ -284,7 +284,7 @@ export default function ChildSupportPage() {
 
             <div className="bg-yellow-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3 text-center">חשוב לדעת</h3>
-              <div className="text-gray-700 space-y-3">
+              <div className="text-beige-700 space-y-3">
                 <p className="text-center">
                   הסכומים לעיל הם הערכה כללית בלבד <strong>ואינם כוללים מחציות</strong> (חלוקת הוצאות משתנות).
                 </p>
@@ -300,13 +300,13 @@ export default function ChildSupportPage() {
         </section>
 
         {/* גורמים המשפיעים על החישוב */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 גורמים המשפיעים על חישוב המזונות
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 כל מקרה הוא ייחודי - אלו הגורמים שנלקחים בחשבון
               </p>
             </div>
@@ -318,7 +318,7 @@ export default function ChildSupportPage() {
                     <CardTitle className="text-lg">{factor.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">{factor.description}</p>
+                    <p className="text-beige-600">{factor.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -330,10 +330,10 @@ export default function ChildSupportPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 למה לבחור בגישור מזונות עם המגשרת זהבית דבי?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 פתרונות מותאמים אישית במקום פסיקות נוקשות
               </p>
             </div>
@@ -342,30 +342,30 @@ export default function ChildSupportPage() {
               {mediationBenefits.map((benefit, index) => (
                 <Card key={index} className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-lg text-slate-700">{benefit.title}</CardTitle>
+                    <CardTitle className="text-lg text-beige-800">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <p className="text-beige-600">{benefit.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
             {/* הצלחות מוכחות */}
-            <div className="bg-gradient-to-r from-gray-50 to-slate-100 p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-beige-50 to-beige-200 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-center mb-6">הצלחות מוכחות עם המגשרת זהבית דבי</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-slate-700 mb-2">85%</div>
-                  <p className="text-gray-700">הצלחה בגישור מזונות</p>
+                  <div className="text-3xl font-bold text-beige-800 mb-2">85%</div>
+                  <p className="text-beige-700">הצלחה בגישור מזונות</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-slate-700 mb-2">3 שבועות</div>
-                  <p className="text-gray-700">זמן ממוצע להסכם</p>
+                  <div className="text-3xl font-bold text-beige-800 mb-2">3 שבועות</div>
+                  <p className="text-beige-700">זמן ממוצע להסכם</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-purple-600 mb-2">200+</div>
-                  <p className="text-gray-700">הסכמי מזונות מוצלחים</p>
+                  <p className="text-beige-700">הסכמי מזונות מוצלחים</p>
                 </div>
               </div>
             </div>
@@ -373,39 +373,39 @@ export default function ChildSupportPage() {
         </section>
 
         {/* השוואת עלויות */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 השוואת עלויות - גישור מול בית משפט
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 חיסכון משמעותי בזמן ובכסף
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {costComparison.map((method, index) => (
-                <Card key={index} className={`h-full ${index === 0 ? 'border-slate-500 border-2' : ''}`}>
+                <Card key={index} className={`h-full ${index === 0 ? 'border-beige-700 border-2' : ''}`}>
                   <CardHeader>
-                    <CardTitle className={`text-xl ${index === 0 ? 'text-slate-700' : 'text-gray-700'}`}>
+                    <CardTitle className={`text-xl ${index === 0 ? 'text-beige-800' : 'text-beige-700'}`}>
                       {method.method}
-                      {index === 0 && <span className="text-sm bg-gray-200 text-slate-800 px-2 py-1 rounded-full mr-2">מומלץ</span>}
+                      {index === 0 && <span className="text-sm bg-beige-200 text-beige-900 px-2 py-1 rounded-full mr-2">מומלץ</span>}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="mb-4">
                       <div className="text-2xl font-bold mb-1">{method.cost}</div>
-                      <div className="text-gray-600">משך זמן: {method.time}</div>
+                      <div className="text-beige-600">משך זמן: {method.time}</div>
                     </div>
                     <h4 className="font-semibold mb-3">יתרונות:</h4>
                     <ul className="space-y-2">
                       {method.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-start">
-                          <span className={`${index === 0 ? 'text-slate-600' : 'text-slate-600'} ml-2 mt-1`}>
-                            {index === 0 ? <Check className="h-4 w-4 text-slate-600" /> : '•'}
+                          <span className={`${index === 0 ? 'text-beige-700' : 'text-beige-700'} ml-2 mt-1`}>
+                            {index === 0 ? <Check className="h-4 w-4 text-beige-700" /> : '•'}
                           </span>
-                          <span className="text-gray-700">{benefit}</span>
+                          <span className="text-beige-700">{benefit}</span>
                         </li>
                       ))}
                     </ul>
@@ -421,10 +421,10 @@ export default function ChildSupportPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   שאלות נפוצות על מזונות ילדים
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   התשובות לכל השאלות החשובות מההורים
                 </p>
               </div>
@@ -449,14 +449,14 @@ export default function ChildSupportPage() {
         <section className="py-16 bg-blue-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-beige-900 mb-8 text-center">
                 מקרים מיוחדים במזונות ילדים
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-slate-700">מזונות לחיילים ובני 18+</CardTitle>
+                    <CardTitle className="text-beige-800">מזונות לחיילים ובני 18+</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
@@ -482,7 +482,7 @@ export default function ChildSupportPage() {
               </div>
 
               <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
-                <p className="text-lg text-gray-700 text-center">
+                <p className="text-lg text-beige-700 text-center">
                   <strong>המגשרת זהבית דבי</strong> מתמחה במקרים מורכבים ויודעת למצוא פתרונות יצירתיים
                   לכל מצב. הניסיון הרב שלה מאפשר להתמודד עם כל סוגי המורכבות הכלכלית והמשפחתית.
                 </p>
@@ -492,25 +492,25 @@ export default function ChildSupportPage() {
         </section>
 
         {/* קריאה לפעולה ויצירת קשר */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-beige-900 mb-6">
                 מוכנים להגיע להסכם מזונות הוגן?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
                 <div className="text-right">
-                  <p className="text-xl text-gray-600 mb-6">
+                  <p className="text-xl text-beige-600 mb-6">
                     פנו אלינו ונעזור לכם להגיע להסכם מזונות הוגן ומאוזן עם חיסכון של 75% בעלויות
                   </p>
                   <div className="space-y-2 text-lg">
                     <p className="flex items-center gap-2">
                       <Phone className="h-4 w-4" />
-                      <a href="tel:+972-54-423-2167" className="hover:text-slate-600">054-423-2167</a>
+                      <a href="tel:+972-54-423-2167" className="hover:text-beige-700">054-423-2167</a>
                     </p>
                     <p className="flex items-center gap-2">
                       <Mail className="h-4 w-4" />
-                      <a href="mailto:zehavit@silaw.co.il" className="hover:text-slate-600">zehavit@silaw.co.il</a>
+                      <a href="mailto:zehavit@silaw.co.il" className="hover:text-beige-700">zehavit@silaw.co.il</a>
                     </p>
                     <p className="flex items-center gap-2">
                       <MapPin className="h-4 w-4" />
@@ -534,30 +534,30 @@ export default function ChildSupportPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-gray-300 hover:text-white">משמורת ילדים</a></li>
-                <li><a href="/child-support" className="text-gray-300 hover:text-white">מזונות</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/cases" className="text-gray-300 hover:text-white">סיפורי הצלחה</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white">צור קשר</a></li>
+                <li><a href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-beige-300 hover:text-white">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-beige-300 hover:text-white">מזונות</a></li>
+                <li><a href="/about" className="text-beige-300 hover:text-white">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-beige-300 hover:text-white">מאמרים</a></li>
+                <li><a href="/cases" className="text-beige-300 hover:text-white">סיפורי הצלחה</a></li>
+                <li><a href="/contact" className="text-beige-300 hover:text-white">צור קשר</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
@@ -566,7 +566,7 @@ export default function ChildSupportPage() {
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
             <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
           </div>
         </div>

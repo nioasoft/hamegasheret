@@ -12,7 +12,9 @@ const IMAGES_TO_CONVERT = [
   'divorce-mistakes.jpg',
   'shared-custody.jpg',
   'asaf.jpg',
-  'zehavit.jpg'
+  'zehavit.jpg',
+  'zehavitmain.jpeg',
+  'zehavit2.png'
 ];
 
 async function convertToWebP() {

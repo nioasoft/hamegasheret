@@ -227,21 +227,21 @@ export default function ChildCustodyPage() {
         />
 
         {/* המגשרת זהבית דבי - המומחיות */}
-        <section className="py-12 bg-gradient-to-r from-gray-50 to-slate-100">
+        <section className="py-12 bg-gradient-to-r from-beige-50 to-beige-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   המגשרת זהבית דבי - מומחית במשמורת ילדים
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   {"כל ילד זוכה לשני הורים"} - זהו העיקרון המנחה את המגשרת זהבית דבי
                 </p>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <div className="space-y-4 text-gray-700">
+                  <div className="space-y-4 text-beige-700">
                     <p>
                       המגשרת זהבית דבי מאמינה שגירושין לא צריכים להרוס את הקשר של הילדים עם ההורים.
                       הגישה הייחודית שלה מתמקדת בטובת הילד קודם כל.
@@ -259,23 +259,23 @@ export default function ChildCustodyPage() {
                   <h3 className="text-xl font-bold mb-6 text-center">התמחויות המגשרת</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>משמורת משותפת יצירתית</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>הסדרי שהות גמישים</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>פתרונות למרחק גיאוגרפי</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>משמורת בגילאים שונים</span>
                     </li>
                     <li className="flex items-center">
-                      <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                      <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                       <span>הכנת ילדים לשינוי</span>
                     </li>
                   </ul>
@@ -289,10 +289,10 @@ export default function ChildCustodyPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 סוגי משמורת - מה מתאים למשפחה שלכם?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 המגשרת זהבית דבי עוזרת למצוא את הפתרון הטוב ביותר לכל משפחה
               </p>
             </div>
@@ -303,7 +303,7 @@ export default function ChildCustodyPage() {
                   <CardHeader className="text-center">
                     <div className="text-4xl mb-4">{type.icon}</div>
                     <CardTitle className="text-xl">{type.title}</CardTitle>
-                    <p className="text-gray-600">{type.description}</p>
+                    <p className="text-beige-600">{type.description}</p>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -312,7 +312,7 @@ export default function ChildCustodyPage() {
                         <ul className="space-y-1">
                           {type.benefits.map((benefit, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-slate-600 ml-2 mt-0.5">•</span>
+                              <span className="text-beige-700 ml-2 mt-0.5">•</span>
                               <span className="text-sm">{benefit}</span>
                             </li>
                           ))}
@@ -320,7 +320,7 @@ export default function ChildCustodyPage() {
                       </div>
                       <div>
                         <h4 className="font-semibold mb-2">מתאים עבור:</h4>
-                        <p className="text-sm text-gray-600">{type.suitableFor}</p>
+                        <p className="text-sm text-beige-600">{type.suitableFor}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -331,14 +331,14 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* שינויים בחוק */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   שינויים חשובים בחוק הישראלי
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   המגשרת זהבית דבי מעודכנת בכל השינויים החדשים בחקיקה
                 </p>
               </div>
@@ -347,18 +347,18 @@ export default function ChildCustodyPage() {
                 {lawChanges.map((change, index) => (
                   <Card key={index}>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold mb-3 text-slate-700">
+                      <h3 className="text-lg font-semibold mb-3 text-beige-800">
                         {change.title}
                       </h3>
-                      <p className="text-gray-700">{change.description}</p>
+                      <p className="text-beige-700">{change.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
 
-              <div className="mt-8 p-6 bg-gray-100 rounded-lg">
+              <div className="mt-8 p-6 bg-beige-100 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3">השפעה על הגישור</h3>
-                <p className="text-gray-700">
+                <p className="text-beige-700">
                   השינויים החדשים בחוק מחזקים את האפשרויות לגישור יעיל במשמורת.
                   המגשרת זהבית דבי מנצלת את החידושים החוקיים כדי למצוא פתרונות מתקדמים יותר
                   המתאימים לעידן החדש של הוריות משותפת.
@@ -372,10 +372,10 @@ export default function ChildCustodyPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 טיפים להוריות משותפת מוצלחת
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 עצות מעשיות מהמגשרת זהבית דבי לניהול הוריות אחרי גירושין
               </p>
             </div>
@@ -390,7 +390,7 @@ export default function ChildCustodyPage() {
                     <ul className="space-y-2">
                       {category.tips.map((tip, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="text-slate-600 ml-2 mt-1">→</span>
+                          <span className="text-beige-700 ml-2 mt-1">→</span>
                           <span className="text-sm">{tip}</span>
                         </li>
                       ))}
@@ -401,9 +401,9 @@ export default function ChildCustodyPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="bg-beige-100 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3">עזרה מקצועית</h3>
-                <p className="text-gray-700">
+                <p className="text-beige-700">
                   המגשרת זהבית דבי מספקת ליווי מתמשך גם אחרי חתימת ההסכם,
                   כולל הכוונה בקושי והתאמות לפי הצורך.
                 </p>
@@ -413,13 +413,13 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* סיפורי הצלחה */}
-        <section className="py-12 bg-gradient-to-r from-gray-50 to-slate-100">
+        <section className="py-12 bg-gradient-to-r from-beige-50 to-beige-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 סיפורי הצלחה במשמורת ילדים
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 דוגמאות אמיתיות לפתרונות יצירתיים של המגשרת זהבית דבי
               </p>
             </div>
@@ -428,13 +428,13 @@ export default function ChildCustodyPage() {
               {successStories.map((story, index) => (
                 <Card key={index} className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-lg text-slate-700">{story.title}</CardTitle>
+                    <CardTitle className="text-lg text-beige-800">{story.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-700 mb-4">{story.description}</p>
-                    <div className="p-3 bg-gray-100 rounded">
-                      <p className="text-sm font-medium text-slate-800">תוצאות:</p>
-                      <p className="text-sm text-slate-700">{story.outcome}</p>
+                    <p className="text-beige-700 mb-4">{story.description}</p>
+                    <div className="p-3 bg-beige-100 rounded">
+                      <p className="text-sm font-medium text-beige-900">תוצאות:</p>
+                      <p className="text-sm text-beige-800">{story.outcome}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -442,7 +442,7 @@ export default function ChildCustodyPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-beige-600">
                 <strong>85% שיעור הצלחה</strong> בהגעה להסכמי משמורת מאוזנים עם המגשרת זהבית דבי
               </p>
             </div>
@@ -454,10 +454,10 @@ export default function ChildCustodyPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   שאלות נפוצות על משמורת ילדים
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   התשובות לכל השאלות החשובות מהמגשרת זהבית דבי
                 </p>
               </div>
@@ -479,7 +479,7 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* סטטיסטיקות */}
-        <section className="py-12 bg-slate-700 text-white">
+        <section className="py-12 bg-beige-800 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">
@@ -512,7 +512,7 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* קריאה לפעולה */}
-        <section className="py-12 bg-slate-800 text-white">
+        <section className="py-12 bg-beige-900 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               מוכנים למצוא את הפתרון הטוב ביותר לילדים שלכם?
@@ -536,13 +536,13 @@ export default function ChildCustodyPage() {
         </section>
 
         {/* טופס יצירת קשר */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-beige-900 mb-6">
                 צוות המומחים שלנו כאן לעזור
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-beige-600 mb-8">
                 פנו אלינו במשמורת ילדים ונמצא יחד את הפתרון הטוב ביותר למשפחה שלכם
               </p>
               <ContactForm
@@ -555,28 +555,28 @@ export default function ChildCustodyPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין - המגשרת המובילה במשמורת ילדים
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-gray-300 hover:text-white">משמורת ילדים</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white">צור קשר</a></li>
+                <li><a href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-beige-300 hover:text-white">משמורת ילדים</a></li>
+                <li><a href="/about" className="text-beige-300 hover:text-white">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-beige-300 hover:text-white">מאמרים</a></li>
+                <li><a href="/contact" className="text-beige-300 hover:text-white">צור קשר</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
@@ -585,7 +585,7 @@ export default function ChildCustodyPage() {
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
             <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
           </div>
         </div>

@@ -377,10 +377,10 @@ export default function CasesPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 סיפורי הצלחה מהשטח
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 כל סיפור הוא עדות לכוחה של התקשורת הבונה והגישור המקצועי
               </p>
             </div>
@@ -388,7 +388,7 @@ export default function CasesPage() {
             <div className="space-y-16">
               {caseStudies.map((caseStudy) => (
                 <Card key={caseStudy.id} className="overflow-hidden">
-                  <CardHeader className="bg-gradient-to-r from-slate-50 to-blue-50 p-8">
+                  <CardHeader className="bg-gradient-to-r from-beige-100 to-blue-50 p-8">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {caseStudy.tags.map((tag, index) => (
                         <Badge key={index} variant="secondary">
@@ -397,11 +397,11 @@ export default function CasesPage() {
                       ))}
                     </div>
 
-                    <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    <CardTitle className="text-2xl sm:text-3xl font-bold text-beige-900 mb-4">
                       {caseStudy.title}
                     </CardTitle>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-600">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-beige-600">
                       <div>
                         <span className="font-semibold">מיקום:</span> {caseStudy.location}
                       </div>
@@ -417,25 +417,25 @@ export default function CasesPage() {
                   <CardContent className="p-8 space-y-8">
                     {/* רקע הזוג */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">רקע הזוג</h4>
-                      <p className="text-gray-700 mb-4">{caseStudy.background.description}</p>
-                      <blockquote className="border-r-4 border-slate-400 pr-4 italic text-gray-600">
+                      <h4 className="text-xl font-semibold text-beige-900 mb-4">רקע הזוג</h4>
+                      <p className="text-beige-700 mb-4">{caseStudy.background.description}</p>
+                      <blockquote className="border-r-4 border-beige-600 pr-4 italic text-beige-600">
                         {caseStudy.background.quote}
                       </blockquote>
                     </div>
 
                     {/* הקונפליקט */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">הקונפליקט המרכזי</h4>
-                      <p className="text-gray-700 mb-6">{caseStudy.conflict.description}</p>
+                      <h4 className="text-xl font-semibold text-beige-900 mb-4">הקונפליקט המרכזי</h4>
+                      <p className="text-beige-700 mb-6">{caseStudy.conflict.description}</p>
 
-                      <div className="bg-gray-50 p-6 rounded-lg">
-                        <h5 className="font-semibold mb-4 text-gray-900">מתוך הדיאלוג בין הצדדים:</h5>
+                      <div className="bg-beige-50 p-6 rounded-lg">
+                        <h5 className="font-semibold mb-4 text-beige-900">מתוך הדיאלוג בין הצדדים:</h5>
                         <div className="space-y-4">
                           {caseStudy.conflict.dialogue.map((exchange, index) => (
                             <div key={index} className="border-r-2 border-red-200 pr-4">
                               <p className="font-medium text-red-600">{exchange.speaker}:</p>
-                              <p className="text-gray-700 italic">{`"${exchange.text}"`}</p>
+                              <p className="text-beige-700 italic">{`"${exchange.text}"`}</p>
                             </div>
                           ))}
                         </div>
@@ -444,14 +444,14 @@ export default function CasesPage() {
 
                     {/* התערבות המגשרת */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התערבות המגשרת</h4>
-                      <p className="text-gray-700 mb-6">{caseStudy.intervention.description}</p>
+                      <h4 className="text-xl font-semibold text-beige-900 mb-4">התערבות המגשרת</h4>
+                      <p className="text-beige-700 mb-6">{caseStudy.intervention.description}</p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {caseStudy.intervention.methods.map((method, index) => (
                           <div key={index} className="flex items-start space-x-3 rtl:space-x-reverse">
-                            <div className="flex-shrink-0 w-2 h-2 bg-slate-500 rounded-full mt-2"></div>
-                            <p className="text-gray-700">{method}</p>
+                            <div className="flex-shrink-0 w-2 h-2 bg-beige-700 rounded-full mt-2"></div>
+                            <p className="text-beige-700">{method}</p>
                           </div>
                         ))}
                       </div>
@@ -459,16 +459,16 @@ export default function CasesPage() {
 
                     {/* הפתרון */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">הפתרון היצירתי</h4>
-                      <p className="text-gray-700 mb-6">{caseStudy.solution.description}</p>
+                      <h4 className="text-xl font-semibold text-beige-900 mb-4">הפתרון היצירתי</h4>
+                      <p className="text-beige-700 mb-6">{caseStudy.solution.description}</p>
 
-                      <div className="bg-slate-50 p-6 rounded-lg">
-                        <h5 className="font-semibold mb-4 text-slate-700">פרטי הפתרון:</h5>
+                      <div className="bg-beige-100 p-6 rounded-lg">
+                        <h5 className="font-semibold mb-4 text-beige-800">פרטי הפתרון:</h5>
                         <div className="grid grid-cols-1 gap-3">
                           {caseStudy.solution.details.map((detail, index) => (
                             <div key={index} className="flex items-start space-x-3 rtl:space-x-reverse">
-                              <div className="flex-shrink-0 w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
-                              <p className="text-slate-700">{detail}</p>
+                              <div className="flex-shrink-0 w-2 h-2 bg-beige-700 rounded-full mt-2"></div>
+                              <p className="text-beige-800">{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -477,8 +477,8 @@ export default function CasesPage() {
 
                     {/* התוצאה */}
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">התוצאה המוצלחת</h4>
-                      <p className="text-gray-700 mb-6">{caseStudy.outcome.description}</p>
+                      <h4 className="text-xl font-semibold text-beige-900 mb-4">התוצאה המוצלחת</h4>
+                      <p className="text-beige-700 mb-6">{caseStudy.outcome.description}</p>
 
                       <blockquote className="bg-blue-50 p-6 rounded-lg border-r-4 border-blue-500">
                         <p className="text-blue-800 italic mb-3">
@@ -497,10 +497,10 @@ export default function CasesPage() {
         </section>
 
         {/* קטע המלצות */}
-        <section className="py-16 bg-slate-50">
+        <section className="py-16 bg-beige-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl font-bold text-beige-900 mb-8">
                 מה מייחד את זהבית?
               </h2>
 
@@ -508,7 +508,7 @@ export default function CasesPage() {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="text-3xl mb-4">✨</div>
                   <h3 className="text-xl font-semibold mb-4">יכולת הפיכת יריבים לשותפים</h3>
-                  <p className="text-gray-600">
+                  <p className="text-beige-600">
                     היכולת המיוחדת להפוך זוגות שנמצאים במלחמה קשה לשותפים בפתרון הקושי
                   </p>
                 </div>
@@ -516,7 +516,7 @@ export default function CasesPage() {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="text-3xl mb-4">🎯</div>
                   <h3 className="text-xl font-semibold mb-4">זיהוי הבעיה האמיתית</h3>
-                  <p className="text-gray-600">
+                  <p className="text-beige-600">
                     התמחות בזיהוי הגורם האמיתי לסכסוך מעבר לטענות השטחיות
                   </p>
                 </div>
@@ -524,17 +524,17 @@ export default function CasesPage() {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="text-3xl mb-4">🔮</div>
                   <h3 className="text-xl font-semibold mb-4">פתרונות מחוץ לקופסה</h3>
-                  <p className="text-gray-600">
+                  <p className="text-beige-600">
                     יצירתיות בפיתוח פתרונות שמתאימים לצרכים הייחודיים של כל זוג
                   </p>
                 </div>
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-                <blockquote className="text-xl italic text-gray-700 mb-4">
+                <blockquote className="text-xl italic text-beige-700 mb-4">
                   {"זהבית דבי היא מגשרת יוצאת דופן. היכולת שלה לראות מעבר לכעס ולטינה ולהגיע ללב הבעיה היא יוצאת דופן. בכל מקרה שהיא טופלת, היא מצליחה למצוא את הדרך להביא לפתרון שמתאים לכל הצדדים."}
                 </blockquote>
-                <p className="font-semibold text-slate-600">
+                <p className="font-semibold text-beige-700">
                   - ד{"ר"} משה כהן, מומחה לדיני משפחה
                 </p>
               </div>
@@ -549,28 +549,28 @@ export default function CasesPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">המגשרת - זהבית דבי</h3>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 מומחית בגישור גירושין ודיני משפחה
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><Link href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</Link></li>
-                <li><Link href="/about" className="text-gray-300 hover:text-white">אודות המגשרת</Link></li>
-                <li><Link href="/articles" className="text-gray-300 hover:text-white">מאמרים</Link></li>
-                <li><Link href="/cases" className="text-gray-300 hover:text-white">סיפורי הצלחה</Link></li>
-                <li><Link href="/contact" className="text-gray-300 hover:text-white">צור קשר</Link></li>
+                <li><Link href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</Link></li>
+                <li><Link href="/about" className="text-beige-300 hover:text-white">אודות המגשרת</Link></li>
+                <li><Link href="/articles" className="text-beige-300 hover:text-white">מאמרים</Link></li>
+                <li><Link href="/cases" className="text-beige-300 hover:text-white">סיפורי הצלחה</Link></li>
+                <li><Link href="/contact" className="text-beige-300 hover:text-white">צור קשר</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
@@ -579,7 +579,7 @@ export default function CasesPage() {
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
             <p>&copy; 2024 המגשרת - זהבית דבי. כל הזכויות שמורות.</p>
           </div>
         </div>

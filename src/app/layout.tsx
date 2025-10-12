@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`${notoSansHebrew.variable} font-sans antialiased bg-white text-gray-900`}>
+      <body className={`${notoSansHebrew.variable} font-sans antialiased bg-white text-beige-900`}>
         {children}
       </body>
     </html>

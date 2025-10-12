@@ -26,7 +26,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
         <div className="flex justify-center items-center h-16 relative">
           {/* Logo */}
           <div className="absolute right-0">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+            <Link href="/" className="text-xl font-bold text-beige-900">
               {logo}
             </Link>
           </div>
@@ -37,7 +37,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
               <Link
                 key={index}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-beige-600 hover:text-beige-900 px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item.label}
               </Link>
@@ -47,7 +47,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
           {/* CTA Button */}
           {ctaButton && (
             <div className="absolute left-0 hidden md:block">
-              <Button className="hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg" asChild>
+              <Button className="hover:bg-beige-800 transition-all active:scale-95 transform hover:shadow-lg" asChild>
                 <Link href={ctaButton.href}>
                   {ctaButton.text}
                 </Link>
@@ -60,10 +60,10 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-slate-600 hover:bg-slate-100 hover:border-slate-800 shadow-md transition-all active:scale-95 transform"
+              className="border-2 border-beige-700 hover:bg-beige-200 hover:border-beige-900 shadow-md transition-all active:scale-95 transform"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-7 w-7 text-slate-700" /> : <Menu className="h-7 w-7 text-slate-700" />}
+              {isMenuOpen ? <X className="h-7 w-7 text-beige-800" /> : <Menu className="h-7 w-7 text-beige-800" />}
             </Button>
           </div>
         </div>
@@ -76,7 +76,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
                 <Link
                   key={index}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                  className="text-beige-600 hover:text-beige-900 block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -85,7 +85,7 @@ export function Navigation({ logo = "דבי סיידה ושו״ת", menuItems, c
 
               {ctaButton && (
                 <div className="px-3 py-2">
-                  <Button asChild className="w-full hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg">
+                  <Button asChild className="w-full hover:bg-beige-800 transition-all active:scale-95 transform hover:shadow-lg">
                     <Link href={ctaButton.href} onClick={() => setIsMenuOpen(false)}>
                       {ctaButton.text}
                     </Link>

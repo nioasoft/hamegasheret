@@ -39,7 +39,7 @@ export function Hero({
   testimonials
 }: HeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-slate-100 py-16 sm:py-24">
+    <section className="relative bg-gradient-to-br from-beige-50 to-beige-200 py-16 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <Badge variant="secondary" className="mb-4 text-sm sm:text-base">
@@ -59,19 +59,19 @@ export function Hero({
                 />
               </div>
             )}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-beige-900 leading-tight">
               {title}
             </h1>
           </div>
 
-          <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl text-beige-600 mb-8 max-w-3xl mx-auto">
             {description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              className="text-lg px-8 py-4 h-auto hover:bg-slate-700 transition-all active:scale-95 transform hover:shadow-lg"
+              className="text-lg px-8 py-4 h-auto hover:bg-beige-800 transition-all active:scale-95 transform hover:shadow-lg"
               asChild
             >
               <a href={ctaHref}>
@@ -83,7 +83,7 @@ export function Hero({
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-4 h-auto hover:bg-gray-50 hover:border-gray-300 transition-all active:scale-95 transform hover:shadow-md"
+                className="text-lg px-8 py-4 h-auto hover:bg-beige-50 hover:border-beige-300 transition-all active:scale-95 transform hover:shadow-md"
                 asChild
               >
                 <a href={secondaryCtaHref}>
@@ -97,10 +97,10 @@ export function Hero({
             <div className="grid grid-cols-3 gap-2 sm:gap-8 mb-10">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 mb-1">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-beige-800 mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-xs sm:text-sm lg:text-base leading-tight">
+                  <div className="text-beige-600 text-xs sm:text-sm lg:text-base leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -111,16 +111,16 @@ export function Hero({
           {testimonials && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="text-center p-4 h-full flex flex-col bg-white/50 backdrop-blur-sm border border-gray-200/50 shadow-sm hover:shadow-md transition-shadow">
+                <Card key={index} className="text-center p-4 h-full flex flex-col bg-white/50 backdrop-blur-sm border border-beige-200/50 shadow-sm hover:shadow-md transition-shadow">
                   <CardContent className="p-0 flex-1 flex flex-col">
-                    <p className="text-gray-700 mb-4 italic text-sm leading-relaxed flex-1">
+                    <p className="text-beige-700 mb-4 italic text-sm leading-relaxed flex-1">
                       {`"${testimonial.quote}"`}
                     </p>
                     <div className="text-xs border-t pt-3 mt-auto">
-                      <div className="font-semibold text-gray-900">
+                      <div className="font-semibold text-beige-900">
                         {testimonial.author}
                       </div>
-                      <div className="text-gray-600">
+                      <div className="text-beige-600">
                         {testimonial.role}
                       </div>
                     </div>

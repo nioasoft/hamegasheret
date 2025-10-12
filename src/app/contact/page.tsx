@@ -113,10 +113,10 @@ export default function ContactPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 איך תרצה ליצור קשר?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 בחר את הדרך הנוחה ביותר עבורך
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                     <CardTitle className="text-xl">{method.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="text-gray-600">{method.description}</p>
+                    <p className="text-beige-600">{method.description}</p>
                     <Button
                       className="w-full"
                       asChild
@@ -146,14 +146,14 @@ export default function ContactPage() {
         </section>
 
         {/* טופס צור קשר + מידע על המשרד */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   שלח לנו הודעה
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   מלא את הפרטים ונחזור אליך בהקדם
                 </p>
               </div>
@@ -167,10 +167,10 @@ export default function ContactPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 מידע על המשרד
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 כל מה שאתה צריך לדעת לפני הביקור
               </p>
             </div>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                   <CardContent>
                     <ul className="space-y-2">
                       {info.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="text-gray-600">
+                        <li key={detailIndex} className="text-beige-600">
                           {detail}
                         </li>
                       ))}
@@ -197,10 +197,10 @@ export default function ContactPage() {
         </section>
 
         {/* מפה */}
-        <section className="py-12 bg-slate-50">
+        <section className="py-12 bg-beige-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl font-bold text-beige-900 mb-8">
                 מיקום המשרד
               </h2>
               <div className="bg-white rounded-lg shadow-lg p-4">
@@ -244,8 +244,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-6 p-4 bg-blue-50 rounded">
-                  <h3 className="font-semibold text-gray-900 mb-2">הוראות הגעה</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="font-semibold text-beige-900 mb-2">הוראות הגעה</h3>
+                  <p className="text-beige-600 text-sm">
                     המשרד ממוקם במרכז באר שבע, עם גישה נוחה לתחבורה ציבורית ולחניה.
                     הכניסה למשרד נגישה לחלוטין וכוללת מעלית.
                   </p>
@@ -260,10 +260,10 @@ export default function ContactPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   שאלות נפוצות
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   התשובות לכל השאלות החשובות
                 </p>
               </div>
@@ -285,7 +285,7 @@ export default function ContactPage() {
         </section>
 
         {/* קריאה לפעולה אחרונה */}
-        <section className="py-12 bg-slate-700 text-white">
+        <section className="py-12 bg-beige-800 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               אל תחכה, צור קשר עכשיו!
@@ -309,27 +309,27 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white">צור קשר</a></li>
+                <li><a href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</a></li>
+                <li><a href="/about" className="text-beige-300 hover:text-white">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-beige-300 hover:text-white">מאמרים</a></li>
+                <li><a href="/contact" className="text-beige-300 hover:text-white">צור קשר</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
@@ -338,7 +338,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
             <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
           </div>
         </div>

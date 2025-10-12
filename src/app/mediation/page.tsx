@@ -156,15 +156,15 @@ export default function MediationPage() {
         />
 
                 {/* זהבית דבי - המומחית */}
-                <section className="py-12 bg-gradient-to-r from-gray-50 to-slate-100">
+                <section className="py-12 bg-gradient-to-r from-beige-50 to-beige-200">
                   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                          <h2 className="text-3xl font-bold text-beige-900 mb-6">
                             זהבית דבי - מומחית בגישור גירושין
                           </h2>
-                          <div className="space-y-4 text-gray-700">
+                          <div className="space-y-4 text-beige-700">
                             <p>
                               זהבית דבי היא עורכת דין מובילה בתחום דיני המשפחה, עם התמחות מיוחדת בגישור גירושין.
                               הניסיון הרב שלה והגישה הייחודית מאפשרים לה להגיע להישגים יוצאי דופן.
@@ -191,19 +191,19 @@ export default function MediationPage() {
                           <h3 className="text-xl font-bold mb-4 text-center">הישגים מוכחים</h3>
                           <ul className="space-y-3">
                             <li className="flex items-center">
-                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>85% הצלחה בהגעה להסכמים</span>
                             </li>
                             <li className="flex items-center">
-                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>15+ שנות ניסיון בגישור</span>
                             </li>
                             <li className="flex items-center">
-                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>מאות זוגות שקיבלו ייעוץ</span>
                             </li>
                             <li className="flex items-center">
-                              <Check className="text-slate-600 ml-2 h-4 w-4 flex-shrink-0" />
+                              <Check className="text-beige-700 ml-2 h-4 w-4 flex-shrink-0" />
                               <span>הכרה מקצועית מדיינים בבתי דין</span>
                             </li>
                           </ul>
@@ -217,10 +217,10 @@ export default function MediationPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 יתרונות הגישור על פני הליך משפטי
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 מדוע כדאי לבחור בגישור גירושין?
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function MediationPage() {
                     <CardTitle className="text-lg">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <p className="text-beige-600">{benefit.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -241,13 +241,13 @@ export default function MediationPage() {
         </section>
 
         {/* תהליך הגישור */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-beige-900 mb-4">
                 תהליך הגישור צעד אחר צעד
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-beige-600">
                 איך מתנהל תהליך הגישור במשרדנו?
               </p>
             </div>
@@ -257,15 +257,15 @@ export default function MediationPage() {
                 {processSteps.map((step, index) => (
                   <div key={index} className="flex items-start space-x-4 rtl:space-x-reverse">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                      <div className="w-12 h-12 bg-beige-800 text-white rounded-full flex items-center justify-center font-bold text-lg">
                         {step.step}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-beige-900 mb-2">
                         {step.title}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-beige-600">
                         {step.description}
                       </p>
                     </div>
@@ -281,10 +281,10 @@ export default function MediationPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-beige-900 mb-4">
                   שאלות נפוצות על גישור גירושין
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-beige-600">
                   התשובות לכל השאלות החשובות
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default function MediationPage() {
         </section>
 
         {/* קריאה לפעולה */}
-        <section className="py-12 bg-slate-800 text-white">
+        <section className="py-12 bg-beige-900 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               מוכנים להתחיל את התהליך?
@@ -330,30 +330,30 @@ export default function MediationPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white transition-colors">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-gray-300 hover:text-white transition-colors">משמורת ילדים</a></li>
-                <li><a href="/child-support" className="text-gray-300 hover:text-white transition-colors">מזונות</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white transition-colors">מאמרים</a></li>
-                <li><a href="/cases" className="text-gray-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">צור קשר</a></li>
+                <li><a href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-beige-300 hover:text-white transition-colors">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-beige-300 hover:text-white transition-colors">מזונות</a></li>
+                <li><a href="/about" className="text-beige-300 hover:text-white transition-colors">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</a></li>
+                <li><a href="/cases" className="text-beige-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
+                <li><a href="/contact" className="text-beige-300 hover:text-white transition-colors">צור קשר</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
@@ -362,7 +362,7 @@ export default function MediationPage() {
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
             <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
           </div>
         </div>

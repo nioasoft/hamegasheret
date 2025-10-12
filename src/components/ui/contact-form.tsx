@@ -14,7 +14,7 @@ interface ContactFormProps {
   whatsappText?: string;
 }
 
-export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-54-423-2167", whatsappText = "שלום, אני מעוניין בייעוץ גישור גירושין" }: ContactFormProps) {
+export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-54-423-2167", whatsappText = "שלום, אני מעוניין בייעוץ גישור גירושין" }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -106,7 +106,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
 
             <Button
               type="submit"
-              className="w-full hover:bg-slate-700 transition-colors active:scale-95 transform"
+              className="w-full hover:bg-beige-800 transition-colors active:scale-95 transform"
               disabled={isSubmitting}
             >
               {isSubmitting ? "שולח..." : "שלח הודעה"}
@@ -124,7 +124,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
           <div className="space-y-4">
             <div>
               <h3 className="font-semibold text-lg mb-2">כתובת המשרד</h3>
-              <p className="text-gray-600">
+              <p className="text-beige-600">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע
@@ -133,8 +133,8 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
 
             <div>
               <h3 className="font-semibold text-lg mb-2">טלפון</h3>
-              <p className="text-gray-600">
-                <a href={`tel:${phone}`} className="hover:text-slate-600">
+              <p className="text-beige-600">
+                <a href={`tel:${phone}`} className="hover:text-beige-700">
                   {phone}
                 </a>
               </p>
@@ -142,8 +142,8 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
 
             <div>
               <h3 className="font-semibold text-lg mb-2">אימייל</h3>
-              <p className="text-gray-600">
-                <a href={`mailto:${email}`} className="hover:text-slate-600">
+              <p className="text-beige-600">
+                <a href={`mailto:${email}`} className="hover:text-beige-700">
                   {email}
                 </a>
               </p>
@@ -154,7 +154,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
             <h3 className="font-semibold text-lg mb-4">צור קשר מהיר</h3>
             <div className="space-y-3">
               <Button
-                className="w-full hover:bg-slate-700 transition-colors"
+                className="w-full hover:bg-beige-800 transition-colors"
                 asChild
               >
                 <a href={`tel:${phone}`} className="flex items-center justify-center gap-2">
@@ -165,7 +165,7 @@ export function ContactForm({ email = "asaf@hamegasheret.co.il", phone = "+972-5
 
               <Button
                 variant="outline"
-                className="w-full hover:bg-slate-50 hover:border-slate-300 transition-colors"
+                className="w-full hover:bg-beige-100 hover:border-beige-300 transition-colors"
                 asChild
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">

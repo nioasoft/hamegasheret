@@ -19,20 +19,20 @@ interface ServicesSectionProps {
 
 export function ServicesSection({ title, subtitle, services }: ServicesSectionProps) {
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-beige-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-beige-900 mb-4">
             {title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-beige-600 max-w-3xl mx-auto">
             {subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-gray-50/30 border border-gray-200/60 shadow-md">
+            <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-beige-50/30 border border-beige-200/60 shadow-md">
               <CardHeader className="text-center pb-4">
                 <div className="text-4xl mb-3">{service.icon}</div>
                 <CardTitle className="text-xl mb-2">
@@ -41,14 +41,14 @@ export function ServicesSection({ title, subtitle, services }: ServicesSectionPr
               </CardHeader>
 
               <CardContent className="flex-1 flex flex-col">
-                <p className="text-gray-600 mb-4 flex-1 leading-relaxed">
+                <p className="text-beige-600 mb-4 flex-1 leading-relaxed">
                   {service.description}
                 </p>
 
                 <ul className="space-y-1.5 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <Check className="text-slate-600 mr-2 h-4 w-4 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-beige-600">
+                      <Check className="text-beige-700 mr-2 h-4 w-4 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -56,7 +56,7 @@ export function ServicesSection({ title, subtitle, services }: ServicesSectionPr
 
                 <Button
                   variant="outline"
-                  className="w-full mt-auto hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95 transform hover:shadow-md"
+                  className="w-full mt-auto hover:bg-beige-100 hover:border-beige-300 transition-all active:scale-95 transform hover:shadow-md"
                   asChild
                 >
                   <Link href={service.href}>

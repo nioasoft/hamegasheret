@@ -105,7 +105,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           formattedLines.push('</div>');
           inAdviceSection = false;
         }
-        formattedLines.push(`<h3 class="text-2xl font-bold text-slate-900 mt-8 mb-4 border-r-4 border-blue-600 pr-4">${line.slice(4)}</h3>`);
+        formattedLines.push(`<h3 class="text-2xl font-bold text-beige-900 mt-8 mb-4 border-r-4 border-blue-600 pr-4">${line.slice(4)}</h3>`);
       }
       else if (line.startsWith('## ')) {
         if (inList) {
@@ -119,12 +119,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         const title = line.slice(3);
         const number = title.match(/^\d+/)?.[0];
         if (number) {
-          formattedLines.push(`<h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
+          formattedLines.push(`<h2 class="text-3xl font-bold text-beige-900 mt-12 mb-6 flex items-center gap-3">
             <span class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center">${number}</span>
             <span>${title.replace(/^\d+\.\s*/, '')}</span>
           </h2>`);
         } else {
-          formattedLines.push(`<h2 class="text-3xl font-bold text-slate-900 mt-12 mb-6">${title}</h2>`);
+          formattedLines.push(`<h2 class="text-3xl font-bold text-beige-900 mt-12 mb-6">${title}</h2>`);
         }
       }
       // קטע העצה של המגשרת
@@ -143,7 +143,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           formattedLines.push('<ul class="list-disc list-inside space-y-3 my-6 mr-6">');
           inList = true;
         }
-        formattedLines.push(`<li class="text-slate-700 leading-relaxed">${line.slice(2)}</li>`);
+        formattedLines.push(`<li class="text-beige-800 leading-relaxed">${line.slice(2)}</li>`);
       }
       // טקסט מודגש
       else if (line.includes('**')) {
@@ -151,13 +151,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           formattedLines.push('</ul>');
           inList = false;
         }
-        const formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-slate-900">$1</strong>');
+        const formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-beige-900">$1</strong>');
         if (inAdviceSection) {
-          formattedLines.push(`<p class="text-slate-700 leading-relaxed">${formattedLine}</p>`);
+          formattedLines.push(`<p class="text-beige-800 leading-relaxed">${formattedLine}</p>`);
           formattedLines.push('</div>');
           inAdviceSection = false;
         } else {
-          formattedLines.push(`<p class="text-slate-700 leading-relaxed my-6 text-lg">${formattedLine}</p>`);
+          formattedLines.push(`<p class="text-beige-800 leading-relaxed my-6 text-lg">${formattedLine}</p>`);
         }
       }
       // פסקה רגילה
@@ -167,15 +167,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           inList = false;
         }
         if (inAdviceSection) {
-          formattedLines.push(`<p class="text-slate-700 leading-relaxed">${line}</p>`);
+          formattedLines.push(`<p class="text-beige-800 leading-relaxed">${line}</p>`);
           formattedLines.push('</div>');
           inAdviceSection = false;
         } else {
           // בדיקה אם זה ציטוט
           if (line.includes('"') && line.includes('המגשרת')) {
-            formattedLines.push(`<blockquote class="border-r-4 border-gray-300 pr-6 my-6 text-gray-700 italic text-lg">${line}</blockquote>`);
+            formattedLines.push(`<blockquote class="border-r-4 border-beige-300 pr-6 my-6 text-beige-700 italic text-lg">${line}</blockquote>`);
           } else {
-            formattedLines.push(`<p class="text-slate-700 leading-relaxed my-6 text-lg">${line}</p>`);
+            formattedLines.push(`<p class="text-beige-800 leading-relaxed my-6 text-lg">${line}</p>`);
           }
         }
       }
@@ -206,12 +206,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <Navigation menuItems={menuItems} />
 
       {/* כותרת העמוד */}
-      <section className="bg-slate-50 py-12">
+      <section className="bg-beige-100 py-12">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">
+          <h1 className="text-4xl font-bold text-beige-900 mb-4">
             {article.title}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-beige-600 max-w-3xl mx-auto">
             {article.excerpt}
           </p>
         </div>
@@ -222,15 +222,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* מטא דאטה */}
-            <div className="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b border-gray-200">
+            <div className="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b border-beige-200">
               <Badge variant="secondary" className="text-sm">
                 {article.category}
               </Badge>
-              <div className="flex items-center gap-2 text-gray-600">
+              <div className="flex items-center gap-2 text-beige-600">
                 <Calendar className="h-4 w-4" />
                 <span className="text-sm">{article.date}</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-600">
+              <div className="flex items-center gap-2 text-beige-600">
                 <Clock className="h-4 w-4" />
                 <span className="text-sm">{article.readTime}</span>
               </div>
@@ -245,10 +245,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             {/* CTA */}
             <div className="mt-16 p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                <h3 className="text-2xl font-bold text-beige-900 mb-4">
                   זקוקים לעזרה בגישור גירושין?
                 </h3>
-                <p className="text-lg text-slate-700 mb-6">
+                <p className="text-lg text-beige-800 mb-6">
                   המגשרת זהבית דבי כאן כדי לעזור לכם לעבור את התהליך בצורה מכבדת והוגנת
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,10 +270,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </section>
 
       {/* מאמרים קשורים */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-beige-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
+            <h2 className="text-3xl font-bold text-center text-beige-900 mb-12">
               מאמרים נוספים שעשויים לעניין אתכם
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -283,13 +283,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     <Badge variant="secondary" className="mb-3">
                       {relatedArticle.category}
                     </Badge>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2">
+                    <h3 className="text-xl font-bold text-beige-900 mb-3 line-clamp-2">
                       {relatedArticle.title}
                     </h3>
-                    <p className="text-slate-600 mb-4 line-clamp-3">
+                    <p className="text-beige-700 mb-4 line-clamp-3">
                       {relatedArticle.excerpt}
                     </p>
-                    <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
+                    <div className="flex justify-between items-center text-sm text-beige-500 mb-4">
                       <span>{relatedArticle.date}</span>
                       <span>{relatedArticle.readTime}</span>
                     </div>
@@ -317,13 +317,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* עמודה 1 - לוגו ותיאור */}
             <div>
               <h3 className="text-xl font-bold mb-4">המגשרת</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-beige-300 mb-4">
                 זהבית דבי - המגשרת המובילה בישראל לגישור גירושין מכבד והוגן
               </p>
             </div>
@@ -332,10 +332,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div>
               <h4 className="text-lg font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><Link href="/" className="text-gray-300 hover:text-white transition-colors">דף הבית</Link></li>
-                <li><Link href="/mediation" className="text-gray-300 hover:text-white transition-colors">גישור גירושין</Link></li>
-                <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">אודות</Link></li>
-                <li><Link href="/articles" className="text-gray-300 hover:text-white transition-colors">מאמרים</Link></li>
+                <li><Link href="/" className="text-beige-300 hover:text-white transition-colors">דף הבית</Link></li>
+                <li><Link href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</Link></li>
+                <li><Link href="/about" className="text-beige-300 hover:text-white transition-colors">אודות</Link></li>
+                <li><Link href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</Link></li>
               </ul>
             </div>
 
@@ -343,10 +343,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div>
               <h4 className="text-lg font-semibold mb-4">השירותים שלנו</h4>
               <ul className="space-y-2">
-                <li><span className="text-gray-300">גישור גירושין</span></li>
-                <li><span className="text-gray-300">הסכמי ממון</span></li>
-                <li><span className="text-gray-300">משמורת משותפת</span></li>
-                <li><span className="text-gray-300">מזונות ילדים</span></li>
+                <li><span className="text-beige-300">גישור גירושין</span></li>
+                <li><span className="text-beige-300">הסכמי ממון</span></li>
+                <li><span className="text-beige-300">משמורת משותפת</span></li>
+                <li><span className="text-beige-300">מזונות ילדים</span></li>
               </ul>
             </div>
 
@@ -354,15 +354,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div>
               <h4 className="text-lg font-semibold mb-4">יצירת קשר</h4>
               <ul className="space-y-2">
-                <li className="text-gray-300">טלפון: 052-8692-921</li>
-                <li className="text-gray-300">מייל: info@hamegasheret.co.il</li>
-                <li className="text-gray-300">כתובת: הרצל 91, באר שבע</li>
-                <li className="text-gray-300">שעות: א׳-ה׳ 9:00-18:00</li>
+                <li className="text-beige-300">טלפון: 052-8692-921</li>
+                <li className="text-beige-300">מייל: info@hamegasheret.co.il</li>
+                <li className="text-beige-300">כתובת: הרצל 91, באר שבע</li>
+                <li className="text-beige-300">שעות: א׳-ה׳ 9:00-18:00</li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
+          <div className="mt-8 pt-8 border-t border-beige-700 text-center text-beige-300">
             <p>&copy; 2024 המגשרת - זהבית דבי. כל הזכויות שמורות.</p>
           </div>
         </div>

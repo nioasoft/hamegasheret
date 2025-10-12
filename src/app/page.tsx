@@ -121,34 +121,34 @@ export default function Home() {
         <section className="py-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl font-bold text-beige-900 mb-8">
                 למה לבחור במשרד שלנו?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-right mb-8">
                 <div>
-                  <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-gray-100">
+                  <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-beige-100">
                     <h3 className="text-xl font-semibold mb-3">ניסיון מוכח</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-beige-600 leading-relaxed">
                       למעלה מ-15 שנות ניסיון בדיני משפחה וגירושין, עם התמחות מיוחדת בגישור.
                     </p>
                   </div>
-                  <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                  <div className="bg-white p-5 rounded-lg shadow-sm border border-beige-100">
                     <h3 className="text-xl font-semibold mb-3">גישה אנושית</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-beige-600 leading-relaxed">
                       אנו מבינים את הרגישות של הנושאים ומתייחסים לכל לקוח באמפתיה ובמקצועיות.
                     </p>
                   </div>
                 </div>
                 <div>
-                  <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-gray-100">
+                  <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-beige-100">
                     <h3 className="text-xl font-semibold mb-3">פתרונות יצירתיים</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-beige-600 leading-relaxed">
                       אנו מוצאים פתרונות מותאמים אישית לכל מקרה, תוך התחשבות בצרכים הייחודיים.
                     </p>
                   </div>
-                  <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+                  <div className="bg-white p-5 rounded-lg shadow-sm border border-beige-100">
                     <h3 className="text-xl font-semibold mb-3">שירות אישי</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-beige-600 leading-relaxed">
                       ליווי צמוד וזמינות מלאה לאורך כל התהליך עד להשגת התוצאה הרצויה.
                     </p>
                   </div>
@@ -158,15 +158,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-beige-900 mb-6">
                 צריכים ייעוץ משפטי?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6">
                 <div className="text-right">
-                  <p className="text-xl text-gray-600 mb-6">
+                  <p className="text-xl text-beige-600 mb-6">
                     פנו אלינו ונעזור לכם למצוא את הפתרון הטוב ביותר למצבכם
                   </p>
                 </div>
@@ -189,30 +189,30 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-beige-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">דבי סיידה ושו״ת</h3>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 משרד עורכי דין מוביל בדיני משפחה וגירושין
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">קישורים מהירים</h4>
               <ul className="space-y-2">
-                <li><a href="/mediation" className="text-gray-300 hover:text-white transition-colors">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-gray-300 hover:text-white transition-colors">משמורת ילדים</a></li>
-                <li><a href="/child-support" className="text-gray-300 hover:text-white transition-colors">מזונות</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-gray-300 hover:text-white transition-colors">מאמרים</a></li>
-                <li><a href="/cases" className="text-gray-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">צור קשר</a></li>
+                <li><a href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</a></li>
+                <li><a href="/child-custody" className="text-beige-300 hover:text-white transition-colors">משמורת ילדים</a></li>
+                <li><a href="/child-support" className="text-beige-300 hover:text-white transition-colors">מזונות</a></li>
+                <li><a href="/about" className="text-beige-300 hover:text-white transition-colors">אודות המשרד</a></li>
+                <li><a href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</a></li>
+                <li><a href="/cases" className="text-beige-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
+                <li><a href="/contact" className="text-beige-300 hover:text-white transition-colors">צור קשר</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-gray-300">
+              <p className="text-beige-300">
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
@@ -221,7 +221,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
             <p>&copy; 2024 דבי סיידה ושו״ת. כל הזכויות שמורות.</p>
           </div>
         </div>
