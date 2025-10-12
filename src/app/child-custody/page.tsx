@@ -527,7 +527,7 @@ export default function ChildCustodyPage() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+972-54-423-2167">
+                <a href="tel:+972-53-606-2456">
                   התקשר עכשיו
                 </a>
               </Button>
@@ -547,7 +547,7 @@ export default function ChildCustodyPage() {
               </p>
               <ContactForm
                 email="zehavit@silaw.co.il"
-                phone="+972-54-423-2167"
+                phone="+972-53-606-2456"
                 whatsappText="שלום, אני מעוניין בייעוץ במשמורת ילדים"
               />
             </div>
@@ -580,7 +580,7 @@ export default function ChildCustodyPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
                 <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>

@@ -20,8 +20,8 @@ const contactMethods = [
   {
     title: "טלפון",
     description: "התקשרו אלינו לקבלת ייעוץ מיידי",
-    value: "054-423-2167 / 053-606-2456",
-    action: "tel:+972-54-423-2167",
+    value: "053-606-2456",
+    action: "tel:+972-53-606-2456",
     icon: "📞",
     cta: "התקשר עכשיו"
   },
@@ -106,7 +106,7 @@ export default function ContactPage() {
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="התקשר עכשיו"
-          secondaryCtaHref="tel:+972-54-423-2167"
+          secondaryCtaHref="tel:+972-53-606-2456"
         />
 
         {/* דרכי התקשרות */}
@@ -295,7 +295,7 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+972-54-423-2167">
+                <a href="tel:+972-53-606-2456">
                   📞 התקשר עכשיו
                 </a>
               </Button>
@@ -333,7 +333,7 @@ export default function ContactPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
                 <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>

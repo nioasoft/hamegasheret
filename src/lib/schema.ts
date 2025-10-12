@@ -13,7 +13,7 @@ export const organizationSchema = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": ["+972-54-423-2167", "+972-53-606-2456"],
+    "telephone": "+972-53-606-2456",
     "email": "zehavit@silaw.co.il",
     "contactType": "customer service",
     "availableLanguage": "Hebrew"
@@ -70,7 +70,7 @@ export const localBusinessSchema = {
   "name": "המגשרת - זהבית דבי | דבי סיידה ושו״ת",
   "description": "המגשרת זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה בבאר שבע. המגשרת המובילה בישראל.",
   "url": "https://hamegasheret.co.il",
-  "telephone": ["+972-54-423-2167", "+972-53-606-2456"],
+  "telephone": "+972-53-606-2456",
   "email": "zehavit@silaw.co.il",
   "address": {
     "@type": "PostalAddress",

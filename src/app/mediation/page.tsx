@@ -321,7 +321,7 @@ export default function MediationPage() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+972-54-423-2167">
+                <a href="tel:+972-53-606-2456">
                   התקשר עכשיו
                 </a>
               </Button>
@@ -357,7 +357,7 @@ export default function MediationPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white transition-colors">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
+                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
                 <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">zehavit@silaw.co.il</a>
               </p>
             </div>

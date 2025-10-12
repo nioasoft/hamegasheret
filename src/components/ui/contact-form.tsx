@@ -14,7 +14,7 @@ interface ContactFormProps {
   whatsappText?: string;
 }
 
-export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-54-423-2167", whatsappText = "שלום, אני מעוניין בייעוץ גישור גירושין" }: ContactFormProps) {
+export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-606-2456", whatsappText = "שלום, אני מעוניין בייעוץ גישור גירושין" }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

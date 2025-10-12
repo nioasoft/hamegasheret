@@ -506,7 +506,7 @@ export default function ChildSupportPage() {
                   <div className="space-y-2 text-lg">
                     <p className="flex items-center gap-2">
                       <Phone className="h-4 w-4" />
-                      <a href="tel:+972-54-423-2167" className="hover:text-beige-700">054-423-2167</a>
+                      <a href="tel:+972-53-606-2456" className="hover:text-beige-700">053-606-2456</a>
                     </p>
                     <p className="flex items-center gap-2">
                       <Mail className="h-4 w-4" />
@@ -528,7 +528,7 @@ export default function ChildSupportPage() {
                   </div>
                 </div>
               </div>
-              <ContactForm email="zehavit@silaw.co.il" phone="+972-54-423-2167" />
+              <ContactForm email="zehavit@silaw.co.il" phone="+972-53-606-2456" />
             </div>
           </div>
         </section>
@@ -561,7 +561,7 @@ export default function ChildSupportPage() {
                 יהודה הנחתום 4<br />
                 בניין בית בלטק<br />
                 באר שבע<br />
-                <a href="tel:+972-54-423-2167" className="hover:text-white">054-423-2167</a> / <a href="tel:+972-53-606-2456" className="hover:text-white">053-606-2456</a><br />
+                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
                 <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
               </p>
             </div>
