@@ -1,9 +1,42 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/ui/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Footer } from "@/components/ui/footer";
 import { articles, categories } from "./data";
+
+export const metadata: Metadata = {
+  title: "מאמרים ומידע משפטי - המגשרת עו״ד זהבית דבי | דיני משפחה וגישור",
+  description: "מאמרים מקצועיים בנושא גישור גירושין, דיני משפחה, משמורת ילדים ומזונות. מידע חיוני וטיפים מקצועיים מהמגשרת עו״ד זהבית דבי.",
+  keywords: "מאמרים דיני משפחה, גישור גירושין, משמורת ילדים, מזונות, הסכם גירושין, טיפים משפטיים, המגשרת זהבית דבי, עורך דין משפחה",
+  alternates: {
+    canonical: "https://hamegasheret.co.il/articles"
+  },
+  openGraph: {
+    title: "מאמרים ומידע משפטי - המגשרת עו״ד זהבית דבי",
+    description: "מאמרים מקצועיים בנושא גישור גירושין ודיני משפחה",
+    url: "https://hamegasheret.co.il/articles",
+    siteName: "המגשרת - עו״ד זהבית דבי",
+    locale: "he_IL",
+    type: "website",
+    images: [
+      {
+        url: "/og-image-articles.jpg",
+        width: 1200,
+        height: 630,
+        alt: "מאמרים ומידע משפטי - המגשרת עו״ד זהבית דבי",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "מאמרים ומידע משפטי - המגשרת עו״ד זהבית דבי",
+    description: "מאמרים מקצועיים על גישור גירושין, משמורת ילדים ודיני משפחה",
+    images: ["/og-image-articles.jpg"],
+  },
+};
 
 const menuItems = [
   { label: "דף הבית", href: "/" },
@@ -21,8 +54,9 @@ export default function ArticlesPage() {
     <>
       <Navigation menuItems={menuItems} />
 
-      {/* כותרת העמוד */}
-      <section className="bg-beige-100 py-16">
+      <main id="main-content">
+        {/* כותרת העמוד */}
+        <section className="bg-beige-100 py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-beige-900 mb-6">
             מאמרים ומידע משפטי מקצועי
@@ -123,42 +157,10 @@ export default function ArticlesPage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-bold mb-4">דבי סיידה ושות'</h3>
-              <p className="text-beige-300">
-                משרד עורכי דין מוביל בדיני משפחה וגירושין
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><a href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</a></li>
-                <li><a href="/about" className="text-beige-300 hover:text-white transition-colors">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</a></li>
-                <li><a href="/contact" className="text-beige-300 hover:text-white transition-colors">צור קשר</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

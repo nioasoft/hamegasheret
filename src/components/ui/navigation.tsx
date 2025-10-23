@@ -21,7 +21,7 @@ export function Navigation({ logo = "דבי סיידה ושות'", menuItems, ct
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm border-b">
+    <nav className="bg-white shadow-sm border-b" aria-label="תפריט ניווט ראשי">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center h-16 relative">
           {/* Logo */}
@@ -62,6 +62,9 @@ export function Navigation({ logo = "דבי סיידה ושות'", menuItems, ct
               size="lg"
               className="border-2 border-beige-700 hover:bg-beige-200 hover:border-beige-900 shadow-md transition-all active:scale-95 transform"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "סגור תפריט" : "פתח תפריט"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? <X className="h-7 w-7 text-beige-800" /> : <Menu className="h-7 w-7 text-beige-800" />}
             </Button>
@@ -70,7 +73,7 @@ export function Navigation({ logo = "דבי סיידה ושות'", menuItems, ct
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
               {menuItems.map((item, index) => (
                 <Link

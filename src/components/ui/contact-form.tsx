@@ -14,6 +14,13 @@ interface ContactFormProps {
   whatsappText?: string;
 }
 
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+}
+
 export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-606-2456", whatsappText = "שלום, אני מעוניין בייעוץ גישור גירושין" }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,26 +28,87 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
     phone: "",
     message: ""
   });
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "נא להזין שם מלא";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "נא להזין כתובת אימייל";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "כתובת האימייל אינה תקינה";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "נא להזין מספר טלפון";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "נא להזין הודעה";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      // Announce error to screen readers
+      const errorMessage = "הטופס מכיל שגיאות. נא לבדוק את השדות ולנסות שנית.";
+      const announcement = document.createElement('div');
+      announcement.setAttribute('role', 'alert');
+      announcement.setAttribute('aria-live', 'assertive');
+      announcement.className = 'sr-only';
+      announcement.textContent = errorMessage;
+      document.body.appendChild(announcement);
+      setTimeout(() => document.body.removeChild(announcement), 1000);
+      return;
+    }
+
     setIsSubmitting(true);
+    setSubmitSuccess(false);
 
     // כאן תהיה הלוגיקה לשליחת המייל
     // לעת עתה נדמה הצלחה
     setTimeout(() => {
-      alert("ההודעה נשלחה בהצלחה!");
+      setSubmitSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
+      setErrors({});
       setIsSubmitting(false);
+
+      // Announce success to screen readers
+      const announcement = document.createElement('div');
+      announcement.setAttribute('role', 'status');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.className = 'sr-only';
+      announcement.textContent = "ההודעה נשלחה בהצלחה!";
+      document.body.appendChild(announcement);
+      setTimeout(() => document.body.removeChild(announcement), 3000);
     }, 1000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: value
     }));
+
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
   };
 
   const whatsappUrl = `https://wa.me/${phone.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(whatsappText)}`;
@@ -53,21 +121,45 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
           <CardTitle className="text-2xl">צור קשר</CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" noValidate aria-label="טופס יצירת קשר">
+            {submitSuccess && (
+              <div
+                className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800"
+                role="status"
+                aria-live="polite"
+              >
+                ההודעה נשלחה בהצלחה! נחזור אליך בהקדם.
+              </div>
+            )}
+
             <div className="space-y-2">
-              <Label htmlFor="name">שם מלא</Label>
+              <Label htmlFor="name" required>
+                שם מלא
+              </Label>
               <Input
                 id="name"
                 name="name"
+                type="text"
                 value={formData.name}
                 onChange={handleChange}
                 required
+                aria-required="true"
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? "name-error" : undefined}
+                autoComplete="name"
                 placeholder="הכנס את שמך המלא"
               />
+              {errors.name && (
+                <p id="name-error" className="text-sm text-destructive" role="alert">
+                  {errors.name}
+                </p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">כתובת אימייל</Label>
+              <Label htmlFor="email" required>
+                כתובת אימייל
+              </Label>
               <Input
                 id="email"
                 name="email"
@@ -75,39 +167,71 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
                 value={formData.email}
                 onChange={handleChange}
                 required
+                aria-required="true"
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
+                autoComplete="email"
                 placeholder="example@email.com"
               />
+              {errors.email && (
+                <p id="email-error" className="text-sm text-destructive" role="alert">
+                  {errors.email}
+                </p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone">טלפון</Label>
+              <Label htmlFor="phone" required>
+                טלפון
+              </Label>
               <Input
                 id="phone"
                 name="phone"
+                type="tel"
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                aria-required="true"
+                aria-invalid={!!errors.phone}
+                aria-describedby={errors.phone ? "phone-error" : undefined}
+                autoComplete="tel"
                 placeholder="050-1234567"
               />
+              {errors.phone && (
+                <p id="phone-error" className="text-sm text-destructive" role="alert">
+                  {errors.phone}
+                </p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="message">הודעה</Label>
+              <Label htmlFor="message" required>
+                הודעה
+              </Label>
               <Textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
+                aria-required="true"
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? "message-error" : undefined}
                 placeholder="אנא פרט את פנייתך..."
                 rows={5}
               />
+              {errors.message && (
+                <p id="message-error" className="text-sm text-destructive" role="alert">
+                  {errors.message}
+                </p>
+              )}
             </div>
 
             <Button
               type="submit"
               className="w-full hover:bg-beige-800 transition-colors active:scale-95 transform"
               disabled={isSubmitting}
+              aria-label={isSubmitting ? "שולח הודעה..." : "שלח הודעה"}
             >
               {isSubmitting ? "שולח..." : "שלח הודעה"}
             </Button>

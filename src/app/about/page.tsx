@@ -3,16 +3,37 @@ import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Footer } from "@/components/ui/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "אודות המגשרת עו״ד זהבית דבי | מומחית בגישור גירושין ודיני משפחה",
   description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין עם 15+ שנות ניסיון ו-85% הצלחה. המגשרת המובילה באר שבע ובכל הארץ. דיני משפחה, משמורת ילדים ופתרון סכסוכים.",
   keywords: "עו״ד זהבית דבי, המגשרת, אודות המגשרת, ניסיון בגישור, מומחית דיני משפחה, המגשרת באר שבע, עורך דין משפחה, גישור מקצועי",
+  alternates: {
+    canonical: "https://hamegasheret.co.il/about"
+  },
   openGraph: {
     title: "אודות המגשרת עו״ד זהבית דבי | מומחית בגישור",
     description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין עם ניסיון של 15+ שנים ושיעור הצלחה של 85%.",
+    url: "https://hamegasheret.co.il/about",
+    siteName: "המגשרת - עו״ד זהבית דבי",
+    locale: "he_IL",
     type: "website",
+    images: [
+      {
+        url: "/og-image-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "אודות המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "אודות המגשרת עו״ד זהבית דבי",
+    description: "מומחית בגישור גירושין עם 15+ שנות ניסיון ו-85% הצלחה - המגשרת המובילה באר שבע",
+    images: ["/og-image-about.jpg"],
   },
 };
 
@@ -103,7 +124,7 @@ export default function AboutPage() {
     <div className="min-h-screen">
       <Navigation menuItems={menuItems} />
 
-      <main>
+      <main id="main-content">
         <Hero
           title="אודות המשרד"
           subtitle="מומחים בגישור גירושין ובדיני משפחה"
@@ -308,40 +329,7 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
-              <p className="text-beige-300">
-                משרד עורכי דין מוביל בדיני משפחה וגירושין
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><a href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/about" className="text-beige-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-beige-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-beige-300 hover:text-white">צור קשר</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

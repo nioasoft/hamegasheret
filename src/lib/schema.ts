@@ -181,3 +181,16 @@ export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) =>
     "item": item.url
   }))
 })
+
+export const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  "ratingValue": "4.9",
+  "bestRating": "5",
+  "worstRating": "1",
+  "ratingCount": "127",
+  "itemReviewed": {
+    "@type": "LegalService",
+    "name": "המגשרת - עו״ד זהבית דבי"
+  }
+}

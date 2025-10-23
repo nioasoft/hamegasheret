@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/ui/navigation";
+import { Footer } from "@/components/ui/footer";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -358,7 +359,7 @@ export default function CasesPage() {
       />
       <Navigation menuItems={menuItems} />
 
-      <main>
+      <main id="main-content">
         <Hero
           title="סיפורי הצלחה של המגשרת"
           subtitle="סיפורים אמיתיים של הצלחה"
@@ -549,41 +550,7 @@ export default function CasesPage() {
         </section>
       </main>
 
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">המגשרת - עו״ד זהבית דבי</h3>
-              <p className="text-beige-300">
-                מומחית בגישור גירושין ודיני משפחה
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><Link href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</Link></li>
-                <li><Link href="/about" className="text-beige-300 hover:text-white">אודות המגשרת</Link></li>
-                <li><Link href="/articles" className="text-beige-300 hover:text-white">מאמרים</Link></li>
-                <li><Link href="/cases" className="text-beige-300 hover:text-white">סיפורי הצלחה</Link></li>
-                <li><Link href="/contact" className="text-beige-300 hover:text-white">צור קשר</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 המגשרת - עו״ד זהבית דבי. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

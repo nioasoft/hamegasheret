@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navigation } from "@/components/ui/navigation";
+import { Footer } from "@/components/ui/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -205,8 +206,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     <>
       <Navigation menuItems={menuItems} />
 
-      {/* כותרת העמוד */}
-      <section className="bg-beige-100 py-12">
+      <main id="main-content">
+        {/* כותרת העמוד */}
+        <section className="bg-beige-100 py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-beige-900 mb-4">
             {article.title}
@@ -315,58 +317,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* עמודה 1 - לוגו ותיאור */}
-            <div>
-              <h3 className="text-xl font-bold mb-4">המגשרת</h3>
-              <p className="text-beige-300 mb-4">
-                עו״ד זהבית דבי - המגשרת המובילה בישראל לגישור גירושין מכבד והוגן
-              </p>
-            </div>
-
-            {/* עמודה 2 - קישורים מהירים */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><Link href="/" className="text-beige-300 hover:text-white transition-colors">דף הבית</Link></li>
-                <li><Link href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</Link></li>
-                <li><Link href="/about" className="text-beige-300 hover:text-white transition-colors">אודות</Link></li>
-                <li><Link href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</Link></li>
-              </ul>
-            </div>
-
-            {/* עמודה 3 - שירותים */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">השירותים שלנו</h4>
-              <ul className="space-y-2">
-                <li><span className="text-beige-300">גישור גירושין</span></li>
-                <li><span className="text-beige-300">הסכמי ממון</span></li>
-                <li><span className="text-beige-300">משמורת משותפת</span></li>
-                <li><span className="text-beige-300">מזונות ילדים</span></li>
-              </ul>
-            </div>
-
-            {/* עמודה 4 - יצירת קשר */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">יצירת קשר</h4>
-              <ul className="space-y-2">
-                <li className="text-beige-300">טלפון: 052-8692-921</li>
-                <li className="text-beige-300">מייל: info@hamegasheret.co.il</li>
-                <li className="text-beige-300">כתובת: הרצל 91, באר שבע</li>
-                <li className="text-beige-300">שעות: א׳-ה׳ 9:00-18:00</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-beige-700 text-center text-beige-300">
-            <p>&copy; 2024 המגשרת - עו״ד זהבית דבי. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

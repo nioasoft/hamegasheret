@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/ui/navigation";
+import { Footer } from "@/components/ui/footer";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,10 +12,30 @@ export const metadata: Metadata = {
   title: "משמורת ילדים - המגשרת עו״ד זהבית דבי | מומחית בגישור משמורת",
   description: "משמורת ילדים עם המגשרת עו״ד זהבית דבי - פתרונות יצירתיים למשמורת משותפת, יחידה ואחריות הורית. 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים והמשפחה.",
   keywords: "משמורת ילדים, המגשרת עו״ד זהבית דבי, משמורת משותפת, משמורת יחידה, אחריות הורית, הסדרי שהות, גישור משמורת, דיני משפחה, זכויות ילדים, הורות משותפת",
+  alternates: {
+    canonical: "https://hamegasheret.co.il/child-custody"
+  },
   openGraph: {
     title: "משמורת ילדים - המגשרת עו״ד זהבית דבי | פתרונות לטובת הילדים",
     description: "המגשרת עו״ד זהבית דבי מתמחה בגישור משמורת ילדים. פתרונות יצירתיים ומאוזנים לטובת הילדים עם שיעור הצלחה של 85% בהגעה להסכמי משמורת מוסכמים.",
+    url: "https://hamegasheret.co.il/child-custody",
+    siteName: "המגשרת - עו״ד זהבית דבי",
+    locale: "he_IL",
     type: "website",
+    images: [
+      {
+        url: "/og-image-child-custody.jpg",
+        width: 1200,
+        height: 630,
+        alt: "משמורת ילדים - המגשרת עו״ד זהבית דבי",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "משמורת ילדים - המגשרת עו״ד זהבית דבי",
+    description: "פתרונות יצירתיים למשמורת ילדים - 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים",
+    images: ["/og-image-child-custody.jpg"],
   },
 };
 
@@ -213,7 +234,7 @@ export default function ChildCustodyPage() {
       />
       <Navigation menuItems={menuItems} />
 
-      <main>
+      <main id="main-content">
         <Hero
           title="משמורת ילדים - פתרונות לטובת הילדים"
           subtitle="המגשרת עו״ד זהבית דבי - כל ילד זכאי לשני הורים"
@@ -555,41 +576,7 @@ export default function ChildCustodyPage() {
         </section>
       </main>
 
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
-              <p className="text-beige-300">
-                משרד עורכי דין מוביל בדיני משפחה וגירושין - המגשרת המובילה במשמורת ילדים
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><a href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-beige-300 hover:text-white">משמורת ילדים</a></li>
-                <li><a href="/about" className="text-beige-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-beige-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-beige-300 hover:text-white">צור קשר</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Footer } from "@/components/ui/footer";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,10 +13,30 @@ export const metadata: Metadata = {
   title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי | מומחית בגישור",
   description: "גישור גירושין מקצועי עם המגשרת עו״ד זהבית דבי - 85% הצלחה. המגשרת המובילה בבאר שבע והדרום. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות.",
   keywords: "גישור גירושין, המגשרת עו״ד זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין",
+  alternates: {
+    canonical: "https://hamegasheret.co.il/mediation"
+  },
   openGraph: {
     title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי | מומחית",
     description: "גישור גירושין מקצועי עם שיעור הצלחה של 85%. עו״ד זהבית דבי המגשרת מאפשרת לבני זוג להגיע להסכמים מוסכמים ללא מלחמות.",
+    url: "https://hamegasheret.co.il/mediation",
+    siteName: "המגשרת - עו״ד זהבית דבי",
+    locale: "he_IL",
     type: "website",
+    images: [
+      {
+        url: "/og-image-mediation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי",
+    description: "גישור גירושין מקצועי עם שיעור הצלחה של 85% - פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות",
+    images: ["/og-image-mediation.jpg"],
   },
 };
 
@@ -142,7 +163,7 @@ export default function MediationPage() {
       />
       <Navigation menuItems={menuItems} />
 
-      <main>
+      <main id="main-content">
         <Hero
           title="גישור גירושין מקצועי"
           subtitle="הגעה להסכם ללא מלחמות"
@@ -330,43 +351,7 @@ export default function MediationPage() {
         </section>
       </main>
 
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
-              <p className="text-beige-300">
-                משרד עורכי דין מוביל בדיני משפחה וגירושין
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><a href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-beige-300 hover:text-white transition-colors">משמורת ילדים</a></li>
-                <li><a href="/child-support" className="text-beige-300 hover:text-white transition-colors">מזונות</a></li>
-                <li><a href="/about" className="text-beige-300 hover:text-white transition-colors">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</a></li>
-                <li><a href="/cases" className="text-beige-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
-                <li><a href="/contact" className="text-beige-300 hover:text-white transition-colors">צור קשר</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

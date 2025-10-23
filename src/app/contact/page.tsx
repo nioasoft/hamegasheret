@@ -1,9 +1,42 @@
+import type { Metadata } from "next";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Footer } from "@/components/ui/footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+export const metadata: Metadata = {
+  title: "צור קשר - המגשרת עו״ד זהבית דבי | ייעוץ משפטי ראשוני חינם",
+  description: "צור קשר עם המגשרת עו״ד זהבית דבי לייעוץ משפטי בגישור גירושין ודיני משפחה. ייעוץ ראשוני חינם. טלפון: 053-606-2456 | באר שבע והדרום",
+  keywords: "צור קשר המגשרת, ייעוץ משפטי, עורך דין גירושין באר שבע, פגישת ייעוץ, המגשרת זהבית דבי",
+  alternates: {
+    canonical: "https://hamegasheret.co.il/contact"
+  },
+  openGraph: {
+    title: "צור קשר - המגשרת עו״ד זהבית דבי",
+    description: "קבע פגישת ייעוץ עם המגשרת - ייעוץ ראשוני חינם",
+    url: "https://hamegasheret.co.il/contact",
+    siteName: "המגשרת - עו״ד זהבית דבי",
+    locale: "he_IL",
+    type: "website",
+    images: [
+      {
+        url: "/og-image-contact.jpg",
+        width: 1200,
+        height: 630,
+        alt: "צור קשר עם המגשרת עו״ד זהבית דבי",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "צור קשר - המגשרת עו״ד זהבית דבי",
+    description: "ייעוץ ראשוני חינם בגישור גירושין - טלפון: 053-606-2456, זמינות 24/7",
+    images: ["/og-image-contact.jpg"],
+  },
+};
 
 const menuItems = [
   { label: "דף הבית", href: "/" },
@@ -98,7 +131,7 @@ export default function ContactPage() {
     <div className="min-h-screen">
       <Navigation menuItems={menuItems} />
 
-      <main>
+      <main id="main-content">
         <Hero
           title="צור קשר"
           subtitle="אנחנו כאן לעזור לך"
@@ -309,40 +342,7 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
-              <p className="text-beige-300">
-                משרד עורכי דין מוביל בדיני משפחה וגירושין
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><a href="/mediation" className="text-beige-300 hover:text-white">גישור גירושין</a></li>
-                <li><a href="/about" className="text-beige-300 hover:text-white">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-beige-300 hover:text-white">מאמרים</a></li>
-                <li><a href="/contact" className="text-beige-300 hover:text-white">צור קשר</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

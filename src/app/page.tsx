@@ -3,7 +3,37 @@ import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { ServicesSection } from "@/components/ui/services-section";
 import { ContactForm } from "@/components/ui/contact-form";
+import { Footer } from "@/components/ui/footer";
 import { organizationSchema, mediationServiceSchema, localBusinessSchema } from "@/lib/schema";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "המגשרת עו״ד זהבית דבי | גישור גירושין מקצועי באר שבע והדרום",
+  description: "המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים מוסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים.",
+  keywords: "המגשרת, עו״ד זהבית דבי, גישור גירושין, גישור באר שבע, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, גישור מקצועי",
+  openGraph: {
+    title: "המגשרת עו״ד זהבית דבי | גישור גירושין מקצועי באר שבע והדרום",
+    description: "המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים מוסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים.",
+    url: "https://hamegasheret.co.il",
+    siteName: "המגשרת - עו״ד זהבית דבי",
+    locale: "he_IL",
+    type: "website",
+    images: [
+      {
+        url: "/og-image-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "המגשרת עו״ד זהבית דבי - גישור גירושין מקצועי",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "המגשרת עו״ד זהבית דבי | גישור גירושין מקצועי",
+    description: "המגשרת הבכירה בבאר שבע והדרום - 85% שיעור הצלחה בהגעה להסכמים מוסכמים",
+    images: ["/og-image-home.jpg"],
+  },
+};
 
 const menuItems = [
   { label: "דף הבית", href: "/" },
@@ -95,7 +125,7 @@ export default function Home() {
       />
       <Navigation menuItems={menuItems} />
 
-      <main>
+      <main id="main-content">
         <Hero
           title="המגשרת עו״ד זהבית דבי"
           subtitle="מומחית בגישור גירושין - הסכמים ללא מלחמות"
@@ -189,43 +219,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-beige-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">דבי סיידה ושות'</h3>
-              <p className="text-beige-300">
-                משרד עורכי דין מוביל בדיני משפחה וגירושין
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">קישורים מהירים</h4>
-              <ul className="space-y-2">
-                <li><a href="/mediation" className="text-beige-300 hover:text-white transition-colors">גישור גירושין</a></li>
-                <li><a href="/child-custody" className="text-beige-300 hover:text-white transition-colors">משמורת ילדים</a></li>
-                <li><a href="/child-support" className="text-beige-300 hover:text-white transition-colors">מזונות</a></li>
-                <li><a href="/about" className="text-beige-300 hover:text-white transition-colors">אודות המשרד</a></li>
-                <li><a href="/articles" className="text-beige-300 hover:text-white transition-colors">מאמרים</a></li>
-                <li><a href="/cases" className="text-beige-300 hover:text-white transition-colors">סיפורי הצלחה</a></li>
-                <li><a href="/contact" className="text-beige-300 hover:text-white transition-colors">צור קשר</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">פרטי קשר</h4>
-              <p className="text-beige-300">
-                יהודה הנחתום 4<br />
-                בניין בית בלטק<br />
-                באר שבע<br />
-                <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">053-606-2456</a><br />
-                <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">zehavit@silaw.co.il</a>
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-beige-800 mt-8 pt-8 text-center text-beige-400">
-            <p>&copy; 2024 דבי סיידה ושות'. כל הזכויות שמורות.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
