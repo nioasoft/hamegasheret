@@ -76,13 +76,25 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
     setIsSubmitting(true);
     setSubmitSuccess(false);
 
-    // כאן תהיה הלוגיקה לשליחת המייל
-    // לעת עתה נדמה הצלחה
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'שגיאה בשליחת הטופס');
+      }
+
+      // Success
       setSubmitSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
       setErrors({});
-      setIsSubmitting(false);
 
       // Announce success to screen readers
       const announcement = document.createElement('div');
@@ -92,7 +104,23 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
       announcement.textContent = "ההודעה נשלחה בהצלחה!";
       document.body.appendChild(announcement);
       setTimeout(() => document.body.removeChild(announcement), 3000);
-    }, 1000);
+
+    } catch (error) {
+      // Handle error
+      const errorMessage = error instanceof Error ? error.message : 'שגיאה בשליחת הטופס. אנא נסה שנית.';
+      setErrors({ message: errorMessage });
+
+      // Announce error to screen readers
+      const announcement = document.createElement('div');
+      announcement.setAttribute('role', 'alert');
+      announcement.setAttribute('aria-live', 'assertive');
+      announcement.className = 'sr-only';
+      announcement.textContent = errorMessage;
+      document.body.appendChild(announcement);
+      setTimeout(() => document.body.removeChild(announcement), 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

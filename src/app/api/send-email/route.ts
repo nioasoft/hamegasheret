@@ -1,0 +1,320 @@
+import { Resend } from 'resend';
+import { NextRequest, NextResponse } from 'next/server';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body: ContactFormData = await request.json();
+    const { name, email, phone, message } = body;
+
+    // Validate required fields
+    if (!name || !email || !phone || !message) {
+      return NextResponse.json(
+        { error: 'כל השדות הם חובה' },
+        { status: 400 }
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'כתובת האימייל אינה תקינה' },
+        { status: 400 }
+      );
+    }
+
+    // Email to the office
+    const officeEmailHtml = `
+      <!DOCTYPE html>
+      <html dir="rtl" lang="he">
+      <head>
+        <meta charset="UTF-8">
+        <style>
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            background-color: #f5f5f0;
+            padding: 20px;
+          }
+          .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+          }
+          .header {
+            background-color: #8b7355;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+          }
+          .header h1 {
+            margin: 0;
+            font-size: 24px;
+          }
+          .content {
+            padding: 30px 20px;
+          }
+          .field {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e5e5e0;
+            padding-bottom: 15px;
+          }
+          .field:last-child {
+            border-bottom: none;
+          }
+          .label {
+            font-weight: bold;
+            color: #8b7355;
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+          .value {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+          }
+          .message-box {
+            background-color: #f9f9f7;
+            padding: 15px;
+            border-right: 4px solid #8b7355;
+            margin-top: 10px;
+            white-space: pre-wrap;
+          }
+          .footer {
+            background-color: #f5f5f0;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📧 פנייה חדשה מהאתר</h1>
+          </div>
+          <div class="content">
+            <div class="field">
+              <div class="label">שם מלא:</div>
+              <div class="value">${name}</div>
+            </div>
+            <div class="field">
+              <div class="label">כתובת אימייל:</div>
+              <div class="value"><a href="mailto:${email}">${email}</a></div>
+            </div>
+            <div class="field">
+              <div class="label">מספר טלפון:</div>
+              <div class="value"><a href="tel:${phone}">${phone}</a></div>
+            </div>
+            <div class="field">
+              <div class="label">הודעה:</div>
+              <div class="message-box">${message}</div>
+            </div>
+          </div>
+          <div class="footer">
+            פנייה זו נשלחה מטופס יצירת קשר באתר hamegasheret.co.il
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    // Email to the client (confirmation)
+    const clientEmailHtml = `
+      <!DOCTYPE html>
+      <html dir="rtl" lang="he">
+      <head>
+        <meta charset="UTF-8">
+        <style>
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            background-color: #f5f5f0;
+            padding: 20px;
+          }
+          .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+          }
+          .header {
+            background-color: #8b7355;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+          }
+          .header h1 {
+            margin: 0;
+            font-size: 24px;
+          }
+          .content {
+            padding: 30px 20px;
+            line-height: 1.8;
+          }
+          .greeting {
+            font-size: 18px;
+            font-weight: bold;
+            color: #8b7355;
+            margin-bottom: 20px;
+          }
+          .message {
+            color: #333;
+            margin-bottom: 15px;
+          }
+          .warning {
+            background-color: #fff8dc;
+            border: 2px solid #ffa500;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #8b4513;
+          }
+          .contact-info {
+            background-color: #f9f9f7;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+          }
+          .contact-item {
+            margin: 10px 0;
+            font-size: 16px;
+          }
+          .contact-label {
+            font-weight: bold;
+            color: #8b7355;
+          }
+          .footer {
+            background-color: #f5f5f0;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>✅ פנייתך התקבלה בהצלחה</h1>
+          </div>
+          <div class="content">
+            <div class="greeting">שלום ${name},</div>
+
+            <p class="message">
+              תודה שפנית אלינו! פנייתך התקבלה במערכת שלנו בהצלחה.
+            </p>
+
+            <p class="message">
+              <strong>עו"ד זהבית דבי - המגשרת</strong> תחזור אליך ביום העסקים הבא בשעות הפעילות.
+            </p>
+
+            <div class="warning">
+              ⚠️ שים לב: מייל זה נשלח ממערכת אוטומטית ולא ניתן להגיב אליו.
+              <br>ליצירת קשר ישיר, אנא השתמש באחת מדרכי ההתקשרות הבאות:
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-label">📞 טלפון:</span>
+                <a href="tel:+972-53-606-2456">053-606-2456</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">💬 וואטסאפ:</span>
+                <a href="https://wa.me/972536062456">שלח הודעה</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">✉️ אימייל:</span>
+                <a href="mailto:zehavit@silaw.co.il">zehavit@silaw.co.il</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">🏢 כתובת:</span>
+                יהודה הנחתום 4, בניין בית בלטק, באר שבע
+              </div>
+            </div>
+
+            <p class="message">
+              אנחנו כאן לעזור לך למצוא את הפתרון הטוב ביותר למצבך.
+            </p>
+
+            <p class="message" style="margin-top: 30px;">
+              בברכה,<br>
+              <strong>המגשרת - עו"ד זהבית דבי</strong><br>
+              גישור גירושין ודיני משפחה
+            </p>
+          </div>
+          <div class="footer">
+            המגשרת - עו"ד זהבית דבי | hamegasheret.co.il
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
+    // Send both emails
+    const results = await Promise.allSettled([
+      // Email to office
+      resend.emails.send({
+        from: 'המגשרת <donotreply@hamegasheret.co.il>',
+        to: 'zehavit@silaw.co.il',
+        subject: `פנייה חדשה מהאתר - ${name}`,
+        html: officeEmailHtml,
+        replyTo: email, // Allow office to reply directly to the client
+      }),
+      // Confirmation email to client
+      resend.emails.send({
+        from: 'המגשרת <donotreply@hamegasheret.co.il>',
+        to: email,
+        subject: 'פנייתך התקבלה - המגשרת עו״ד זהבית דבי',
+        html: clientEmailHtml,
+      }),
+    ]);
+
+    // Check if both emails were sent successfully
+    const officeEmailResult = results[0];
+    const clientEmailResult = results[1];
+
+    if (officeEmailResult.status === 'rejected' || clientEmailResult.status === 'rejected') {
+      console.error('Email sending failed:', {
+        officeEmail: officeEmailResult.status === 'rejected' ? officeEmailResult.reason : 'success',
+        clientEmail: clientEmailResult.status === 'rejected' ? clientEmailResult.reason : 'success',
+      });
+
+      return NextResponse.json(
+        { error: 'שגיאה בשליחת המייל. אנא נסה שנית או צור קשר טלפונית.' },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'ההודעה נשלחה בהצלחה! נחזור אליך בהקדם.'
+      },
+      { status: 200 }
+    );
+
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return NextResponse.json(
+      { error: 'שגיאה בשליחת המייל. אנא נסה שנית מאוחר יותר.' },
+      { status: 500 }
+    );
+  }
+}

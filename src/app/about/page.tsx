@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -68,35 +67,6 @@ const testimonials = [
     quote: "המקצועיות והרגישות של עו״ד זהבית דבי בגישור הן יוצאות דופן. התהליך שינה את חיינו לטובה.",
     author: "מ.כ.",
     role: "לקוח ממיתר"
-  }
-];
-
-const teamMembers = [
-  {
-    name: "עו״ד זהבית דבי",
-    title: "שותפה בכירה - מומחית בגישור גירושין",
-    description: '"עורכת דין מובילה בתחום דיני המשפחה עם התמחות מיוחדת בגישור גירושין. בעלת ניסיון של למעלה מ-15 שנים ומוניטין מעולה בתחום הגישור."',
-    achievements: [
-      "85% הצלחה בהגעה להסכמים בגישור",
-      "15+ שנות ניסיון בגישור גירושין",
-      "מאות זוגות שקיבלו ליווי מקצועי",
-      "הכרה מקצועית בתחום הגישור",
-      "מומחית בהגעה להסכמים ללא מלחמות"
-    ],
-    specialties: ["גישור גירושין", "דיני משפחה", "הסכמי גירושין", "משמורת ילדים", "מזונות"]
-  },
-  {
-    name: "אסף סיידה",
-    title: "מייסד המשרד - מומחה בדיני משפחה ומסחרי",
-    description: "עורך דין מנוסה בתחום דיני המשפחה והמשפט המסחרי, עם התמחות מיוחדת בליווי עסקים ובפתרון סכסוכים מורכבים.",
-    achievements: [
-      "מייסד המשרד עם ניסיון עשיר",
-      "מומחה בדיני משפחה ומסחרי",
-      "ליווי מאות לקוחות פרטיים ועסקיים",
-      "התמחות בהסכמי ממון ושותפויות",
-      "פתרון סכסוכים מורכבים"
-    ],
-    specialties: ["דיני משפחה", "משפט מסחרי", "הסכמי ממון", "שותפויות", "ליווי עסקי"]
   }
 ];
 
@@ -176,72 +146,6 @@ export default function AboutPage() {
                   </Card>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* הצוות */}
-        <section className="py-12 bg-beige-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-beige-900 mb-4">
-                צוות המשרד
-              </h2>
-              <p className="text-xl text-beige-600">
-                עורכי דין מקצועיים ומנוסים בתחום דיני המשפחה
-              </p>
-            </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                      {teamMembers.map((member, index) => (
-                        <Card key={index} className="h-full bg-white border border-beige-200 shadow-md">
-                          <CardHeader className="text-center pb-4">
-                            <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
-                              <Image
-                                src={index === 0 ? "/images/zehavit2.webp" : "/images/asaf.webp"}
-                                alt={member.name}
-                                width={128}
-                                height={128}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                            <CardTitle className="text-2xl mb-2">{member.name}</CardTitle>
-                            <p className="text-beige-700 font-medium">{member.title}</p>
-                          </CardHeader>
-
-                  <CardContent className="space-y-5">
-                    <p className="text-beige-700 leading-7 text-base">
-                      {member.description}
-                    </p>
-
-                    <div>
-                      <h4 className="font-semibold text-beige-900 mb-2">הישגים:</h4>
-                      <ul className="space-y-1.5">
-                        {member.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start text-sm text-beige-600">
-                            <span className="text-beige-700 mr-2 mt-1">•</span>
-                            <span className="leading-6">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-beige-900 mb-2">תחומי התמחות:</h4>
-                      <div className="flex flex-wrap gap-1.5">
-                        {member.specialties.map((specialty, specIndex) => (
-                          <span
-                            key={specIndex}
-                            className="bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full text-xs"
-                          >
-                            {specialty}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
