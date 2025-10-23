@@ -283,7 +283,7 @@ export async function POST(request: NextRequest) {
       // Email to office
       resend.emails.send({
         from: 'המגשרת <donotreply@hamegasheret.co.il>',
-        to: 'zehavit@silaw.co.il',
+        to: ['zehavit@silaw.co.il', 'asaf@silaw.co.il'],
         subject: `פנייה חדשה מהאתר - ${name}`,
         html: officeEmailHtml,
         replyTo: email, // Allow office to reply directly to the client
