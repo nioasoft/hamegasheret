@@ -65,11 +65,13 @@ export async function POST(request: NextRequest) {
           }
           .content {
             padding: 30px 20px;
+            text-align: right;
           }
           .field {
             margin-bottom: 20px;
             border-bottom: 1px solid #e5e5e0;
             padding-bottom: 15px;
+            text-align: right;
           }
           .field:last-child {
             border-bottom: none;
@@ -79,11 +81,13 @@ export async function POST(request: NextRequest) {
             color: #8b7355;
             font-size: 14px;
             margin-bottom: 5px;
+            text-align: right;
           }
           .value {
             color: #333;
             font-size: 16px;
             line-height: 1.5;
+            text-align: right;
           }
           .message-box {
             background-color: #f9f9f7;
@@ -91,6 +95,7 @@ export async function POST(request: NextRequest) {
             border-right: 4px solid #8b7355;
             margin-top: 10px;
             white-space: pre-wrap;
+            text-align: right;
           }
           .footer {
             background-color: #f5f5f0;
@@ -166,16 +171,19 @@ export async function POST(request: NextRequest) {
           .content {
             padding: 30px 20px;
             line-height: 1.8;
+            text-align: right;
           }
           .greeting {
             font-size: 18px;
             font-weight: bold;
             color: #8b7355;
             margin-bottom: 20px;
+            text-align: right;
           }
           .message {
             color: #333;
             margin-bottom: 15px;
+            text-align: right;
           }
           .warning {
             background-color: #fff8dc;
@@ -185,16 +193,19 @@ export async function POST(request: NextRequest) {
             margin: 20px 0;
             font-weight: bold;
             color: #8b4513;
+            text-align: right;
           }
           .contact-info {
             background-color: #f9f9f7;
             padding: 20px;
             border-radius: 5px;
             margin: 20px 0;
+            text-align: right;
           }
           .contact-item {
             margin: 10px 0;
             font-size: 16px;
+            text-align: right;
           }
           .contact-label {
             font-weight: bold;
