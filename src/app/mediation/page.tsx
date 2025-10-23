@@ -10,15 +10,15 @@ import { Metadata } from "next";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי | מומחית בגישור",
-  description: "גישור גירושין מקצועי עם המגשרת עו״ד זהבית דבי - 85% הצלחה. המגשרת המובילה בבאר שבע והדרום. פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות.",
-  keywords: "גישור גירושין, המגשרת עו״ד זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין",
+  title: "גישור גירושין ושלום בית - המגשרת עו״ד זהבית דבי | הצלת נישואים",
+  description: "גישור גירושין ושלום בית מקצועי עם המגשרת עו״ד זהבית דבי - 85% הצלחה. הצלת נישואים, גישור זוגי ופתרון משברים משפחתיים. המגשרת המובילה בבאר שבע והדרום.",
+  keywords: "גישור גירושין, שלום בית, הצלת נישואים, גישור זוגי, המגשרת עו״ד זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, הסכם שלום בית, שיקום נישואים",
   alternates: {
     canonical: "https://hamegasheret.co.il/mediation"
   },
   openGraph: {
-    title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי | מומחית",
-    description: "גישור גירושין מקצועי עם שיעור הצלחה של 85%. עו״ד זהבית דבי המגשרת מאפשרת לבני זוג להגיע להסכמים מוסכמים ללא מלחמות.",
+    title: "גישור גירושין ושלום בית - המגשרת עו״ד זהבית דבי | הצלת נישואים",
+    description: "גישור גירושין ושלום בית מקצועי עם שיעור הצלחה של 85%. עו״ד זהבית דבי המגשרת מסייעת להציל נישואים ולהגיע להסכמים מוסכמים ללא מלחמות.",
     url: "https://hamegasheret.co.il/mediation",
     siteName: "המגשרת - עו״ד זהבית דבי",
     locale: "he_IL",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "גישור גירושין מקצועי - המגשרת עו״ד זהבית דבי",
-    description: "גישור גירושין מקצועי עם שיעור הצלחה של 85% - פתרון בעיות משמורת, רכוש ומזונות ללא מלחמות",
+    title: "גישור גירושין ושלום בית - המגשרת עו״ד זהבית דבי",
+    description: "גישור גירושין ושלום בית מקצועי עם הצלחה של 85% - הצלת נישואים, פתרון משברים זוגיים ומשמורת ילדים",
     images: ["/og-image-mediation.jpg"],
   },
 };
@@ -229,6 +229,244 @@ export default function MediationPage() {
                             </li>
                           </ul>
                         </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* שלום בית - הצלת נישואים */}
+        <section className="py-16 bg-beige-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-beige-900 mb-4">
+                  💚 שלום בית - הצלת נישואים באמצעות גישור
+                </h2>
+                <p className="text-xl text-beige-700">
+                  לא כל משבר זוגי צריך להסתיים בגירושין. המגשרת יכולה לעזור לכם להציל את הנישואים!
+                </p>
+              </div>
+
+              {/* מהו שלום בית */}
+              <div className="bg-white rounded-lg shadow-xl p-8 mb-12">
+                <h3 className="text-2xl font-bold text-beige-900 mb-6 text-center">
+                  מה זה הסכם שלום בית?
+                </h3>
+                <div className="prose prose-lg max-w-none text-beige-700 leading-relaxed space-y-4">
+                  <p>
+                    <strong>הסכם שלום בית</strong> הוא כלי חשוב ומיוחד המיועד לזוגות שנמצאים במשבר זוגי עמוק, אך עדיין רוצים לנסות
+                    לשמר ולשקם את הקשר ביניהם. במקום לפנות מיד לגירושין, זוגות רבים מגלים שבעזרת גישור מקצועי וממוקד,
+                    ניתן לגשר על רוב הבעיות ולתת לעצמם הזדמנות אמיתית לשיקום מערכת היחסים.
+                  </p>
+                  <p>
+                    <strong>עו"ד זהבית דבי - המגשרת</strong> מתמחה בליווי זוגות בתהליכי שלום בית, ועוזרת להם:
+                  </p>
+                  <ul className="mr-6 space-y-2">
+                    <li className="flex items-start">
+                      <span className="text-beige-700 font-bold ml-2">✓</span>
+                      <span>לזהות את המקורות האמיתיים למשבר הזוגי ולטפל בהם בצורה ישירה ואפקטיבית</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-beige-700 font-bold ml-2">✓</span>
+                      <span>לשפר את התקשורת הזוגית ולבנות מחדש את האמון והכבוד ההדדי</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-beige-700 font-bold ml-2">✓</span>
+                      <span>להגיע להסכמות ברורות על נושאים שנויים במחלוקת (כלכלה, חינוך ילדים, חלוקת תפקידים)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-beige-700 font-bold ml-2">✓</span>
+                      <span>ליצור מסגרת בטוחה ונטולת שיפוטיות שבה כל צד יכול להביע את רגשותיו וצרכיו</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-beige-700 font-bold ml-2">✓</span>
+                      <span>לבנות תוכנית עבודה משותפת לשיקום הנישואים ולשיפור איכות החיים המשפחתית</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* יתרונות שלום בית */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <Card className="bg-white border-2 border-beige-200 hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center">
+                      <span className="ml-2 text-2xl">🏡</span>
+                      שמירה על התא המשפחתי
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-beige-600">
+                      שמירה על הבית המשפחתי והיציבות הרגשית של הילדים, מניעת פגיעה בהם וחיסכון בטראומה של גירושין.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white border-2 border-beige-200 hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center">
+                      <span className="ml-2 text-2xl">💰</span>
+                      חיסכון כלכלי ורגשי
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-beige-600">
+                      חיסכון משמעותי בעלויות גירושין, עורכי דין, חלוקת רכוש ושני משקי בית. חיסכון בכאב רגשי וסבל מיותר.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white border-2 border-beige-200 hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center">
+                      <span className="ml-2 text-2xl">🌟</span>
+                      הזדמנות שנייה
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-beige-600">
+                      מתן הזדמנות אמיתית לשנות דפוסים, לתקן מה שנשבר ולבנות מחדש את הקשר על יסודות חזקים יותר.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white border-2 border-beige-200 hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center">
+                      <span className="ml-2 text-2xl">💬</span>
+                      שיפור התקשורת
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-beige-600">
+                      לימוד כלים לתקשורת אפקטיבית, הקשבה אמיתית וביטוי רגשות בצורה בריאה ובונה.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white border-2 border-beige-200 hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center">
+                      <span className="ml-2 text-2xl">🤝</span>
+                      ליווי מקצועי
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-beige-600">
+                      ליווי של מגשרת מנוסה שרואה את שני הצדדים, מבינה את הדינמיקה הזוגית ויודעת להוביל לפריצת דרך.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-white border-2 border-beige-200 hover:shadow-xl transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-lg flex items-center">
+                      <span className="ml-2 text-2xl">⚖️</span>
+                      גמישות והגנה
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-beige-600">
+                      אפשרות לשלב בהסכם גם "תוכנית ב'" - הסדרים לגירושין במידה והשיקום לא יצליח, תוך הגנה על שני הצדדים.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* עדויות לקוחות */}
+              <div className="bg-beige-100 rounded-lg p-8 mb-12">
+                <h3 className="text-2xl font-bold text-beige-900 mb-6 text-center">
+                  💕 לקוחות שהצילו את נישואיהם מספרים
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="bg-white/90 backdrop-blur">
+                    <CardContent className="pt-6">
+                      <p className="text-beige-700 italic mb-4 leading-relaxed">
+                        "הגענו למשרד של זהבית כשכבר היינו בדרך לגירושין. חשבנו שזה הסוף. אבל זהבית עזרה לנו לראות את
+                        הבעיות האמיתיות ולא את הסימפטומים. היום, שנה אחרי, אנחנו זוג מאושר ומחוזק. היא ממש הצילה לנו את החיים
+                        ואת המשפחה שלנו!"
+                      </p>
+                      <p className="text-beige-900 font-semibold">- ר.כ. ומ.כ., באר שבע</p>
+                      <p className="text-beige-600 text-sm">נשואים 12 שנה, 3 ילדים</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white/90 backdrop-blur">
+                    <CardContent className="pt-6">
+                      <p className="text-beige-700 italic mb-4 leading-relaxed">
+                        "אחרי 8 שנות נישואים הגענו למשבר קשה. המגשרת עזרה לנו להבין שאנחנו לא אויבים, אלא שותפים שצריכים
+                        ללמוד לדבר מחדש. התהליך היה לא קל, אבל היום אנחנו יודעים שעשינו את הבחירה הנכונה. תודה זהבית!"
+                      </p>
+                      <p className="text-beige-900 font-semibold">- א.ל. וי.ל., קיבוץ להב</p>
+                      <p className="text-beige-600 text-sm">נשואים 8 שנים, 2 ילדים</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white/90 backdrop-blur md:col-span-2">
+                    <CardContent className="pt-6">
+                      <p className="text-beige-700 italic mb-4 leading-relaxed">
+                        "כשהגענו למגשרת לא האמנו שאפשר להציל את הנישואים. היינו בטוחים שזה הסוף. אבל עו"ד זהבית דבי לא
+                        ויתרה עלינו. היא הצליחה לעזור לנו לפרוץ את הקירות שבנינו, להקשיב אחד לשני באמת, ולהבין מה באמת חשוב
+                        לנו. היום, אנחנו לא רק ביחד - אנחנו מאושרים יותר מאי פעם. המגשרת ממש הצילה לנו את החיים,
+                        את המשפחה ואת העתיד שלנו!"
+                      </p>
+                      <p className="text-beige-900 font-semibold">- ד.מ. וש.מ., באר שבע</p>
+                      <p className="text-beige-600 text-sm">נשואים 15 שנה, 4 ילדים</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              {/* ההליך המשולב */}
+              <div className="bg-white rounded-lg shadow-xl p-8 mb-8">
+                <h3 className="text-2xl font-bold text-beige-900 mb-6 text-center">
+                  הסכם "שלום בית או לחילופין גירושין"
+                </h3>
+                <div className="prose prose-lg max-w-none text-beige-700 space-y-4">
+                  <p>
+                    זהו הסכם ייחודי ומתקדם המשלב את שני העולמות ומעניק ביטחון ושקט נפשי לשני הצדדים:
+                  </p>
+                  <div className="bg-beige-100 border-r-4 border-beige-700 p-6 rounded-lg mb-4">
+                    <h4 className="font-bold text-beige-900 mb-3">חלק א׳ - הסכם שלום בית:</h4>
+                    <p className="mb-0">
+                      מסדיר את כל הנושאים שעליהם קיימת מחלוקת, קובע כללים ברורים לחיים המשותפים, מגדיר ציפיות ומחויבויות,
+                      ויוצר מסגרת לשיקום הקשר הזוגי. ההסכם כולל מנגנוני מעקב והתייעצות תקופתית עם המגשרת.
+                    </p>
+                  </div>
+                  <div className="bg-beige-100 border-r-4 border-beige-700 p-6 rounded-lg">
+                    <h4 className="font-bold text-beige-900 mb-3">חלק ב׳ - הסכם גירושין (לחילופין):</h4>
+                    <p className="mb-0">
+                      במקרה שלמרות המאמצים המשותפים לא יושג שיקום הקשר, ההסכם כולל הסדרים מוסכמים מראש בנושאים של
+                      משמורת ילדים, מזונות, חלוקת רכוש, דיור ועוד. זה מעניק שקט נפשי ומאפשר להתמקד בניסיון לשיקום
+                      מבלי לפחד מהעתיד.
+                    </p>
+                  </div>
+                  <p className="text-center font-semibold text-lg text-beige-900 mt-6">
+                    גישה זו מאפשרת לזוגות לנסות לשקם את הקשר באווירה של ביטחון, כבוד ושקיפות.
+                  </p>
+                </div>
+              </div>
+
+              {/* קריאה לפעולה */}
+              <div className="text-center bg-beige-800 text-white rounded-lg p-8 shadow-xl">
+                <h3 className="text-2xl font-bold mb-4">
+                  רוצים לנסות להציל את הנישואים שלכם?
+                </h3>
+                <p className="text-lg mb-6 opacity-95">
+                  אל תוותרו מבלי לנסות! המגשרת עו"ד זהבית דבי כאן כדי לעזור לכם למצוא את הדרך חזרה אחד לשני.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" variant="secondary" asChild>
+                    <a href="/contact">
+                      קבע פגישת ייעוץ להצלת נישואים
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="outline" className="bg-white text-beige-900 hover:bg-beige-50" asChild>
+                    <a href="tel:+972-53-606-2456">
+                      התקשר עכשיו - 053-606-2456
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
