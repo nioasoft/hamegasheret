@@ -111,22 +111,22 @@ export async function POST(request: NextRequest) {
           <div class="header">
             <h1>📧 פנייה חדשה מהאתר</h1>
           </div>
-          <div class="content">
-            <div class="field">
-              <div class="label">שם מלא:</div>
-              <div class="value">${name}</div>
+          <div class="content" dir="rtl" style="text-align: right; direction: rtl;">
+            <div class="field" style="text-align: right; direction: rtl;">
+              <div class="label" style="text-align: right; direction: rtl;">שם מלא:</div>
+              <div class="value" style="text-align: right; direction: rtl;">${name}</div>
             </div>
-            <div class="field">
-              <div class="label">כתובת אימייל:</div>
-              <div class="value"><a href="mailto:${email}">${email}</a></div>
+            <div class="field" style="text-align: right; direction: rtl;">
+              <div class="label" style="text-align: right; direction: rtl;">כתובת אימייל:</div>
+              <div class="value" style="text-align: right; direction: rtl;"><a href="mailto:${email}">${email}</a></div>
             </div>
-            <div class="field">
-              <div class="label">מספר טלפון:</div>
-              <div class="value"><a href="tel:${phone}">${phone}</a></div>
+            <div class="field" style="text-align: right; direction: rtl;">
+              <div class="label" style="text-align: right; direction: rtl;">מספר טלפון:</div>
+              <div class="value" style="text-align: right; direction: rtl;"><a href="tel:${phone}">${phone}</a></div>
             </div>
-            <div class="field">
-              <div class="label">הודעה:</div>
-              <div class="message-box">${message}</div>
+            <div class="field" style="text-align: right; direction: rtl;">
+              <div class="label" style="text-align: right; direction: rtl;">הודעה:</div>
+              <div class="message-box" style="text-align: right; direction: rtl;">${message}</div>
             </div>
           </div>
           <div class="footer">
@@ -225,46 +225,46 @@ export async function POST(request: NextRequest) {
           <div class="header">
             <h1>✅ פנייתך התקבלה בהצלחה</h1>
           </div>
-          <div class="content">
-            <div class="greeting">שלום ${name},</div>
+          <div class="content" dir="rtl" style="text-align: right; direction: rtl;">
+            <div class="greeting" style="text-align: right; direction: rtl;">שלום ${name},</div>
 
-            <p class="message">
+            <p class="message" style="text-align: right; direction: rtl;">
               תודה שפנית אלינו! פנייתך התקבלה במערכת שלנו בהצלחה.
             </p>
 
-            <p class="message">
+            <p class="message" style="text-align: right; direction: rtl;">
               <strong>עו"ד זהבית דבי - המגשרת</strong> תחזור אליך ביום העסקים הבא בשעות הפעילות.
             </p>
 
-            <div class="warning">
+            <div class="warning" style="text-align: right; direction: rtl;">
               ⚠️ שים לב: מייל זה נשלח ממערכת אוטומטית ולא ניתן להגיב אליו.
               <br>ליצירת קשר ישיר, אנא השתמש באחת מדרכי ההתקשרות הבאות:
             </div>
 
-            <div class="contact-info">
-              <div class="contact-item">
+            <div class="contact-info" style="text-align: right; direction: rtl;">
+              <div class="contact-item" style="text-align: right; direction: rtl;">
                 <span class="contact-label">📞 טלפון:</span>
                 <a href="tel:+972-53-606-2456">053-606-2456</a>
               </div>
-              <div class="contact-item">
+              <div class="contact-item" style="text-align: right; direction: rtl;">
                 <span class="contact-label">💬 וואטסאפ:</span>
                 <a href="https://wa.me/972536062456">שלח הודעה</a>
               </div>
-              <div class="contact-item">
+              <div class="contact-item" style="text-align: right; direction: rtl;">
                 <span class="contact-label">✉️ אימייל:</span>
                 <a href="mailto:zehavit@silaw.co.il">zehavit@silaw.co.il</a>
               </div>
-              <div class="contact-item">
+              <div class="contact-item" style="text-align: right; direction: rtl;">
                 <span class="contact-label">🏢 כתובת:</span>
                 יהודה הנחתום 4, בניין בית בלטק, באר שבע
               </div>
             </div>
 
-            <p class="message">
+            <p class="message" style="text-align: right; direction: rtl;">
               אנחנו כאן לעזור לך למצוא את הפתרון הטוב ביותר למצבך.
             </p>
 
-            <p class="message" style="margin-top: 30px;">
+            <p class="message" style="margin-top: 30px; text-align: right; direction: rtl;">
               בברכה,<br>
               <strong>המגשרת - עו"ד זהבית דבי</strong><br>
               גישור גירושין ודיני משפחה
