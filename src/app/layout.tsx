@@ -3,6 +3,9 @@ import { Noto_Sans_Hebrew } from "next/font/google";
 import Script from "next/script";
 import { SkipLink } from "@/components/ui/skip-link";
 import { CookieBanner } from "@/components/ui/cookie-banner";
+import { Navigation } from "@/components/ui/navigation";
+import { Footer } from "@/components/ui/footer";
+import { MENU_ITEMS } from "@/lib/constants";
 import "./globals.css";
 
 const notoSansHebrew = Noto_Sans_Hebrew({
@@ -14,15 +17,11 @@ const notoSansHebrew = Noto_Sans_Hebrew({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hamegasheret.co.il"),
   title: "המגשרת - עו״ד זהבית דבי | מומחית בגישור גירושין ודיני משפחה",
   description: "המגשרת עו״ד זהבית דבי עם 85% הצלחה. המגשרת המובילה בבאר שבע והדרום. גישור מקצועי לגירושין, משמורת ילדים ודיני משפחה.",
   keywords: "המגשרת, המגשרת באר שבע, גישור גירושין, עורך דין גירושין, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, עו״ד זהבית דבי, עורכי דין משפחה",
   authors: [{ name: "עו״ד זהבית דבי - המגשרת" }],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   openGraph: {
     title: "המגשרת - עו״ד זהבית דבי | מומחית בגישור גירושין",
     description: "המגשרת עו״ד זהבית דבי עם 85% הצלחה. המגשרת המובילה בבאר שבע והדרום.",
@@ -44,6 +43,24 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://hamegasheret.co.il",
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
+  manifest: '/site.webmanifest',
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -114,7 +131,11 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Navigation menuItems={MENU_ITEMS} />
+
         {children}
+
+        <Footer />
 
         {/* Cookie Consent Banner */}
         <CookieBanner />

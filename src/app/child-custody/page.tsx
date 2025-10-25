@@ -1,5 +1,3 @@
-import { Navigation } from "@/components/ui/navigation";
-import { Footer } from "@/components/ui/footer";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,9 +7,9 @@ import { Check } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "משמורת ילדים - המגשרת עו״ד זהבית דבי | מומחית בגישור משמורת",
-  description: "משמורת ילדים עם המגשרת עו״ד זהבית דבי - פתרונות יצירתיים למשמורת משותפת, יחידה ואחריות הורית. 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים והמשפחה.",
-  keywords: "משמורת ילדים, המגשרת עו״ד זהבית דבי, משמורת משותפת, משמורת יחידה, אחריות הורית, הסדרי שהות, גישור משמורת, דיני משפחה, זכויות ילדים, הורות משותפת",
+  title: "משמורת ילדים באר שבע - המגשרת עו״ד זהבית דבי | פתרונות יצירתיים",
+  description: "משמורת ילדים באר שבע עם המגשרת עו״ד זהבית דבי - פתרונות יצירתיים למשמורת משותפת, יחידה ואחריות הורית. 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים והמשפחה. גישור מקצועי ורגיש.",
+  keywords: "משמורת ילדים, משמורת ילדים באר שבע, המגשרת עו״ד זהבית דבי, משמורת משותפת, משמורת יחידה, אחריות הורית, הסדרי שהות, גישור משמורת, דיני משפחה, זכויות ילדים, הורות משותפת, תיקון חוק משמורת 2018, המגשרת באר שבע",
   alternates: {
     canonical: "https://hamegasheret.co.il/child-custody"
   },
@@ -38,17 +36,6 @@ export const metadata: Metadata = {
     images: ["/og-image-child-custody.jpg"],
   },
 };
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 const testimonials = [
   {
@@ -225,14 +212,13 @@ const custodyServiceSchema = {
 
 export default function ChildCustodyPage() {
   return (
-    <div className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([childCustodyFaqSchema, custodyServiceSchema]),
         }}
       />
-      <Navigation menuItems={menuItems} />
 
       <main id="main-content">
         <Hero
@@ -575,8 +561,6 @@ export default function ChildCustodyPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

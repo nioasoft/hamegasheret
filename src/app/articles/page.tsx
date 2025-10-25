@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Navigation } from "@/components/ui/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Footer } from "@/components/ui/footer";
 import { articles, categories } from "./data";
 
 export const metadata: Metadata = {
@@ -38,22 +36,9 @@ export const metadata: Metadata = {
   },
 };
 
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
-
 export default function ArticlesPage() {
   return (
     <>
-      <Navigation menuItems={menuItems} />
-
       <main id="main-content">
         {/* כותרת העמוד */}
         <section className="bg-beige-100 py-16">
@@ -158,9 +143,6 @@ export default function ArticlesPage() {
         </div>
       </section>
       </main>
-
-      {/* Footer */}
-      <Footer />
     </>
   );
 }

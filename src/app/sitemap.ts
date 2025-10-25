@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const fallbackDates = {
     home: new Date('2024-09-24'),
     mediation: new Date('2024-09-24'),
+    postDivorceMediation: new Date('2025-10-23'),
     childCustody: new Date('2024-09-24'),
     childSupport: new Date('2024-09-24'),
     cases: new Date('2024-09-24'),
@@ -82,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/mediation`,
       lastModified: lastModifiedDates.mediation,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/post-divorce-mediation`,
+      lastModified: lastModifiedDates.postDivorceMediation,
       changeFrequency: 'weekly',
       priority: 0.9,
     },

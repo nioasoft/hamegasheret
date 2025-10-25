@@ -1,17 +1,4 @@
 import type { Metadata } from "next";
-import { Navigation } from "@/components/ui/navigation";
-import { Footer } from "@/components/ui/footer";
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 export const metadata: Metadata = {
   title: "הצהרת נגישות | המגשרת עו״ד זהבית דבי",
@@ -27,9 +14,7 @@ export const metadata: Metadata = {
 
 export default function AccessibilityStatementPage() {
   return (
-    <div className="min-h-screen">
-      <Navigation menuItems={menuItems} />
-
+    <>
       <main id="main-content">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-beige-50 to-white py-16">
@@ -542,8 +527,6 @@ export default function AccessibilityStatementPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

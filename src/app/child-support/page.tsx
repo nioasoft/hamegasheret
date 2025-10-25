@@ -1,5 +1,3 @@
-import { Navigation } from "@/components/ui/navigation";
-import { Footer } from "@/components/ui/footer";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -9,9 +7,9 @@ import { Metadata } from "next";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "מזונות ילדים - המגשרת עו״ד זהבית דבי | חישוב מזונות מקצועי 2024",
-  description: "מזונות ילדים עם המגשרת עו״ד זהבית דבי - הערכת חישוב מזונות המותאם לתא המשפחתי ובהתאם לפסיקה הרווחת, הסכמי מזונות הוגנים, גישור מזונות וחיסכון של 75% בעלויות משפט.",
-  keywords: "מזונות ילדים, חישוב מזונות, המגשרת עו״ד זהבית דבי, הסכמי מזונות, גישור מזונות, מזונות 2024, תקנות מזונות, מזונות נטל, מזונות לפי גיל, עדכון מזונות",
+  title: "מזונות ילדים 2025 באר שבע - המגשרת עו״ד זהבית דבי | חישוב מזונות מקצועי",
+  description: "מזונות ילדים 2025 עם המגשרת עו״ד זהבית דבי באר שבע - הערכת חישוב מזונות המותאם לתא המשפחתי ובהתאם לפסיקה הרווחת, הסכמי מזונות הוגנים, גישור מזונות וחיסכון של 75% בעלויות משפט. תיקון חוק 2017 מעודכן.",
+  keywords: "מזונות ילדים, חישוב מזונות, חישוב מזונות 2025, המגשרת עו״ד זהבית דבי, הסכמי מזונות, גישור מזונות, מזונות 2024, תקנות מזונות, מזונות נטל, מזונות לפי גיל, עדכון מזונות, תיקון חוק מזונות 2017, המגשרת באר שבע, חישוב מזונות באר שבע",
   alternates: {
     canonical: "https://hamegasheret.co.il/child-support"
   },
@@ -38,17 +36,6 @@ export const metadata: Metadata = {
     images: ["/og-image-child-support.jpg"],
   },
 };
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 const testimonials = [
   {
@@ -182,14 +169,13 @@ const costComparison = [
 
 export default function ChildSupportPage() {
   return (
-    <div className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
         }}
       />
-      <Navigation menuItems={menuItems} />
 
       <main id="main-content">
         <Hero
@@ -554,8 +540,6 @@ export default function ChildSupportPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

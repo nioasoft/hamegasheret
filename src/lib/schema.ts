@@ -2,15 +2,20 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'",
-  "description": "המגשרת עו״ד זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה. המגשרת המובילה עם 85% הצלחה בגישור.",
+  "description": "המגשרת עו״ד זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה באר שבע והדרום. המגשרת המובילה עם 85% הצלחה בגישור.",
   "url": "https://hamegasheret.co.il",
+  "image": "https://hamegasheret.co.il/images/zehavitmain.webp",
   "logo": "https://hamegasheret.co.il/logo.png",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "יהודה הנחתום 4, בניין בית בלטק",
     "addressLocality": "באר שבע",
+    "postalCode": "8414002",
     "addressCountry": "IL"
   },
+  "sameAs": [
+    "https://hamegasheret.co.il"
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+972-53-606-2456",

@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ui/contact-form";
-import { Footer } from "@/components/ui/footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
@@ -37,17 +35,6 @@ export const metadata: Metadata = {
     images: ["/og-image-contact.jpg"],
   },
 };
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 const contactMethods = [
   {
@@ -128,9 +115,7 @@ const faqs = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
-      <Navigation menuItems={menuItems} />
-
+    <>
       <main id="main-content">
         <Hero
           title="צור קשר"
@@ -341,8 +326,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Footer } from "@/components/ui/footer";
-import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,9 +8,9 @@ import { Metadata } from "next";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "גישור גירושין ושלום בית - המגשרת עו״ד זהבית דבי | הצלת נישואים",
-  description: "גישור גירושין ושלום בית מקצועי עם המגשרת עו״ד זהבית דבי - 85% הצלחה. הצלת נישואים, גישור זוגי ופתרון משברים משפחתיים. המגשרת המובילה בבאר שבע והדרום.",
-  keywords: "גישור גירושין, שלום בית, הצלת נישואים, גישור זוגי, המגשרת עו״ד זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, הסכם שלום בית, שיקום נישואים",
+  title: "גישור גירושין באר שבע - המגשרת עו״ד זהבית דבי | 85% הצלחה + שלום בית",
+  description: "גישור גירושין מקצועי בבאר שבע עם המגשרת עו״ד זהבית דבי - שיעור הצלחה של 85%. חיסכון של 80% בעלויות, תהליך מהיר וממוקד בטובת הילדים. כולל גישור שלום בית והצלת נישואים. ייעוץ ראשוני חינם!",
+  keywords: "גישור גירושין, גישור גירושין באר שבע, שלום בית, הצלת נישואים, גישור זוגי, המגשרת עו״ד זהבית דבי, המגשרת באר שבע, פתרון סכסוכים, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, הסכם שלום בית, שיקום נישואים, תיאום הורי, גישור מקצועי באר שבע",
   alternates: {
     canonical: "https://hamegasheret.co.il/mediation"
   },
@@ -39,17 +37,6 @@ export const metadata: Metadata = {
     images: ["/og-image-mediation.jpg"],
   },
 };
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 const testimonials = [
   {
@@ -154,14 +141,13 @@ const faqs = [
 
 export default function MediationPage() {
   return (
-    <div className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
         }}
       />
-      <Navigation menuItems={menuItems} />
 
       <main id="main-content">
         <Hero
@@ -588,8 +574,6 @@ export default function MediationPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

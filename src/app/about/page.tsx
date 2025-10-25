@@ -1,14 +1,12 @@
-import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ui/contact-form";
-import { Footer } from "@/components/ui/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "אודות המגשרת עו״ד זהבית דבי | מומחית בגישור גירושין ודיני משפחה",
-  description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין עם 15+ שנות ניסיון ו-85% הצלחה. המגשרת המובילה באר שבע ובכל הארץ. דיני משפחה, משמורת ילדים ופתרון סכסוכים.",
-  keywords: "עו״ד זהבית דבי, המגשרת, אודות המגשרת, ניסיון בגישור, מומחית דיני משפחה, המגשרת באר שבע, עורך דין משפחה, גישור מקצועי",
+  title: "אודות המגשרת באר שבע - עו״ד זהבית דבי | 15+ שנות ניסיון בגישור",
+  description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין באר שבע עם 15+ שנות ניסיון ו-85% הצלחה. המגשרת המובילה בדרום בתחום דיני משפחה, משמורת ילדים ופתרון סכסוכים. משרד דבי סיידה ושות' - מקצועיות ואמינות.",
+  keywords: "עו״ד זהבית דבי, המגשרת באר שבע, אודות המגשרת, ניסיון בגישור, מומחית דיני משפחה, המגשרת באר שבע, עורך דין משפחה, גישור מקצועי, דבי סיידה ושות', משרד עורכי דין באר שבע, המגשרת המובילה בדרום",
   alternates: {
     canonical: "https://hamegasheret.co.il/about"
   },
@@ -35,17 +33,6 @@ export const metadata: Metadata = {
     images: ["/og-image-about.jpg"],
   },
 };
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 const testimonials = [
   {
@@ -91,9 +78,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      <Navigation menuItems={menuItems} />
-
+    <>
       <main id="main-content">
         <Hero
           title="אודות המשרד"
@@ -110,9 +95,9 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-beige-900 mb-6">
-                  דבי סיידה ושות' - משרד עורכי דין
-                </h2>
+                <h1 className="text-3xl font-bold text-beige-900 mb-6">
+                  דבי סיידה ושות' - משרד עורכי דין | המגשרת עו״ד זהבית דבי באר שבע
+                </h1>
                 <div className="space-y-5 text-beige-700 text-base leading-7">
                   <p>
                     משרד {`"דבי סיידה ושות'"`} הינו משרד מקצועי למתן ייעוץ, סיוע משפטי וייצוג למוסדות ציבוריים,
@@ -232,8 +217,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

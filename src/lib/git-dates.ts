@@ -39,6 +39,7 @@ export function getPageDates(): Record<string, Date> {
   const pages = {
     home: getFileLastModified(path.join(appDir, 'page.tsx')),
     mediation: getFileLastModified(path.join(appDir, 'mediation/page.tsx')),
+    postDivorceMediation: getFileLastModified(path.join(appDir, 'post-divorce-mediation/page.tsx')),
     childCustody: getFileLastModified(path.join(appDir, 'child-custody/page.tsx')),
     childSupport: getFileLastModified(path.join(appDir, 'child-support/page.tsx')),
     cases: getFileLastModified(path.join(appDir, 'cases/page.tsx')),

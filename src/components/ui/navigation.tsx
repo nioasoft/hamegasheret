@@ -32,12 +32,12 @@ export function Navigation({ logo = "דבי סיידה ושות'", menuItems, ct
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+          <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className="text-beige-600 hover:text-beige-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-beige-600 hover:text-beige-900 px-2 py-2 text-sm font-medium transition-colors"
               >
                 {item.label}
               </Link>

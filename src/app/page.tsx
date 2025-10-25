@@ -1,19 +1,17 @@
 import Image from "next/image";
-import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/ui/hero";
 import { ServicesSection } from "@/components/ui/services-section";
 import { ContactForm } from "@/components/ui/contact-form";
-import { Footer } from "@/components/ui/footer";
 import { organizationSchema, mediationServiceSchema, localBusinessSchema } from "@/lib/schema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "המגשרת עו״ד זהבית דבי | גישור גירושין מקצועי באר שבע והדרום",
-  description: "המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים מוסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים.",
-  keywords: "המגשרת, עו״ד זהבית דבי, גישור גירושין, גישור באר שבע, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, גישור מקצועי",
+  title: "המגשרת באר שבע - עו״ד זהבית דבי | גישור גירושין מקצועי עם 85% הצלחה",
+  description: "המגשרת עו״ד זהבית דבי - המובילה בגישור גירושין באר שבע והדרום עם 85% הצלחה. גישור מקצועי לגירושין, משמורת ילדים, מזונות ודיני משפחה. ייעוץ ראשוני חינם! חיסכון של 80% בעלויות.",
+  keywords: "המגשרת, המגשרת באר שבע, המגשרת זהבית דבי, עו״ד זהבית דבי, גישור גירושין, גישור גירושין באר שבע, עורך דין גירושין, דיני משפחה, משמורת ילדים, מזונות, הסכם גירושין, גישור משפחה באר שבע, עורכי דין משפחה באר שבע, תיאום הורי, גישור מקצועי דרום",
   openGraph: {
-    title: "המגשרת עו״ד זהבית דבי | גישור גירושין מקצועי באר שבע והדרום",
-    description: "המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים מוסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים.",
+    title: "המגשרת באר שבע - עו״ד זהבית דבי | גישור גירושין עם 85% הצלחה",
+    description: "המגשרת עו״ד זהבית דבי - המובילה בגישור גירושין באר שבע והדרום. 85% הצלחה בהגעה להסכמים, חיסכון של 80% בעלויות. גישור מקצועי לגירושין, משמורת ילדים ומזונות.",
     url: "https://hamegasheret.co.il",
     siteName: "המגשרת - עו״ד זהבית דבי",
     locale: "he_IL",
@@ -29,22 +27,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "המגשרת עו״ד זהבית דבי | גישור גירושין מקצועי",
-    description: "המגשרת הבכירה בבאר שבע והדרום - 85% שיעור הצלחה בהגעה להסכמים מוסכמים",
+    title: "המגשרת באר שבע - עו״ד זהבית דבי | גישור גירושין",
+    description: "המגשרת באר שבע - 85% הצלחה בגישור גירושין, חיסכון של 80% בעלויות. ייעוץ ראשוני חינם!",
     images: ["/og-image-home.jpg"],
   },
 };
-
-const menuItems = [
-  { label: "דף הבית", href: "/" },
-  { label: "גישור גירושין", href: "/mediation" },
-  { label: "משמורת ילדים", href: "/child-custody" },
-  { label: "מזונות", href: "/child-support" },
-  { label: "אודות", href: "/about" },
-  { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
-  { label: "צור קשר", href: "/contact" }
-];
 
 const testimonials = [
   {
@@ -82,7 +69,7 @@ const services = [
     icon: "🤝",
     href: "/mediation",
     features: [
-      "הגעה להסכמים מוסכמים",
+      "הגעה להסכמים",
       "שמירה על מערכות יחסים",
       "חיסכון משמעותי בעלויות",
       "תהליך מהיר ויעיל"
@@ -111,32 +98,43 @@ const services = [
       "ייצוג בבית המשפט",
       "עדכון שוטף של פסקי דין"
     ]
+  },
+  {
+    title: "גישור לאחר גירושין",
+    description: "תיאום הורי ופתרון מחלוקות לאחר הגירושין. התאמת הסכמים לנסיבות משתנות.",
+    icon: "🔄",
+    href: "/post-divorce-mediation",
+    features: [
+      "תיאום הורי מקצועי",
+      "עדכון הסדרי שהות ומזונות",
+      "פתרון מחלוקות ללא ביהמ״ש",
+      "שמירה על יחסים תקינים"
+    ]
   }
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([organizationSchema, mediationServiceSchema, localBusinessSchema]),
         }}
       />
-      <Navigation menuItems={menuItems} />
 
       <main id="main-content">
         <Hero
           title="המגשרת עו״ד זהבית דבי"
           subtitle="מומחית בגישור גירושין - הסכמים ללא מלחמות"
-          description="המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים מוסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים."
+          description="המגשרת הבכירה בבאר שבע והדרום, עם שיעור הצלחה של 85% בהגעה להסכמים. מתמחה בתהליך גישור מקצועי ורגיש שמביא לתוצאות מעולות ללא קרבות משפטיים."
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="למד על גישור"
           secondaryCtaHref="/mediation"
           profileImage={{
             src: "/images/zehavitmain.webp",
-            alt: "המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין"
+            alt: "המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין באר שבע והדרום"
           }}
           stats={stats}
           testimonials={testimonials}
@@ -151,9 +149,9 @@ export default function Home() {
         <section className="py-10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-beige-900 mb-8">
-                למה לבחור במשרד שלנו?
-              </h2>
+              <h1 className="text-3xl font-bold text-beige-900 mb-8">
+                למה לבחור במגשרת עו״ד זהבית דבי - המשרד המוביל בבאר שבע?
+              </h1>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-right mb-8">
                 <div>
                   <div className="bg-white p-5 rounded-lg shadow-sm mb-4 border border-beige-100">
@@ -204,11 +202,11 @@ export default function Home() {
                   <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
                     <Image
                       src="/images/consultation-hero.webp"
-                      alt="ייעוץ משפטי מקצועי עם המגשרת עו״ד זהבית דבי"
+                      alt="ייעוץ משפטי מקצועי עם המגשרת עו״ד זהבית דבי בבאר שבע - גישור גירושין ודיני משפחה"
                       width={192}
                       height={192}
                       className="w-full h-full object-cover"
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -218,8 +216,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }
