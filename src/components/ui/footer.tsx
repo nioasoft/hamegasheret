@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 
 export function Footer() {
   return (
@@ -59,11 +62,19 @@ export function Footer() {
               יהודה הנחתום 4<br />
               בניין בית בלטק<br />
               באר שבע<br />
-              <a href="tel:+972-53-606-2456" className="hover:text-white transition-colors">
+              <a
+                href="tel:+972-53-606-2456"
+                className="hover:text-white transition-colors"
+                onClick={() => trackPhoneClick('+972-53-606-2456', 'footer')}
+              >
                 053-606-2456
               </a>
               <br />
-              <a href="mailto:zehavit@silaw.co.il" className="hover:text-white transition-colors">
+              <a
+                href="mailto:zehavit@silaw.co.il"
+                className="hover:text-white transition-colors"
+                onClick={() => trackEmailClick('footer')}
+              >
                 zehavit@silaw.co.il
               </a>
             </address>

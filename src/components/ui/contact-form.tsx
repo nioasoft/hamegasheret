@@ -1,12 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail } from "lucide-react";
+import {
+  trackFormStart,
+  trackFormSubmit,
+  trackFormSuccess,
+  trackFormError,
+  trackPhoneClick,
+  trackWhatsAppClick,
+  trackEmailClick
+} from "@/lib/analytics";
 
 interface ContactFormProps {
   email?: string;
@@ -31,6 +40,7 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const formStartTracked = useRef(false);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -60,7 +70,13 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Track form submission attempt
+    trackFormSubmit('contact_form');
+
     if (!validateForm()) {
+      // Track validation error
+      trackFormError('contact_form', 'Validation failed');
+
       // Announce error to screen readers
       const errorMessage = "הטופס מכיל שגיאות. נא לבדוק את השדות ולנסות שנית.";
       const announcement = document.createElement('div');
@@ -91,10 +107,17 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
         throw new Error(data.error || 'שגיאה בשליחת הטופס');
       }
 
-      // Success
+      // Success - Track conversion!
+      trackFormSuccess('contact_form', {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+      });
+
       setSubmitSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
       setErrors({});
+      formStartTracked.current = false; // Reset for next form fill
 
       // Announce success to screen readers
       const announcement = document.createElement('div');
@@ -106,8 +129,11 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
       setTimeout(() => document.body.removeChild(announcement), 3000);
 
     } catch (error) {
-      // Handle error
+      // Track error
       const errorMessage = error instanceof Error ? error.message : 'שגיאה בשליחת הטופס. אנא נסה שנית.';
+      trackFormError('contact_form', errorMessage);
+
+      // Handle error
       setErrors({ message: errorMessage });
 
       // Announce error to screen readers
@@ -125,6 +151,13 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    // Track form start on first interaction
+    if (!formStartTracked.current && value.trim()) {
+      trackFormStart('contact_form');
+      formStartTracked.current = true;
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -286,7 +319,11 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
             <div>
               <h3 className="font-semibold text-lg mb-2">טלפון</h3>
               <p className="text-beige-600">
-                <a href={`tel:${phone}`} className="hover:text-beige-700">
+                <a
+                  href={`tel:${phone}`}
+                  className="hover:text-beige-700"
+                  onClick={() => trackPhoneClick(phone, 'contact_info_text')}
+                >
                   {phone.replace('+972-', '0').replace('+972', '0')}
                 </a>
               </p>
@@ -295,7 +332,11 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
             <div>
               <h3 className="font-semibold text-lg mb-2">אימייל</h3>
               <p className="text-beige-600">
-                <a href={`mailto:${email}`} className="hover:text-beige-700">
+                <a
+                  href={`mailto:${email}`}
+                  className="hover:text-beige-700"
+                  onClick={() => trackEmailClick('contact_info_text')}
+                >
                   {email}
                 </a>
               </p>
@@ -309,7 +350,11 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
                 className="w-full hover:bg-beige-800 transition-colors"
                 asChild
               >
-                <a href={`tel:${phone}`} className="flex items-center justify-center gap-2">
+                <a
+                  href={`tel:${phone}`}
+                  className="flex items-center justify-center gap-2"
+                  onClick={() => trackPhoneClick(phone, 'contact_button')}
+                >
                   <Phone className="h-4 w-4" />
                   התקשר עכשיו
                 </a>
@@ -320,7 +365,13 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
                 className="w-full hover:bg-beige-100 hover:border-beige-300 transition-colors"
                 asChild
               >
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2"
+                  onClick={() => trackWhatsAppClick('contact_button')}
+                >
                   <MessageCircle className="h-4 w-4" />
                   וואטסאפ
                 </a>
@@ -331,7 +382,11 @@ export function ContactForm({ email = "zehavit@silaw.co.il", phone = "+972-53-60
                 className="w-full hover:bg-blue-50 hover:border-blue-300 transition-colors"
                 asChild
               >
-                <a href={`mailto:${email}`} className="flex items-center justify-center gap-2">
+                <a
+                  href={`mailto:${email}`}
+                  className="flex items-center justify-center gap-2"
+                  onClick={() => trackEmailClick('contact_button')}
+                >
                   <Mail className="h-4 w-4" />
                   שלח אימייל
                 </a>

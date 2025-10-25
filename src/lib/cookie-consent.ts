@@ -18,16 +18,6 @@ const CONSENT_KEY = 'cookie-consent-preferences';
 const CONSENT_TIMESTAMP_KEY = 'cookie-consent-timestamp';
 
 /**
- * Declare gtag function for TypeScript
- */
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
-/**
  * Initialize Google Consent Mode with default denied state
  * This should be called before any Google Analytics scripts load
  */
