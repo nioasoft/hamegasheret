@@ -95,25 +95,6 @@ export const localBusinessSchema = {
   "priceRange": "$$"
 }
 
-export const testimonialSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "לקוח מרוצה"
-  },
-  "reviewBody": "עו״ד זהבית דבי המגשרת היא מקצועית מהשורה הראשונה. היא הצליחה להחזיר לנו לא רק את הנישואין אלא גם את החלום המשותף שלנו. היום אנחנו צוות חזק יותר מתמיד.",
-  "itemReviewed": {
-    "@type": "Service",
-    "name": "גישור גירושין - המגשרת עו״ד זהבית דבי"
-  }
-}
-
 export const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

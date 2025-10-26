@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
-import { testimonialSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "סיפורי הצלחה - המגשרת עו״ד זהבית דבי",
@@ -338,13 +337,6 @@ const caseStudies = [
 export default function CasesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(testimonialSchema),
-        }}
-      />
-
       <main id="main-content">
         <Hero
           title="סיפורי הצלחה של המגשרת"
