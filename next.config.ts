@@ -45,21 +45,9 @@ const nextConfig: NextConfig = {
   },
 
   // Redirects for SEO
+  // Note: www → non-www redirect is handled by Vercel/Cloudflare
   async redirects() {
-    return [
-      // www → non-www redirect (301 permanent)
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.hamegasheret.co.il',
-          },
-        ],
-        destination: 'https://hamegasheret.co.il/:path*',
-        permanent: true,
-      },
-    ];
+    return [];
   },
 
   // Compression
