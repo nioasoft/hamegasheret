@@ -5,7 +5,19 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/', '/admin/'],
+      disallow: [
+        '/private/',
+        '/admin/',
+        '/_next/static/',
+        '/_next/image/',
+        '/api/',
+        '/*.woff2$',
+        '/*.woff$',
+        '/*.ttf$',
+        '/favicon*',
+        '/apple-icon*',
+        '/web-app-manifest*',
+      ],
     },
     sitemap: 'https://hamegasheret.co.il/sitemap.xml',
   }

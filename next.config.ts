@@ -47,9 +47,16 @@ const nextConfig: NextConfig = {
   // Redirects for SEO
   async redirects() {
     return [
+      // www → non-www redirect (301 permanent)
       {
-        source: '/old-url',
-        destination: '/',
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.hamegasheret.co.il',
+          },
+        ],
+        destination: 'https://hamegasheret.co.il/:path*',
         permanent: true,
       },
     ];
