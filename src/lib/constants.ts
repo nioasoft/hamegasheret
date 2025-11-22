@@ -23,7 +23,7 @@ export const CONTACT_INFO = {
     building: "בניין בית בלטק",
     city: "באר שבע"
   },
-  asafName: "עו"ד אסף סיידה",
+  asafName: 'עו"ד אסף סיידה',
   asafPhone: "+972-54-423-2167",
   asafPhoneDisplay: "054-423-2167"
 } as const;
