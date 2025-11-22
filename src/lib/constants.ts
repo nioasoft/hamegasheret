@@ -22,5 +22,8 @@ export const CONTACT_INFO = {
     street: "יהודה הנחתום 4",
     building: "בניין בית בלטק",
     city: "באר שבע"
-  }
+  },
+  asafName: "עו"ד אסף סיידה",
+  asafPhone: "+972-54-423-2167",
+  asafPhoneDisplay: "054-423-2167"
 } as const;
