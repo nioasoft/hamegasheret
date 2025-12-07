@@ -1,7 +1,10 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy initialize Resend to avoid build-time errors when API key is not available
+function getResendClient() {
+  return new Resend(process.env.RESEND_API_KEY);
+}
 
 interface ContactFormData {
   name: string;
@@ -281,7 +284,7 @@ export async function POST(request: NextRequest) {
     // Send both emails
     const results = await Promise.allSettled([
       // Email to office
-      resend.emails.send({
+      getResendClient().emails.send({
         from: 'המגשרת <donotreply@hamegasheret.co.il>',
         to: ['zehavit@silaw.co.il', 'asaf@silaw.co.il'],
         subject: `פנייה חדשה מהאתר - ${name}`,
@@ -289,7 +292,7 @@ export async function POST(request: NextRequest) {
         replyTo: email, // Allow office to reply directly to the client
       }),
       // Confirmation email to client
-      resend.emails.send({
+      getResendClient().emails.send({
         from: 'המגשרת <donotreply@hamegasheret.co.il>',
         to: email,
         subject: 'פנייתך התקבלה - המגשרת עו״ד זהבית דבי',
