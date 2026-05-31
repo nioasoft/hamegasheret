@@ -1,10 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  eslint: {
-    // Disable the unescaped entities rule for Hebrew text
-    ignoreDuringBuilds: true,
-  },
   // Vercel optimizations
   // Note: optimizeCss graduated to stable in Next 16 (CSS chunking is on by default)
   experimental: {
@@ -40,7 +36,11 @@ const nextConfig: NextConfig = {
 
   // Image optimization
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com', 'hamegasheret.co.il'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'via.placeholder.com' },
+      { protocol: 'https', hostname: 'hamegasheret.co.il' },
+    ],
     formats: ['image/webp', 'image/avif'],
   },
 
