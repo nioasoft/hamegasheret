@@ -553,13 +553,13 @@ export default function PostDivorceMediationPage() {
           </div>
         </section>
 
-        {/* סיפורי הצלחה */}
+        {/* סיפורי גישור */}
         <section className="py-16 bg-beige-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-beige-900 mb-4">
-                  💡 סיפורי הצלחה מהשטח
+                  💡 סיפורי גישור מהשטח
                 </h2>
                 <p className="text-xl text-beige-600">
                   דוגמאות אמיתיות לפתרונות שעבדו

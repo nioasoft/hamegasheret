@@ -16,7 +16,7 @@ const menuItems = [
   { label: "מזונות", href: "/child-support" },
   { label: "אודות", href: "/about" },
   { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
+  { label: "סיפורי גישור", href: "/cases" },
   { label: "צור קשר", href: "/contact" }
 ];
 

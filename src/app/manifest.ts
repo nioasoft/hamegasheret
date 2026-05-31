@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'המגשרת - עו״ד זהבית דבי | גישור גירושין ודיני משפחה',
     short_name: 'המגשרת',
-    description: 'המגשרת עו״ד זהבית דבי עם 85% הצלחה. המגשרת המובילה בבאר שבע והדרום. גישור מקצועי לגירושין, משמורת ילדים ודיני משפחה.',
+    description: 'המגשרת עו״ד זהבית דבי עם ניסיון של 15+ שנים. המגשרת המובילה בבאר שבע והדרום. גישור מקצועי לגירושין, משמורת ילדים ודיני משפחה.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

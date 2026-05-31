@@ -137,7 +137,7 @@ export default function ArticlesPage() {
             </div>
             <div>
               <div className="text-4xl font-bold text-beige-900 mb-2">15+</div>
-              <div className="text-beige-600">הצלחה בגישור</div>
+              <div className="text-beige-600">שנות ניסיון</div>
             </div>
           </div>
         </div>

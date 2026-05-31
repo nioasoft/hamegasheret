@@ -45,7 +45,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/cases" className="text-beige-300 hover:text-white transition-colors">
-                    סיפורי הצלחה
+                    סיפורי גישור
                   </Link>
                 </li>
                 <li>

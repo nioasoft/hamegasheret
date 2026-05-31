@@ -2,7 +2,7 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'",
-  "description": "המגשרת עו״ד זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה באר שבע והדרום. המגשרת המובילה עם 85% הצלחה בגישור.",
+  "description": "המגשרת עו״ד זהבית דבי - משרד עורכי דין מוביל בגישור גירושין ודיני משפחה באר שבע והדרום. המגשרת המובילה בגישור עם ניסיון של 15+ שנים.",
   "url": "https://hamegasheret.co.il",
   "image": "https://hamegasheret.co.il/images/zehavitmain.webp",
   "logo": "https://hamegasheret.co.il/logo.png",
@@ -41,7 +41,7 @@ export const mediationServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "גישור גירושין - המגשרת עו״ד זהבית דבי",
-  "description": "שירות גישור גירושין מקצועי של המגשרת עו״ד זהבית דבי עם שיעור הצלחה של 85%. הגעה להסכמים מוסכמים ללא מלחמות משפטיות.",
+  "description": "שירות גישור גירושין מקצועי של המגשרת עו״ד זהבית דבי עם ניסיון של 15+ שנים. הגעה להסכמים מוסכמים ללא מלחמות משפטיות.",
   "provider": {
     "@type": "LegalService",
     "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'"

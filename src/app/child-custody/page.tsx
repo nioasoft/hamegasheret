@@ -419,12 +419,12 @@ export default function ChildCustodyPage() {
           </div>
         </section>
 
-        {/* סיפורי הצלחה */}
+        {/* סיפורי גישור */}
         <section className="py-12 bg-gradient-to-r from-beige-50 to-beige-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-beige-900 mb-4">
-                סיפורי הצלחה במשמורת ילדים
+                סיפורי גישור במשמורת ילדים
               </h2>
               <p className="text-xl text-beige-600">
                 דוגמאות אמיתיות לפתרונות יצירתיים של המגשרת עו״ד זהבית דבי
@@ -499,16 +499,16 @@ export default function ChildCustodyPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold mb-2">××××ª</div>
-                <div className="text-lg">מההסכמים הם למשמורת משותפת</div>
+                <div className="text-4xl font-bold mb-2">15+</div>
+                <div className="text-lg">שנות ניסיון</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">80%</div>
-                <div className="text-lg">הצלחה בגישור עם המגשרת</div>
+                <div className="text-lg">חיסכון בעלויות</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">3-6</div>
-                <div className="text-lg">שביעות רצון של הילדים</div>
+                <div className="text-lg">חודשי גישור ממוצע</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">60%</div>

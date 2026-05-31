@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "אודות המגשרת באר שבע - עו״ד זהבית דבי | 15+ שנות ניסיון בגישור",
-  description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין באר שבע עם 15+ שנות ניסיון ו-85% הצלחה. המגשרת המובילה בדרום בתחום דיני משפחה, משמורת ילדים ופתרון סכסוכים. משרד דבי סיידה ושות' - מקצועיות ואמינות.",
+  description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין באר שבע עם 15+ שנות ניסיון. המגשרת המובילה בדרום בתחום דיני משפחה, משמורת ילדים ופתרון סכסוכים. משרד דבי סיידה ושות' - מקצועיות ואמינות.",
   keywords: "עו״ד זהבית דבי, המגשרת באר שבע, אודות המגשרת, ניסיון בגישור, מומחית דיני משפחה, המגשרת באר שבע, עורך דין משפחה, גישור מקצועי, דבי סיידה ושות', משרד עורכי דין באר שבע, המגשרת המובילה בדרום",
   alternates: {
     canonical: "https://hamegasheret.co.il/about"
@@ -193,8 +193,8 @@ export default function AboutPage() {
                 <div className="opacity-90">לקוחות שקיבלו ייעוץ</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">××××ª</div>
-                <div className="opacity-90">הצלחה בגישור</div>
+                <div className="text-4xl font-bold mb-2">מאות</div>
+                <div className="opacity-90">משפחות שליוותה</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">24/7</div>

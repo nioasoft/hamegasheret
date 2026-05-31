@@ -9,7 +9,7 @@ export const MENU_ITEMS = [
   { label: "משמורת ילדים", href: "/child-custody" },
   { label: "מזונות", href: "/child-support" },
   { label: "מאמרים", href: "/articles" },
-  { label: "סיפורי הצלחה", href: "/cases" },
+  { label: "סיפורי גישור", href: "/cases" },
   { label: "אודות", href: "/about" },
   { label: "צור קשר", href: "/contact" }
 ];
