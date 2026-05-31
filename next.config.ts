@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   // Vercel optimizations
+  // Note: optimizeCss graduated to stable in Next 16 (CSS chunking is on by default)
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
 
