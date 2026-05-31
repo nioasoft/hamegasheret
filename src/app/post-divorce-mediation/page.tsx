@@ -52,7 +52,7 @@ const testimonials = [
 ];
 
 const stats = [
-  { number: "85%", label: "הצלחה בגישור" },
+  { number: "15+", label: "שנות ניסיון" },
   { number: "60%", label: "חיסכון בזמן" },
   { number: "80%", label: "חיסכון בעלויות" }
 ];
@@ -279,8 +279,8 @@ export default function PostDivorceMediationPage() {
                   </Card>
                   <Card className="bg-beige-100 border-beige-300">
                     <CardContent className="pt-6 text-center">
-                      <div className="text-4xl font-bold text-beige-900 mb-2">85%</div>
-                      <div className="text-beige-700">שיעור הצלחה</div>
+                      <div className="text-4xl font-bold text-beige-900 mb-2">מאות</div>
+                      <div className="text-beige-700">משפחות שליוותה</div>
                     </CardContent>
                   </Card>
                 </div>

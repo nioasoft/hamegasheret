@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "אודות המגשרת עו״ד זהבית דבי | מומחית בגישור",
-    description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין עם ניסיון של 15+ שנים ושיעור הצלחה של 85%.",
+    description: "הכירו את המגשרת עו״ד זהבית דבי - מומחית בגישור גירושין עם ניסיון של 15+ שנים.",
     url: "https://hamegasheret.co.il/about",
     siteName: "המגשרת - עו״ד זהבית דבי",
     locale: "he_IL",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "אודות המגשרת עו״ד זהבית דבי",
-    description: "מומחית בגישור גירושין עם 15+ שנות ניסיון ו-85% הצלחה - המגשרת המובילה באר שבע",
+    description: "מומחית בגישור גירושין עם 15+ שנות ניסיון - המגשרת המובילה באר שבע",
     images: ["/og-image-about.jpg"],
   },
 };
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 <div className="opacity-90">לקוחות שקיבלו ייעוץ</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">85%</div>
+                <div className="text-4xl font-bold mb-2">××××ª</div>
                 <div className="opacity-90">הצלחה בגישור</div>
               </div>
               <div className="text-center">

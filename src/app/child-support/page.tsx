@@ -51,7 +51,7 @@ const testimonials = [
 ];
 
 const stats = [
-  { number: "85%", label: "הצלחה בגישור מזונות" },
+  { number: "מאות", label: "משפחות שליוותה" },
   { number: "3 שבועות", label: "זמן ממוצע להסכם" },
   { number: "80%", label: "חיסכון בעלויות" }
 ];
@@ -363,7 +363,7 @@ export default function ChildSupportPage() {
               <h3 className="text-2xl font-bold text-center mb-6">הצלחות מוכחות עם המגשרת עו״ד זהבית דבי</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-beige-800 mb-2">85%</div>
+                  <div className="text-3xl font-bold text-beige-800 mb-2">15+</div>
                   <p className="text-beige-700">הצלחה בגישור מזונות</p>
                 </div>
                 <div>

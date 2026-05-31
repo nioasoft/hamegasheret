@@ -8,14 +8,14 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "משמורת ילדים באר שבע - המגשרת עו״ד זהבית דבי | פתרונות יצירתיים",
-  description: "משמורת ילדים באר שבע עם המגשרת עו״ד זהבית דבי - פתרונות יצירתיים למשמורת משותפת, יחידה ואחריות הורית. 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים והמשפחה. גישור מקצועי ורגיש.",
+  description: "משמורת ילדים באר שבע עם המגשרת עו״ד זהבית דבי - פתרונות יצירתיים למשמורת משותפת, יחידה ואחריות הורית. ניסיון רב במציאת הסכמי משמורת מאוזנים לטובת הילדים והמשפחה. גישור מקצועי ורגיש.",
   keywords: "משמורת ילדים, משמורת ילדים באר שבע, המגשרת עו״ד זהבית דבי, משמורת משותפת, משמורת יחידה, אחריות הורית, הסדרי שהות, גישור משמורת, דיני משפחה, זכויות ילדים, הורות משותפת, תיקון חוק משמורת 2018, המגשרת באר שבע",
   alternates: {
     canonical: "https://hamegasheret.co.il/child-custody"
   },
   openGraph: {
     title: "משמורת ילדים - המגשרת עו״ד זהבית דבי | פתרונות לטובת הילדים",
-    description: "המגשרת עו״ד זהבית דבי מתמחה בגישור משמורת ילדים. פתרונות יצירתיים ומאוזנים לטובת הילדים עם שיעור הצלחה של 85% בהגעה להסכמי משמורת מוסכמים.",
+    description: "המגשרת עו״ד זהבית דבי מתמחה בגישור משמורת ילדים. פתרונות יצירתיים ומאוזנים לטובת הילדים עם ניסיון של 15+ שנים בהגעה להסכמי משמורת מוסכמים.",
     url: "https://hamegasheret.co.il/child-custody",
     siteName: "המגשרת - עו״ד זהבית דבי",
     locale: "he_IL",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "משמורת ילדים - המגשרת עו״ד זהבית דבי",
-    description: "פתרונות יצירתיים למשמורת ילדים - 85% הצלחה במציאת הסכמי משמורת מאוזנים לטובת הילדים",
+    description: "פתרונות יצירתיים למשמורת ילדים - הסכמי משמורת מאוזנים לטובת הילדים",
     images: ["/og-image-child-custody.jpg"],
   },
 };
@@ -51,8 +51,8 @@ const testimonials = [
 ];
 
 const stats = [
-  { number: "85%", label: "הצלחה בהסכמי משמורת" },
-  { number: "75%", label: "משמורת משותפת מוסכמת" }
+  { number: "מאות", label: "משפחות שליוותה" },
+  { number: "80%", label: "חיסכון בעלויות" }
 ];
 
 const custodyTypes = [
@@ -201,7 +201,7 @@ const custodyServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "משמורת ילדים - המגשרת עו״ד זהבית דבי",
-  "description": "שירות גישור מקצועי למשמורת ילדים עם המגשרת עו״ד זהבית דבי. פתרונות יצירתיים לטובת הילדים והמשפחה עם שיעור הצלחה של 85%.",
+  "description": "שירות גישור מקצועי למשמורת ילדים עם המגשרת עו״ד זהבית דבי. פתרונות יצירתיים לטובת הילדים והמשפחה עם ניסיון של 15+ שנים.",
   "provider": {
     "@type": "LegalService",
     "name": "המגשרת - עו״ד זהבית דבי | דבי סיידה ושות'"
@@ -224,7 +224,7 @@ export default function ChildCustodyPage() {
         <Hero
           title="משמורת ילדים - פתרונות לטובת הילדים"
           subtitle="המגשרת עו״ד זהבית דבי - כל ילד זכאי לשני הורים"
-          description="המגשרת עו״ד זהבית דבי מאמינה שכל ילד זוכה לשני הורים אוהבים ומעורבים. גישור משמורת עם המגשרת מביא לפתרונות יצירתיים לטובת הילדים עם שיעור הצלחה של 85% בהגעה להסכמי משמורת מאוזנים."
+          description="המגשרת עו״ד זהבית דבי מאמינה שכל ילד זוכה לשני הורים אוהבים ומעורבים. גישור משמורת עם המגשרת מביא לפתרונות יצירתיים לטובת הילדים עם ניסיון של 15+ שנים בהגעה להסכמי משמורת מאוזנים."
           ctaText="קבע פגישת ייעוץ"
           ctaHref="/contact"
           secondaryCtaText="צור קשר עכשיו"
@@ -254,7 +254,7 @@ export default function ChildCustodyPage() {
                       הגישה הייחודית שלה מתמקדת בטובת הילד קודם כל.
                     </p>
                     <p>
-                      <strong>85% הצלחה</strong> בהגעה להסכמי משמורת מאוזנים המתאימים לכל משפחה.
+                      <strong>ניסיון רב</strong> בהגעה להסכמי משמורת מאוזנים המתאימים לכל משפחה.
                     </p>
                     <p>
                       המגשרת עו״ד זהבית דבי מתמחה בפתרונות יצירתיים שמתחשבים בצרכים הייחודיים של כל ילד,
@@ -450,7 +450,7 @@ export default function ChildCustodyPage() {
 
             <div className="mt-8 text-center">
               <p className="text-lg text-beige-600">
-                <strong>85% שיעור הצלחה</strong> בהגעה להסכמי משמורת מאוזנים עם המגשרת עו״ד זהבית דבי
+                <strong>ניסיון של 15+ שנים</strong> בהגעה להסכמי משמורת מאוזנים עם המגשרת עו״ד זהבית דבי
               </p>
             </div>
           </div>
@@ -499,15 +499,15 @@ export default function ChildCustodyPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold mb-2">75%</div>
+                <div className="text-4xl font-bold mb-2">××××ª</div>
                 <div className="text-lg">מההסכמים הם למשמורת משותפת</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">85%</div>
+                <div className="text-4xl font-bold mb-2">80%</div>
                 <div className="text-lg">הצלחה בגישור עם המגשרת</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">90%</div>
+                <div className="text-4xl font-bold mb-2">3-6</div>
                 <div className="text-lg">שביעות רצון של הילדים</div>
               </div>
               <div>
